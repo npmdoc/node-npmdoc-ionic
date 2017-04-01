@@ -1,122 +1,122 @@
 <svg height="1902" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="1902" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  1.  2017-04-01 17:17:22 +0000    43244 byte  CHANGELOG.md</tspan>
-<tspan x="10" y="42">  2.  2017-04-01 17:17:22 +0000     1073 byte  LICENSE</tspan>
-<tspan x="10" y="58">  3.  2017-04-01 17:17:22 +0000    21024 byte  README.md</tspan>
-<tspan x="10" y="74">  4.  2017-04-01 17:17:22 +0000      679 byte  appveyor.yml</tspan>
-<tspan x="10" y="90">  5.  2017-04-01 17:17:22 +0000      460 byte  bin/ionic</tspan>
-<tspan x="10" y="106">  6.  2017-04-01 17:17:22 +0000      126 byte  circle.yml</tspan>
-<tspan x="10" y="122">  7.  2017-04-01 17:17:22 +0000     1895 byte  e2e/helpers.js</tspan>
-<tspan x="10" y="138">  8.  2017-04-01 17:17:22 +0000     1755 byte  e2e/shell.spec.js</tspan>
-<tspan x="10" y="154">  9.  2017-04-01 17:17:22 +0000    21003 byte  lib/cli.js</tspan>
-<tspan x="10" y="170"> 10.  2017-04-01 17:17:22 +0000     1567 byte  lib/config/commands.js</tspan>
-<tspan x="10" y="186"> 11.  2017-04-01 17:17:22 +0000     1176 byte  lib/hooks/after_platform_add/010_install_plugins.\</tspan>
+<tspan x="10" y="26">  1.  2017-04-01 17:32:29 +0000    43244 byte  CHANGELOG.md</tspan>
+<tspan x="10" y="42">  2.  2017-04-01 17:32:29 +0000     1073 byte  LICENSE</tspan>
+<tspan x="10" y="58">  3.  2017-04-01 17:32:29 +0000    21024 byte  README.md</tspan>
+<tspan x="10" y="74">  4.  2017-04-01 17:32:29 +0000      679 byte  appveyor.yml</tspan>
+<tspan x="10" y="90">  5.  2017-04-01 17:32:29 +0000      460 byte  bin/ionic</tspan>
+<tspan x="10" y="106">  6.  2017-04-01 17:32:29 +0000      126 byte  circle.yml</tspan>
+<tspan x="10" y="122">  7.  2017-04-01 17:32:29 +0000     1895 byte  e2e/helpers.js</tspan>
+<tspan x="10" y="138">  8.  2017-04-01 17:32:29 +0000     1755 byte  e2e/shell.spec.js</tspan>
+<tspan x="10" y="154">  9.  2017-04-01 17:32:29 +0000    21003 byte  lib/cli.js</tspan>
+<tspan x="10" y="170"> 10.  2017-04-01 17:32:29 +0000     1567 byte  lib/config/commands.js</tspan>
+<tspan x="10" y="186"> 11.  2017-04-01 17:32:29 +0000     1176 byte  lib/hooks/after_platform_add/010_install_plugins.\</tspan>
 <tspan x="10" y="202">js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-01 17:17:22 +0000     1833 byte  lib/hooks/after_plugin_add/010_register_plugin.js</tspan>
-<tspan x="10" y="234"> 13.  2017-04-01 17:17:22 +0000      867 byte  lib/hooks/after_plugin_rm/010_deregister_plugin.j\</tspan>
+<tspan x="10" y="218"> 12.  2017-04-01 17:32:29 +0000     1833 byte  lib/hooks/after_plugin_add/010_register_plugin.js</tspan>
+<tspan x="10" y="234"> 13.  2017-04-01 17:32:29 +0000      867 byte  lib/hooks/after_plugin_rm/010_deregister_plugin.j\</tspan>
 <tspan x="10" y="250">s</tspan>
-<tspan x="10" y="266"> 14.  2017-04-01 17:17:22 +0000     2910 byte  lib/hooks/after_prepare/010_add_platform_class.js</tspan>
-<tspan x="10" y="282"> 15.  2017-04-01 17:17:22 +0000      918 byte  lib/hooks/after_prepare/020_remove_sass_from_plat\</tspan>
+<tspan x="10" y="266"> 14.  2017-04-01 17:32:29 +0000     2910 byte  lib/hooks/after_prepare/010_add_platform_class.js</tspan>
+<tspan x="10" y="282"> 15.  2017-04-01 17:32:29 +0000      918 byte  lib/hooks/after_prepare/020_remove_sass_from_plat\</tspan>
 <tspan x="10" y="298">forms.js</tspan>
-<tspan x="10" y="314"> 16.  2017-04-01 17:17:22 +0000      618 byte  lib/hooks/before_platform_add/init_directories.js</tspan>
-<tspan x="10" y="330"> 17.  2017-04-01 17:17:22 +0000     2508 byte  lib/ionic/add.js</tspan>
-<tspan x="10" y="346"> 18.  2017-04-01 17:17:22 +0000      585 byte  lib/ionic/address.js</tspan>
-<tspan x="10" y="362"> 19.  2017-04-01 17:17:22 +0000      229 byte  lib/ionic/assets/gradle.properties</tspan>
-<tspan x="10" y="378"> 20.  2017-04-01 17:17:22 +0000     1331 byte  lib/ionic/assets/gulpfile.js</tspan>
-<tspan x="10" y="394"> 21.  2017-04-01 17:17:22 +0000     2192 byte  lib/ionic/build.js</tspan>
-<tspan x="10" y="410"> 22.  2017-04-01 17:17:22 +0000      943 byte  lib/ionic/compile.js</tspan>
-<tspan x="10" y="426"> 23.  2017-04-01 17:17:22 +0000     1403 byte  lib/ionic/config.js</tspan>
-<tspan x="10" y="442"> 24.  2017-04-01 17:17:22 +0000     4520 byte  lib/ionic/docs.js</tspan>
-<tspan x="10" y="458"> 25.  2017-04-01 17:17:22 +0000     3596 byte  lib/ionic/emulate.js</tspan>
-<tspan x="10" y="474"> 26.  2017-04-01 17:17:22 +0000     3847 byte  lib/ionic/generate.js</tspan>
-<tspan x="10" y="490"> 27.  2017-04-01 17:17:22 +0000      905 byte  lib/ionic/help.js</tspan>
-<tspan x="10" y="506"> 28.  2017-04-01 17:17:22 +0000     1027 byte  lib/ionic/hooks.js</tspan>
-<tspan x="10" y="522"> 29.  2017-04-01 17:17:22 +0000      608 byte  lib/ionic/info.js</tspan>
-<tspan x="10" y="538"> 30.  2017-04-01 17:17:22 +0000     1158 byte  lib/ionic/io.js</tspan>
-<tspan x="10" y="554"> 31.  2017-04-01 17:17:22 +0000    10190 byte  lib/ionic/lib.js</tspan>
-<tspan x="10" y="570"> 32.  2017-04-01 17:17:22 +0000     1442 byte  lib/ionic/link.js</tspan>
-<tspan x="10" y="586"> 33.  2017-04-01 17:17:22 +0000     1815 byte  lib/ionic/list.js</tspan>
-<tspan x="10" y="602"> 34.  2017-04-01 17:17:22 +0000     2573 byte  lib/ionic/login.js</tspan>
-<tspan x="10" y="618"> 35.  2017-04-01 17:17:22 +0000     9016 byte  lib/ionic/package.js</tspan>
-<tspan x="10" y="634"> 36.  2017-04-01 17:17:22 +0000     2320 byte  lib/ionic/platform.js</tspan>
-<tspan x="10" y="650"> 37.  2017-04-01 17:17:22 +0000     2342 byte  lib/ionic/plugin.js</tspan>
-<tspan x="10" y="666"> 38.  2017-04-01 17:17:22 +0000      946 byte  lib/ionic/prepare.js</tspan>
-<tspan x="10" y="682"> 39.  2017-04-01 17:17:22 +0000    13294 byte  lib/ionic/push.js</tspan>
-<tspan x="10" y="698"> 40.  2017-04-01 17:17:22 +0000     2496 byte  lib/ionic/remove.js</tspan>
-<tspan x="10" y="714"> 41.  2017-04-01 17:17:22 +0000     1403 byte  lib/ionic/resources.js</tspan>
-<tspan x="10" y="730"> 42.  2017-04-01 17:17:22 +0000     2796 byte  lib/ionic/resources/docs.json</tspan>
-<tspan x="10" y="746"> 43.  2017-04-01 17:17:22 +0000     3578 byte  lib/ionic/run.js</tspan>
-<tspan x="10" y="762"> 44.  2017-04-01 17:17:22 +0000     9773 byte  lib/ionic/security.js</tspan>
-<tspan x="10" y="778"> 45.  2017-04-01 17:17:22 +0000     5394 byte  lib/ionic/serve.js</tspan>
-<tspan x="10" y="794"> 46.  2017-04-01 17:17:22 +0000     6748 byte  lib/ionic/service.js</tspan>
-<tspan x="10" y="810"> 47.  2017-04-01 17:17:22 +0000     1050 byte  lib/ionic/setup.js</tspan>
-<tspan x="10" y="826"> 48.  2017-04-01 17:17:22 +0000     1582 byte  lib/ionic/share.js</tspan>
-<tspan x="10" y="842"> 49.  2017-04-01 17:17:22 +0000     3404 byte  lib/ionic/start.js</tspan>
-<tspan x="10" y="858"> 50.  2017-04-01 17:17:22 +0000     1985 byte  lib/ionic/state.js</tspan>
-<tspan x="10" y="874"> 51.  2017-04-01 17:17:22 +0000     1158 byte  lib/ionic/upload.js</tspan>
-<tspan x="10" y="890"> 52.  2017-04-01 17:17:22 +0000     1752 byte  lib/utils/bower.js</tspan>
-<tspan x="10" y="906"> 53.  2017-04-01 17:17:22 +0000    10056 byte  lib/utils/cordova.js</tspan>
-<tspan x="10" y="922"> 54.  2017-04-01 17:17:22 +0000      176 byte  lib/utils/extend.js</tspan>
-<tspan x="10" y="938"> 55.  2017-04-01 17:17:22 +0000     4864 byte  lib/utils/help.js</tspan>
-<tspan x="10" y="954"> 56.  2017-04-01 17:17:22 +0000     2743 byte  lib/utils/ionitron.js</tspan>
-<tspan x="10" y="970"> 57.  2017-04-01 17:17:22 +0000     3799 byte  lib/utils/ionitron.txt</tspan>
-<tspan x="10" y="986"> 58.  2017-04-01 17:17:22 +0000     3936 byte  lib/utils/npmScripts.js</tspan>
-<tspan x="10" y="1002"> 59.  2017-04-01 17:17:22 +0000      490 byte  lib/utils/prompt.js</tspan>
-<tspan x="10" y="1018"> 60.  2017-04-01 17:17:22 +0000     1470 byte  lib/utils/serve.js</tspan>
-<tspan x="10" y="1034"> 61.  2017-04-01 17:17:22 +0000     4446 byte  lib/utils/stats.js</tspan>
-<tspan x="10" y="1050"> 62.  2017-04-01 17:17:22 +0000     1238 byte  lib/utils/store.js</tspan>
-<tspan x="10" y="1066"> 63.  2017-04-01 17:17:22 +0000      601 byte  lib/utils/table.js</tspan>
-<tspan x="10" y="1082"> 64.  2017-04-01 17:17:22 +0000     1838 byte  lib/utils/templates.js</tspan>
-<tspan x="10" y="1098"> 65.  2017-04-01 17:17:22 +0000     4376 byte  package-orig.json</tspan>
-<tspan x="10" y="1114"> 66.  2017-04-01 17:17:22 +0000     4389 byte  package.json</tspan>
-<tspan x="10" y="1130"> 67.  2017-04-01 17:17:22 +0000     2139 byte  scripts/publish-nightly.js</tspan>
-<tspan x="10" y="1146"> 68.  2017-04-01 17:17:22 +0000    35422 byte  spec/cli.spec.js</tspan>
-<tspan x="10" y="1162"> 69.  2017-04-01 17:17:22 +0000      842 byte  spec/config/commands.spec.js</tspan>
-<tspan x="10" y="1178"> 70.  2017-04-01 17:17:22 +0000     1390 byte  spec/fixtures/package.json</tspan>
-<tspan x="10" y="1194"> 71.  2017-04-01 17:17:22 +0000      261 byte  spec/helpers/ionic.js</tspan>
-<tspan x="10" y="1210"> 72.  2017-04-01 17:17:22 +0000     5290 byte  spec/tasks/add.spec.js</tspan>
-<tspan x="10" y="1226"> 73.  2017-04-01 17:17:22 +0000     1491 byte  spec/tasks/address.spec.js</tspan>
-<tspan x="10" y="1242"> 74.  2017-04-01 17:17:22 +0000     7979 byte  spec/tasks/build.spec.js</tspan>
-<tspan x="10" y="1258"> 75.  2017-04-01 17:17:22 +0000     2272 byte  spec/tasks/compile.spec.js</tspan>
-<tspan x="10" y="1274"> 76.  2017-04-01 17:17:22 +0000     4854 byte  spec/tasks/config.spec.js</tspan>
-<tspan x="10" y="1290"> 77.  2017-04-01 17:17:22 +0000     2206 byte  spec/tasks/docs.spec.js</tspan>
-<tspan x="10" y="1306"> 78.  2017-04-01 17:17:22 +0000    13245 byte  spec/tasks/emulate.spec.js</tspan>
-<tspan x="10" y="1322"> 79.  2017-04-01 17:17:22 +0000        0 byte  spec/tasks/generate.spec.js</tspan>
-<tspan x="10" y="1338"> 80.  2017-04-01 17:17:22 +0000     3111 byte  spec/tasks/help.spec.js</tspan>
-<tspan x="10" y="1354"> 81.  2017-04-01 17:17:22 +0000     3421 byte  spec/tasks/hooks.spec.js</tspan>
-<tspan x="10" y="1370"> 82.  2017-04-01 17:17:22 +0000     2259 byte  spec/tasks/info.spec.js</tspan>
-<tspan x="10" y="1386"> 83.  2017-04-01 17:17:22 +0000     3846 byte  spec/tasks/io.spec.js</tspan>
-<tspan x="10" y="1402"> 84.  2017-04-01 17:17:22 +0000     3867 byte  spec/tasks/lib.spec.js</tspan>
-<tspan x="10" y="1418"> 85.  2017-04-01 17:17:22 +0000        0 byte  spec/tasks/link.spec.js</tspan>
-<tspan x="10" y="1434"> 86.  2017-04-01 17:17:22 +0000     3274 byte  spec/tasks/list.spec.js</tspan>
-<tspan x="10" y="1450"> 87.  2017-04-01 17:17:22 +0000     6507 byte  spec/tasks/login.spec.js</tspan>
-<tspan x="10" y="1466"> 88.  2017-04-01 17:17:22 +0000        0 byte  spec/tasks/package.spec.js</tspan>
-<tspan x="10" y="1482"> 89.  2017-04-01 17:17:22 +0000     6354 byte  spec/tasks/platform.spec.js</tspan>
-<tspan x="10" y="1498"> 90.  2017-04-01 17:17:22 +0000     6341 byte  spec/tasks/plugin.spec.js</tspan>
-<tspan x="10" y="1514"> 91.  2017-04-01 17:17:22 +0000     2147 byte  spec/tasks/prepare.spec.js</tspan>
-<tspan x="10" y="1530"> 92.  2017-04-01 17:17:22 +0000        0 byte  spec/tasks/push.spec.js</tspan>
-<tspan x="10" y="1546"> 93.  2017-04-01 17:17:22 +0000     5342 byte  spec/tasks/remove.spec.js</tspan>
-<tspan x="10" y="1562"> 94.  2017-04-01 17:17:22 +0000     3808 byte  spec/tasks/resources.spec.js</tspan>
-<tspan x="10" y="1578"> 95.  2017-04-01 17:17:22 +0000    12717 byte  spec/tasks/run.spec.js</tspan>
-<tspan x="10" y="1594"> 96.  2017-04-01 17:17:22 +0000        0 byte  spec/tasks/security.spec.js</tspan>
-<tspan x="10" y="1610"> 97.  2017-04-01 17:17:22 +0000    12019 byte  spec/tasks/serve.spec.js</tspan>
-<tspan x="10" y="1626"> 98.  2017-04-01 17:17:22 +0000        0 byte  spec/tasks/service.spec.js</tspan>
-<tspan x="10" y="1642"> 99.  2017-04-01 17:17:22 +0000     3463 byte  spec/tasks/setup.spec.js</tspan>
-<tspan x="10" y="1658">100.  2017-04-01 17:17:22 +0000     6065 byte  spec/tasks/share.spec.js</tspan>
-<tspan x="10" y="1674">101.  2017-04-01 17:17:22 +0000     7817 byte  spec/tasks/start.spec.js</tspan>
-<tspan x="10" y="1690">102.  2017-04-01 17:17:22 +0000     5147 byte  spec/tasks/state.spec.js</tspan>
-<tspan x="10" y="1706">103.  2017-04-01 17:17:22 +0000     3474 byte  spec/tasks/upload.spec.js</tspan>
-<tspan x="10" y="1722">104.  2017-04-01 17:17:22 +0000     5375 byte  spec/utils/bower.spec.js</tspan>
-<tspan x="10" y="1738">105.  2017-04-01 17:17:22 +0000    15290 byte  spec/utils/cordova.spec.js</tspan>
-<tspan x="10" y="1754">106.  2017-04-01 17:17:22 +0000     4751 byte  spec/utils/help.spec.js</tspan>
-<tspan x="10" y="1770">107.  2017-04-01 17:17:22 +0000      901 byte  spec/utils/ionitron.spec.js</tspan>
-<tspan x="10" y="1786">108.  2017-04-01 17:17:22 +0000     4282 byte  spec/utils/npmScripts.spec.js</tspan>
-<tspan x="10" y="1802">109.  2017-04-01 17:17:22 +0000     1180 byte  spec/utils/prompt.spec.js</tspan>
-<tspan x="10" y="1818">110.  2017-04-01 17:17:22 +0000     9228 byte  spec/utils/stats.spec.js</tspan>
-<tspan x="10" y="1834">111.  2017-04-01 17:17:22 +0000     7147 byte  spec/utils/store.spec.js</tspan>
-<tspan x="10" y="1850">112.  2017-04-01 17:17:22 +0000     1362 byte  spec/utils/table.spec.js</tspan>
-<tspan x="10" y="1866">113.  2017-04-01 17:17:22 +0000     4975 byte  spec/utils/templates.spec.js</tspan>
-<tspan x="10" y="1882">114.  2017-04-01 17:17:22 +0000   490340 byte  .</tspan>
+<tspan x="10" y="314"> 16.  2017-04-01 17:32:29 +0000      618 byte  lib/hooks/before_platform_add/init_directories.js</tspan>
+<tspan x="10" y="330"> 17.  2017-04-01 17:32:29 +0000     2508 byte  lib/ionic/add.js</tspan>
+<tspan x="10" y="346"> 18.  2017-04-01 17:32:29 +0000      585 byte  lib/ionic/address.js</tspan>
+<tspan x="10" y="362"> 19.  2017-04-01 17:32:29 +0000      229 byte  lib/ionic/assets/gradle.properties</tspan>
+<tspan x="10" y="378"> 20.  2017-04-01 17:32:29 +0000     1331 byte  lib/ionic/assets/gulpfile.js</tspan>
+<tspan x="10" y="394"> 21.  2017-04-01 17:32:29 +0000     2192 byte  lib/ionic/build.js</tspan>
+<tspan x="10" y="410"> 22.  2017-04-01 17:32:29 +0000      943 byte  lib/ionic/compile.js</tspan>
+<tspan x="10" y="426"> 23.  2017-04-01 17:32:29 +0000     1403 byte  lib/ionic/config.js</tspan>
+<tspan x="10" y="442"> 24.  2017-04-01 17:32:29 +0000     4520 byte  lib/ionic/docs.js</tspan>
+<tspan x="10" y="458"> 25.  2017-04-01 17:32:29 +0000     3596 byte  lib/ionic/emulate.js</tspan>
+<tspan x="10" y="474"> 26.  2017-04-01 17:32:29 +0000     3847 byte  lib/ionic/generate.js</tspan>
+<tspan x="10" y="490"> 27.  2017-04-01 17:32:29 +0000      905 byte  lib/ionic/help.js</tspan>
+<tspan x="10" y="506"> 28.  2017-04-01 17:32:29 +0000     1027 byte  lib/ionic/hooks.js</tspan>
+<tspan x="10" y="522"> 29.  2017-04-01 17:32:29 +0000      608 byte  lib/ionic/info.js</tspan>
+<tspan x="10" y="538"> 30.  2017-04-01 17:32:29 +0000     1158 byte  lib/ionic/io.js</tspan>
+<tspan x="10" y="554"> 31.  2017-04-01 17:32:29 +0000    10190 byte  lib/ionic/lib.js</tspan>
+<tspan x="10" y="570"> 32.  2017-04-01 17:32:29 +0000     1442 byte  lib/ionic/link.js</tspan>
+<tspan x="10" y="586"> 33.  2017-04-01 17:32:29 +0000     1815 byte  lib/ionic/list.js</tspan>
+<tspan x="10" y="602"> 34.  2017-04-01 17:32:29 +0000     2573 byte  lib/ionic/login.js</tspan>
+<tspan x="10" y="618"> 35.  2017-04-01 17:32:29 +0000     9016 byte  lib/ionic/package.js</tspan>
+<tspan x="10" y="634"> 36.  2017-04-01 17:32:29 +0000     2320 byte  lib/ionic/platform.js</tspan>
+<tspan x="10" y="650"> 37.  2017-04-01 17:32:29 +0000     2342 byte  lib/ionic/plugin.js</tspan>
+<tspan x="10" y="666"> 38.  2017-04-01 17:32:29 +0000      946 byte  lib/ionic/prepare.js</tspan>
+<tspan x="10" y="682"> 39.  2017-04-01 17:32:29 +0000    13294 byte  lib/ionic/push.js</tspan>
+<tspan x="10" y="698"> 40.  2017-04-01 17:32:29 +0000     2496 byte  lib/ionic/remove.js</tspan>
+<tspan x="10" y="714"> 41.  2017-04-01 17:32:29 +0000     1403 byte  lib/ionic/resources.js</tspan>
+<tspan x="10" y="730"> 42.  2017-04-01 17:32:29 +0000     2796 byte  lib/ionic/resources/docs.json</tspan>
+<tspan x="10" y="746"> 43.  2017-04-01 17:32:29 +0000     3578 byte  lib/ionic/run.js</tspan>
+<tspan x="10" y="762"> 44.  2017-04-01 17:32:29 +0000     9773 byte  lib/ionic/security.js</tspan>
+<tspan x="10" y="778"> 45.  2017-04-01 17:32:29 +0000     5394 byte  lib/ionic/serve.js</tspan>
+<tspan x="10" y="794"> 46.  2017-04-01 17:32:29 +0000     6748 byte  lib/ionic/service.js</tspan>
+<tspan x="10" y="810"> 47.  2017-04-01 17:32:29 +0000     1050 byte  lib/ionic/setup.js</tspan>
+<tspan x="10" y="826"> 48.  2017-04-01 17:32:29 +0000     1582 byte  lib/ionic/share.js</tspan>
+<tspan x="10" y="842"> 49.  2017-04-01 17:32:29 +0000     3404 byte  lib/ionic/start.js</tspan>
+<tspan x="10" y="858"> 50.  2017-04-01 17:32:29 +0000     1985 byte  lib/ionic/state.js</tspan>
+<tspan x="10" y="874"> 51.  2017-04-01 17:32:29 +0000     1158 byte  lib/ionic/upload.js</tspan>
+<tspan x="10" y="890"> 52.  2017-04-01 17:32:29 +0000     1752 byte  lib/utils/bower.js</tspan>
+<tspan x="10" y="906"> 53.  2017-04-01 17:32:29 +0000    10056 byte  lib/utils/cordova.js</tspan>
+<tspan x="10" y="922"> 54.  2017-04-01 17:32:29 +0000      176 byte  lib/utils/extend.js</tspan>
+<tspan x="10" y="938"> 55.  2017-04-01 17:32:29 +0000     4864 byte  lib/utils/help.js</tspan>
+<tspan x="10" y="954"> 56.  2017-04-01 17:32:29 +0000     2743 byte  lib/utils/ionitron.js</tspan>
+<tspan x="10" y="970"> 57.  2017-04-01 17:32:29 +0000     3799 byte  lib/utils/ionitron.txt</tspan>
+<tspan x="10" y="986"> 58.  2017-04-01 17:32:29 +0000     3936 byte  lib/utils/npmScripts.js</tspan>
+<tspan x="10" y="1002"> 59.  2017-04-01 17:32:29 +0000      490 byte  lib/utils/prompt.js</tspan>
+<tspan x="10" y="1018"> 60.  2017-04-01 17:32:29 +0000     1470 byte  lib/utils/serve.js</tspan>
+<tspan x="10" y="1034"> 61.  2017-04-01 17:32:29 +0000     4446 byte  lib/utils/stats.js</tspan>
+<tspan x="10" y="1050"> 62.  2017-04-01 17:32:29 +0000     1238 byte  lib/utils/store.js</tspan>
+<tspan x="10" y="1066"> 63.  2017-04-01 17:32:29 +0000      601 byte  lib/utils/table.js</tspan>
+<tspan x="10" y="1082"> 64.  2017-04-01 17:32:29 +0000     1838 byte  lib/utils/templates.js</tspan>
+<tspan x="10" y="1098"> 65.  2017-04-01 17:32:29 +0000     4376 byte  package-orig.json</tspan>
+<tspan x="10" y="1114"> 66.  2017-04-01 17:32:29 +0000     4389 byte  package.json</tspan>
+<tspan x="10" y="1130"> 67.  2017-04-01 17:32:29 +0000     2139 byte  scripts/publish-nightly.js</tspan>
+<tspan x="10" y="1146"> 68.  2017-04-01 17:32:29 +0000    35422 byte  spec/cli.spec.js</tspan>
+<tspan x="10" y="1162"> 69.  2017-04-01 17:32:29 +0000      842 byte  spec/config/commands.spec.js</tspan>
+<tspan x="10" y="1178"> 70.  2017-04-01 17:32:29 +0000     1390 byte  spec/fixtures/package.json</tspan>
+<tspan x="10" y="1194"> 71.  2017-04-01 17:32:29 +0000      261 byte  spec/helpers/ionic.js</tspan>
+<tspan x="10" y="1210"> 72.  2017-04-01 17:32:29 +0000     5290 byte  spec/tasks/add.spec.js</tspan>
+<tspan x="10" y="1226"> 73.  2017-04-01 17:32:29 +0000     1491 byte  spec/tasks/address.spec.js</tspan>
+<tspan x="10" y="1242"> 74.  2017-04-01 17:32:29 +0000     7979 byte  spec/tasks/build.spec.js</tspan>
+<tspan x="10" y="1258"> 75.  2017-04-01 17:32:29 +0000     2272 byte  spec/tasks/compile.spec.js</tspan>
+<tspan x="10" y="1274"> 76.  2017-04-01 17:32:29 +0000     4854 byte  spec/tasks/config.spec.js</tspan>
+<tspan x="10" y="1290"> 77.  2017-04-01 17:32:29 +0000     2206 byte  spec/tasks/docs.spec.js</tspan>
+<tspan x="10" y="1306"> 78.  2017-04-01 17:32:29 +0000    13245 byte  spec/tasks/emulate.spec.js</tspan>
+<tspan x="10" y="1322"> 79.  2017-04-01 17:32:29 +0000        0 byte  spec/tasks/generate.spec.js</tspan>
+<tspan x="10" y="1338"> 80.  2017-04-01 17:32:29 +0000     3111 byte  spec/tasks/help.spec.js</tspan>
+<tspan x="10" y="1354"> 81.  2017-04-01 17:32:29 +0000     3421 byte  spec/tasks/hooks.spec.js</tspan>
+<tspan x="10" y="1370"> 82.  2017-04-01 17:32:29 +0000     2259 byte  spec/tasks/info.spec.js</tspan>
+<tspan x="10" y="1386"> 83.  2017-04-01 17:32:29 +0000     3846 byte  spec/tasks/io.spec.js</tspan>
+<tspan x="10" y="1402"> 84.  2017-04-01 17:32:29 +0000     3867 byte  spec/tasks/lib.spec.js</tspan>
+<tspan x="10" y="1418"> 85.  2017-04-01 17:32:29 +0000        0 byte  spec/tasks/link.spec.js</tspan>
+<tspan x="10" y="1434"> 86.  2017-04-01 17:32:29 +0000     3274 byte  spec/tasks/list.spec.js</tspan>
+<tspan x="10" y="1450"> 87.  2017-04-01 17:32:29 +0000     6507 byte  spec/tasks/login.spec.js</tspan>
+<tspan x="10" y="1466"> 88.  2017-04-01 17:32:29 +0000        0 byte  spec/tasks/package.spec.js</tspan>
+<tspan x="10" y="1482"> 89.  2017-04-01 17:32:29 +0000     6354 byte  spec/tasks/platform.spec.js</tspan>
+<tspan x="10" y="1498"> 90.  2017-04-01 17:32:29 +0000     6341 byte  spec/tasks/plugin.spec.js</tspan>
+<tspan x="10" y="1514"> 91.  2017-04-01 17:32:29 +0000     2147 byte  spec/tasks/prepare.spec.js</tspan>
+<tspan x="10" y="1530"> 92.  2017-04-01 17:32:29 +0000        0 byte  spec/tasks/push.spec.js</tspan>
+<tspan x="10" y="1546"> 93.  2017-04-01 17:32:29 +0000     5342 byte  spec/tasks/remove.spec.js</tspan>
+<tspan x="10" y="1562"> 94.  2017-04-01 17:32:29 +0000     3808 byte  spec/tasks/resources.spec.js</tspan>
+<tspan x="10" y="1578"> 95.  2017-04-01 17:32:29 +0000    12717 byte  spec/tasks/run.spec.js</tspan>
+<tspan x="10" y="1594"> 96.  2017-04-01 17:32:29 +0000        0 byte  spec/tasks/security.spec.js</tspan>
+<tspan x="10" y="1610"> 97.  2017-04-01 17:32:29 +0000    12019 byte  spec/tasks/serve.spec.js</tspan>
+<tspan x="10" y="1626"> 98.  2017-04-01 17:32:29 +0000        0 byte  spec/tasks/service.spec.js</tspan>
+<tspan x="10" y="1642"> 99.  2017-04-01 17:32:29 +0000     3463 byte  spec/tasks/setup.spec.js</tspan>
+<tspan x="10" y="1658">100.  2017-04-01 17:32:29 +0000     6065 byte  spec/tasks/share.spec.js</tspan>
+<tspan x="10" y="1674">101.  2017-04-01 17:32:29 +0000     7817 byte  spec/tasks/start.spec.js</tspan>
+<tspan x="10" y="1690">102.  2017-04-01 17:32:29 +0000     5147 byte  spec/tasks/state.spec.js</tspan>
+<tspan x="10" y="1706">103.  2017-04-01 17:32:29 +0000     3474 byte  spec/tasks/upload.spec.js</tspan>
+<tspan x="10" y="1722">104.  2017-04-01 17:32:29 +0000     5375 byte  spec/utils/bower.spec.js</tspan>
+<tspan x="10" y="1738">105.  2017-04-01 17:32:29 +0000    15290 byte  spec/utils/cordova.spec.js</tspan>
+<tspan x="10" y="1754">106.  2017-04-01 17:32:29 +0000     4751 byte  spec/utils/help.spec.js</tspan>
+<tspan x="10" y="1770">107.  2017-04-01 17:32:29 +0000      901 byte  spec/utils/ionitron.spec.js</tspan>
+<tspan x="10" y="1786">108.  2017-04-01 17:32:29 +0000     4282 byte  spec/utils/npmScripts.spec.js</tspan>
+<tspan x="10" y="1802">109.  2017-04-01 17:32:29 +0000     1180 byte  spec/utils/prompt.spec.js</tspan>
+<tspan x="10" y="1818">110.  2017-04-01 17:32:29 +0000     9228 byte  spec/utils/stats.spec.js</tspan>
+<tspan x="10" y="1834">111.  2017-04-01 17:32:29 +0000     7147 byte  spec/utils/store.spec.js</tspan>
+<tspan x="10" y="1850">112.  2017-04-01 17:32:29 +0000     1362 byte  spec/utils/table.spec.js</tspan>
+<tspan x="10" y="1866">113.  2017-04-01 17:32:29 +0000     4975 byte  spec/utils/templates.spec.js</tspan>
+<tspan x="10" y="1882">114.  2017-04-01 17:32:29 +0000   490340 byte  .</tspan>
 </text>
 </svg>
