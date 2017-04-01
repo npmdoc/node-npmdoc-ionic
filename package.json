@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"ionic",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "ionic",
+    "description": "api documentation for [ionic (v2.2.2-201704011716-201704011716-201704011717)](http://ionicframework.com/) [![npm package](https://img.shields.io/npm/v/npmdoc-ionic.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ionic) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ionic.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ionic)",
     "devDependencies": {
-        "ionic": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "ionic": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-ionic",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-ionic",
+    "keywords": [
+        "documentation",
+        "ionic"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_ionic.js",
+    "name": "npmdoc-ionic",
+    "nameAlias": "npmdoc_ionic",
+    "nameOriginal": "npmdoc-ionic",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-ionic.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
