@@ -1,11 +1,13 @@
-# api documentation for  [ionic (v2.2.2-201704011716-201704011716-201704011717)](http://ionicframework.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-ionic.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ionic) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ionic.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ionic)
+# api documentation for  [ionic (v2.2.2-201704072015-201704072016-201704072016)](http://ionicframework.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-ionic.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ionic) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ionic.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ionic)
 #### A tool for creating and developing Ionic Framework mobile apps.
 
 [![NPM](https://nodei.co/npm/ionic.png?downloads=true)](https://www.npmjs.com/package/ionic)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-ionic/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-ionic_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ionic/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-ionic/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-ionic%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ionic/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-ionic/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-ionic/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-ionic/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
@@ -15,7 +17,7 @@
 
 {
     "name": "ionic",
-    "version": "2.2.2-201704011716-201704011716-201704011717",
+    "version": "2.2.2-201704072015-201704072016-201704072016",
     "preferGlobal": true,
     "description": "A tool for creating and developing Ionic Framework mobile apps.",
     "homepage": "http://ionicframework.com/",
