@@ -1,4 +1,4 @@
-# api documentation for  [ionic (v2.2.2-201704072015-201704072016-201704072016)](http://ionicframework.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-ionic.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ionic) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ionic.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ionic)
+# api documentation for  [ionic (v2.2.2-201704072020-201704072021-201704072022)](http://ionicframework.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-ionic.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ionic) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ionic.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ionic)
 #### A tool for creating and developing Ionic Framework mobile apps.
 
 [![NPM](https://nodei.co/npm/ionic.png?downloads=true)](https://www.npmjs.com/package/ionic)
@@ -17,7 +17,7 @@
 
 {
     "name": "ionic",
-    "version": "2.2.2-201704072015-201704072016-201704072016",
+    "version": "2.2.2-201704072020-201704072021-201704072022",
     "preferGlobal": true,
     "description": "A tool for creating and developing Ionic Framework mobile apps.",
     "homepage": "http://ionicframework.com/",
