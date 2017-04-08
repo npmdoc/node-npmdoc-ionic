@@ -2,11 +2,11 @@
 <rect height="2606" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
 <tspan x="10" y="26"></tspan>
-<tspan x="10" y="42">&gt; npmdoc-ionic@0.0.2 test /home/travis/build/npmdoc/node-npmdoc-ionic</tspan>
+<tspan x="10" y="42">&gt; npmdoc-ionic@0.0.3 test /home/travis/build/npmdoc/node-npmdoc-ionic</tspan>
 <tspan x="10" y="58">&gt; (set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)</tspan>
 <tspan x="10" y="74"></tspan>
 <tspan x="10" y="90"></tspan>
-<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2017-04-08T10:16:11Z - npm-testing /home/travis/build/npmdoc/node-npmdoc-\</tspan>
+<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2017-04-08T10:19:37Z - npm-testing /home/travis/build/npmdoc/node-npmdoc-\</tspan>
 <tspan x="10" y="122">ionic</tspan>
 <tspan x="10" y="138"></tspan>
 <tspan x="10" y="154"></tspan>
@@ -14,7 +14,7 @@
 <tspan x="10" y="186">c-ionic/test.js</tspan>
 <tspan x="10" y="202">merging file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build/test-report.json to test-re\</tspan>
 <tspan x="10" y="218">port</tspan>
-<tspan x="10" y="234">&gt; server listening on http-port 55186</tspan>
+<tspan x="10" y="234">&gt; server listening on http-port 42314</tspan>
 <tspan x="10" y="250">Building Nightly ... BEGIN</tspan>
 <tspan x="10" y="266">Backing up the original package.json</tspan>
 <tspan x="10" y="282">Creating the nightly version of package.json</tspan>
@@ -53,83 +53,83 @@
 <tspan x="10" y="810"></tspan>
 <tspan x="10" y="826"></tspan>
 <tspan x="10" y="842">browserTest - created electron entry-page /home/travis/build/npmdoc/node-npmdoc-ionic/tmp/electr\</tspan>
-<tspan x="10" y="858">on.15b4d1069c00.928585cf84472.html</tspan>
+<tspan x="10" y="858">on.15b4d138dcd0.9389acdca866.html</tspan>
 <tspan x="10" y="874"></tspan>
 <tspan x="10" y="890">[node test-case 1 of 6 passed] - testCase_buildLib_default</tspan>
 <tspan x="10" y="906">[node test-case 2 of 6 passed] - testCase_buildReadme_default</tspan>
 <tspan x="10" y="922">[node test-case 3 of 6 passed] - testCase_buildTest_default</tspan>
 <tspan x="10" y="938"></tspan>
 <tspan x="10" y="954">browserTest - created electron entry-page /home/travis/build/npmdoc/node-npmdoc-ionic/tmp/electr\</tspan>
-<tspan x="10" y="970">on.15b4d1069ef0.4e448794182e5.html</tspan>
+<tspan x="10" y="970">on.15b4d138dfd0.66df3d10b6a47.html</tspan>
 <tspan x="10" y="986"></tspan>
 <tspan x="10" y="1002">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
 <tspan x="10" y="1018">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="1034">&gt; server listening on http-port 62344</tspan>
-<tspan x="10" y="1050">merging file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build/test-report.json to test-re\</tspan>
-<tspan x="10" y="1066">port</tspan>
+<tspan x="10" y="1034">merging file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build/test-report.json to test-re\</tspan>
+<tspan x="10" y="1050">port</tspan>
+<tspan x="10" y="1066">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
 <tspan x="10" y="1082">merging file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build/test-report.json to test-re\</tspan>
 <tspan x="10" y="1098">port</tspan>
-<tspan x="10" y="1114">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="1130">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="1146">[4886:0408/101614:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="1162">[4886:0408/101614:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="1178">[4890:0408/101614:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="1194">[4890:0408/101614:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="1210">[4938:0408/101614:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
-<tspan x="10" y="1226">in process gpu-process. </tspan>
-<tspan x="10" y="1242">[4922:0408/101614:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
-<tspan x="10" y="1258">in process gpu-process. </tspan>
-<tspan x="10" y="1274">[4886:0408/101614:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
-<tspan x="10" y="1290">[4890:0408/101614:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
+<tspan x="10" y="1114">[6394:0408/101939:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="1130">[6394:0408/101939:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="1146">&gt; server listening on http-port 54836</tspan>
+<tspan x="10" y="1162">[6421:0408/101939:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="1178">in process gpu-process. </tspan>
+<tspan x="10" y="1194">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
+<tspan x="10" y="1210">[6394:0408/101939:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
+<tspan x="10" y="1226">[6390:0408/101939:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="1242">[6390:0408/101939:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="1258">[6450:0408/101939:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="1274">in process gpu-process. </tspan>
+<tspan x="10" y="1290">[6390:0408/101939:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
 <tspan x="10" y="1306"></tspan>
-<tspan x="10" y="1322">browserTest - opened url /home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build/apidoc.html</tspan>
+<tspan x="10" y="1322">browserTest - opened url http://127.0.0.1:42314?modeTest=1</tspan>
 <tspan x="10" y="1338"></tspan>
 <tspan x="10" y="1354"></tspan>
-<tspan x="10" y="1370">browserTest - opened url http://127.0.0.1:55186?modeTest=1</tspan>
+<tspan x="10" y="1370">browserTest - opened url /home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build/apidoc.html</tspan>
 <tspan x="10" y="1386"></tspan>
-<tspan x="10" y="1402">[4890:0408/101616:INFO:CONSOLE(248)] "----------|-----------|-----------|-----------|-----------\</tspan>
+<tspan x="10" y="1402">[6394:0408/101941:INFO:CONSOLE(248)] "----------|-----------|-----------|-----------|-----------\</tspan>
 <tspan x="10" y="1418">|</tspan>
 <tspan x="10" y="1434">File      |   % Stmts |% Branches |   % Funcs |   % Lines |</tspan>
 <tspan x="10" y="1450">----------|-----------|-----------|-----------|-----------|</tspan>
 <tspan x="10" y="1466">----------|-----------|-----------|-----------|-----------|</tspan>
 <tspan x="10" y="1482">All files |       100 |       100 |       100 |       100 |</tspan>
 <tspan x="10" y="1498">----------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="1514">", source: file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/electron.15b4d1069ef0.4e448794\</tspan>
-<tspan x="10" y="1530">182e5.html (248)</tspan>
-<tspan x="10" y="1546">[4890:0408/101616:INFO:CONSOLE(248)] "created coverage file:///tmp/build/coverage.html/index.htm\</tspan>
-<tspan x="10" y="1562">l", source: file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/electron.15b4d1069ef0.4e44879\</tspan>
-<tspan x="10" y="1578">4182e5.html (248)</tspan>
+<tspan x="10" y="1514">", source: file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/electron.15b4d138dfd0.66df3d10\</tspan>
+<tspan x="10" y="1530">b6a47.html (248)</tspan>
+<tspan x="10" y="1546">[6394:0408/101941:INFO:CONSOLE(248)] "created coverage file:///tmp/build/coverage.html/index.htm\</tspan>
+<tspan x="10" y="1562">l", source: file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/electron.15b4d138dfd0.66df3d1\</tspan>
+<tspan x="10" y="1578">0b6a47.html (248)</tspan>
 <tspan x="10" y="1594">[node test-case 4 of 6 passed] - testCase_buildApp_default</tspan>
 <tspan x="10" y="1610"></tspan>
 <tspan x="10" y="1626">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build\</tspan>
-<tspan x="10" y="1642">/screenCapture.npmTest.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-ionic%2Ftmp%2Fbui\</tspan>
-<tspan x="10" y="1658">ld%2Fapidoc.html.png</tspan>
-<tspan x="10" y="1674"></tspan>
-<tspan x="10" y="1690">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build\</tspan>
-<tspan x="10" y="1706">/screenCapture.npmTest.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-ionic%2Ftmp%2Fbui\</tspan>
-<tspan x="10" y="1722">ld%2Fapidoc.html.html</tspan>
-<tspan x="10" y="1738"></tspan>
-<tspan x="10" y="1754">browserTest - exit-code 0 - /home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build/apidoc.html</tspan>
+<tspan x="10" y="1642">/screenCapture.npmTest.browser.%2F.png</tspan>
+<tspan x="10" y="1658"></tspan>
+<tspan x="10" y="1674">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build\</tspan>
+<tspan x="10" y="1690">/screenCapture.npmTest.browser.%2F.html</tspan>
+<tspan x="10" y="1706"></tspan>
+<tspan x="10" y="1722">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build\</tspan>
+<tspan x="10" y="1738">/screenCapture.npmTest.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-ionic%2Ftmp%2Fbui\</tspan>
+<tspan x="10" y="1754">ld%2Fapidoc.html.png</tspan>
 <tspan x="10" y="1770"></tspan>
-<tspan x="10" y="1786">[node test-case 5 of 6 passed] - testCase_buildApidoc_default</tspan>
-<tspan x="10" y="1802"></tspan>
-<tspan x="10" y="1818">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build\</tspan>
-<tspan x="10" y="1834">/screenCapture.npmTest.browser.%2F.png</tspan>
-<tspan x="10" y="1850"></tspan>
-<tspan x="10" y="1866">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build\</tspan>
-<tspan x="10" y="1882">/screenCapture.npmTest.browser.%2F.html</tspan>
+<tspan x="10" y="1786"></tspan>
+<tspan x="10" y="1802">browserTest - exit-code 0 - http://127.0.0.1:42314?modeTest=1</tspan>
+<tspan x="10" y="1818"></tspan>
+<tspan x="10" y="1834"></tspan>
+<tspan x="10" y="1850">browserTest - merged coverage from /home/travis/build/npmdoc/node-npmdoc-ionic/tmp/coverage.npmT\</tspan>
+<tspan x="10" y="1866">est.browser.%2F.json</tspan>
+<tspan x="10" y="1882"></tspan>
 <tspan x="10" y="1898"></tspan>
-<tspan x="10" y="1914">browserTest - exit-code 0 - http://127.0.0.1:55186?modeTest=1</tspan>
-<tspan x="10" y="1930"></tspan>
+<tspan x="10" y="1914">browserTest - merging test-report from /home/travis/build/npmdoc/node-npmdoc-ionic/tmp/test-repo\</tspan>
+<tspan x="10" y="1930">rt.npmTest.browser.%2F.json</tspan>
 <tspan x="10" y="1946"></tspan>
-<tspan x="10" y="1962">browserTest - merged coverage from /home/travis/build/npmdoc/node-npmdoc-ionic/tmp/coverage.npmT\</tspan>
-<tspan x="10" y="1978">est.browser.%2F.json</tspan>
-<tspan x="10" y="1994"></tspan>
-<tspan x="10" y="2010"></tspan>
-<tspan x="10" y="2026">browserTest - merging test-report from /home/travis/build/npmdoc/node-npmdoc-ionic/tmp/test-repo\</tspan>
-<tspan x="10" y="2042">rt.npmTest.browser.%2F.json</tspan>
+<tspan x="10" y="1962">[node test-case 5 of 6 passed] - testCase_webpage_default</tspan>
+<tspan x="10" y="1978">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build\</tspan>
+<tspan x="10" y="1994">/screenCapture.npmTest.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-ionic%2Ftmp%2Fbui\</tspan>
+<tspan x="10" y="2010">ld%2Fapidoc.html.html</tspan>
+<tspan x="10" y="2026"></tspan>
+<tspan x="10" y="2042">browserTest - exit-code 0 - /home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build/apidoc.html</tspan>
 <tspan x="10" y="2058"></tspan>
-<tspan x="10" y="2074">[node test-case 6 of 6 passed] - testCase_webpage_default</tspan>
+<tspan x="10" y="2074">[node test-case 6 of 6 passed] - testCase_buildApidoc_default</tspan>
 <tspan x="10" y="2090">--------------------------|-----------|-----------|-----------|-----------|</tspan>
 <tspan x="10" y="2106">File                      |   % Stmts |% Branches |   % Funcs |   % Lines |</tspan>
 <tspan x="10" y="2122">--------------------------|-----------|-----------|-----------|-----------|</tspan>
@@ -147,11 +147,11 @@
 <tspan x="10" y="2314">port</tspan>
 <tspan x="10" y="2330"></tspan>
 <tspan x="10" y="2346">-------------------------------------------------------</tspan>
-<tspan x="10" y="2362">| test-report - npmTest - node - linux v6.10.2 - 2017-04-08T10:16:12.016Z</tspan>
-<tspan x="10" y="2378">|   17468 ms            0 failed        6 passed      |</tspan>
+<tspan x="10" y="2362">| test-report - npmTest - node - linux v6.10.2 - 2017-04-08T10:19:37.822Z</tspan>
+<tspan x="10" y="2378">|   17302 ms            0 failed        6 passed      |</tspan>
 <tspan x="10" y="2394">-------------------------------------------------------</tspan>
-<tspan x="10" y="2410">| test-report - npmdoc - node - linux v6.10.2 - 2017-04-08T10:15:50.328Z</tspan>
-<tspan x="10" y="2426">|   17255 ms            0 failed        1 passed      |</tspan>
+<tspan x="10" y="2410">| test-report - npmdoc - node - linux v6.10.2 - 2017-04-08T10:18:58.966Z</tspan>
+<tspan x="10" y="2426">|   17043 ms            0 failed        1 passed      |</tspan>
 <tspan x="10" y="2442">-------------------------------------------------------</tspan>
 <tspan x="10" y="2458"></tspan>
 <tspan x="10" y="2474">created test-report file:///home/travis/build/npmdoc/node-npmdoc-ionic/tmp/build/test-report.htm\</tspan>
@@ -161,6 +161,6 @@
 <tspan x="10" y="2538">npmTest - 0 failed tests</tspan>
 <tspan x="10" y="2554"></tspan>
 <tspan x="10" y="2570"></tspan>
-<tspan x="10" y="2586">[MODE_BUILD=npmTest] - 2017-04-08T10:16:31Z - EXIT_CODE - 0</tspan>
+<tspan x="10" y="2586">[MODE_BUILD=npmTest] - 2017-04-08T10:19:56Z - EXIT_CODE - 0</tspan>
 </text>
 </svg>
