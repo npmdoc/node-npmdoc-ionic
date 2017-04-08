@@ -1,9 +1,9 @@
-# api documentation for  [ionic (v2.2.2-201704072020-201704072021-201704072022)](http://ionicframework.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-ionic.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ionic) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ionic.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ionic)
+# api documentation for  [ionic (v2.2.2-201704081015-201704081016-201704081016)](http://ionicframework.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-ionic.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ionic) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ionic.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ionic)
 #### A tool for creating and developing Ionic Framework mobile apps.
 
 [![NPM](https://nodei.co/npm/ionic.png?downloads=true)](https://www.npmjs.com/package/ionic)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-ionic/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-ionic%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ionic/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-ionic/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-ionic%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ionic/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-ionic/build/screenCapture.npmPackageListing.svg)
 
@@ -17,7 +17,7 @@
 
 {
     "name": "ionic",
-    "version": "2.2.2-201704072020-201704072021-201704072022",
+    "version": "2.2.2-201704081015-201704081016-201704081016",
     "preferGlobal": true,
     "description": "A tool for creating and developing Ionic Framework mobile apps.",
     "homepage": "http://ionicframework.com/",
