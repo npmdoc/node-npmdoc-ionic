@@ -1,9 +1,14 @@
-# api documentation for  [ionic (v2.2.2-201704081019-201704081019-201704081019)](http://ionicframework.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-ionic.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ionic) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ionic.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ionic)
+# npmdoc-ionic
+
+#### api documentation for  [ionic (v2.2.2-201704202002-201704202002)](http://ionicframework.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-ionic.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ionic) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ionic.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ionic)
+
 #### A tool for creating and developing Ionic Framework mobile apps.
 
-[![NPM](https://nodei.co/npm/ionic.png?downloads=true)](https://www.npmjs.com/package/ionic)
+[![NPM](https://nodei.co/npm/ionic.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ionic)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-ionic/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-ionic%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ionic/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-ionic/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-ionic/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-ionic/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ionic/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-ionic/build/screenCapture.npmPackageListing.svg)
 
@@ -17,7 +22,7 @@
 
 {
     "name": "ionic",
-    "version": "2.2.2-201704081019-201704081019-201704081019",
+    "version": "2.2.2-201704202002-201704202002",
     "preferGlobal": true,
     "description": "A tool for creating and developing Ionic Framework mobile apps.",
     "homepage": "http://ionicframework.com/",
@@ -47,33 +52,32 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/driftyco/ionic-cli.git"
+        "url": "https://github.com/driftyco/ionic-cli.git"
     },
     "contributors": [
         {
             "name": "Max Lynch",
-            "email": "max@ionic.io",
-            "url": "https://twitter.com/maxlynch"
+            "web": "https://twitter.com/maxlynch"
         },
         {
             "name": "Peter Collins",
-            "url": "https://twitter.com/SomethingNew2_0"
+            "web": "https://twitter.com/SomethingNew2_0"
         },
         {
             "name": "Adam Bradley",
-            "url": "https://twitter.com/adamdbradley"
+            "web": "https://twitter.com/adamdbradley"
         },
         {
             "name": "Josh Bavari",
-            "url": "https://twitter.com/jbavari"
+            "web": "https://twitter.com/jbavari"
         },
         {
             "name": "Tim Lancina",
-            "url": "https://twitter.com/timlancina"
+            "web": "https://twitter.com/timlancina"
         },
         {
             "name": "Josh Thomas",
-            "url": "https://twitter.com/jthoms1"
+            "web": "https://twitter.com/jthoms1"
         }
     ],
     "license": "MIT",
@@ -113,11 +117,7 @@
         "mock-require": "1.3.0",
         "rewire": "2.5.1"
     },
-    "gitHead": "ebde0f5507a020a0f1b83061baf71e047a378801",
-    "bugs": {
-        "url": "https://github.com/driftyco/ionic-cli/issues"
-    },
-    "bundleDependencies": [
+    "bundledDependencies": [
         "cli-table",
         "chalk",
         "cross-spawn",
@@ -140,55 +140,9 @@
         "shelljs",
         "underscore",
         "unzip"
-    ],
-    "dist": {
-        "shasum": "3890117c43f2cf6719a3b9063c928420d1762f41",
-        "tarball": "https://registry.npmjs.org/ionic/-/ionic-2.2.2.tgz"
-    },
-    "maintainers": [
-        {
-            "name": "brandyscarney",
-            "email": "brandy@ionic.io"
-        },
-        {
-            "name": "drifty",
-            "email": "max@drifty.com"
-        },
-        {
-            "name": "drygh",
-            "email": "drew.rygh@gmail.com"
-        },
-        {
-            "name": "dwieeb",
-            "email": "dwieeb@gmail.com"
-        },
-        {
-            "name": "ericb",
-            "email": "eric@hellouser.net"
-        },
-        {
-            "name": "jthoms1",
-            "email": "jthoms1@gmail.com"
-        },
-        {
-            "name": "tlancina",
-            "email": "tim@ionic.io"
-        }
-    ],
-    "directories": {},
-    "readme": "ERROR: No README data found!"
+    ]
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module ionic](#apidoc.module.ionic)
-
-
-
-# <a name="apidoc.module.ionic"></a>[module ionic](#apidoc.module.ionic)
 
 
 
