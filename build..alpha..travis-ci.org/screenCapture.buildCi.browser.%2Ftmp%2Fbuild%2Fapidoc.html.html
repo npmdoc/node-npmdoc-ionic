@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://ionicframework.com/"
-
-    >ionic (v2.2.2-201704202002-201704202002)</a>
+    <a href="http://ionicframework.com/">ionic (v2.2.2-201704202002-201704202002)</a>
 </h1>
 <h4>A tool for creating and developing Ionic Framework mobile apps.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.ionic">module ionic</a><ol>
 
@@ -2360,13 +2353,13 @@
   if (!fileName) return this;
 
   this.fileName = fileName;
-  if (fileName.indexOf(&#x27;.&#x27;) &#x3c; 0) {
-    this.fileName += &#x27;.data&#x27;;
+  if (fileName.indexOf('.') &lt; 0) {
+    this.fileName += '.data';
   }
 
   this.homeDir = process.env.HOME || process.env.USERPROFILE || process.env.HOMEPATH;
 
-  this.privateDir = path.join(this.homeDir, &#x27;.ionic&#x27;);
+  this.privateDir = path.join(this.homeDir, '.ionic');
 
   if (!fs.existsSync(this.privateDir)) {
     fs.mkdirSync(this.privateDir);
@@ -2480,13 +2473,13 @@
     <li>description and source-code<pre class="apidocCodePre">function run(ionic, argv) {
 
   // This command will be deprecated in the future.
-  var deprecationMsg = &#x27;This command has been &#x27; + chalk.red(&#x27;deprecated&#x27;) + &#x27;.  All &#x27; +
-   &#x27;resources are currently available in NPM and we recommend that you use NPM to manage these.\n&#x27; +
-   &#x27;More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n&#x27;;
+  var deprecationMsg = 'This command has been ' + chalk.red('deprecated') + '.  All ' +
+   'resources are currently available in NPM and we recommend that you use NPM to manage these.\n' +
+   'More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n';
   log.info(chalk.bold(deprecationMsg));
 
   if (!bower.checkForBower()) {
-    appLibUtils.fail(bower.installMessage, &#x27;add&#x27;);
+    appLibUtils.fail(bower.installMessage, 'add');
     return;
   }
 
@@ -2498,7 +2491,7 @@
     installBowerComponent(componentName);
   } catch (error) {
     var errorMessage = error.message ? error.message : error;
-    appLibUtils.fail(errorMessage, &#x27;service&#x27;);
+    appLibUtils.fail(errorMessage, 'service');
   }
 
   // Inject the component into our index.html, if necessary, and save the app_id
@@ -2509,8 +2502,8 @@
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -2546,16 +2539,16 @@ module.exports = function ionic(ionicArgs) {
 
   // reset any address configs
   var ionConfig = IonicConfig.load();
-  ionConfig.set(&#x27;ionicServeAddress&#x27;, null);
-  ionConfig.set(&#x27;platformServeAddress&#x27;, null);
+  ionConfig.set('ionicServeAddress', null);
+  ionConfig.set('platformServeAddress', null);
   return Serve.getAddress({ isAddressCmd: true });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -2583,9 +2576,9 @@ module.exports = function ionic(ionicArgs) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function checkForBower() {
   try {
-    var result = childProcess.execSync(&#x27;bower -v&#x27;, { silent: true, encoding: &#x27;utf8&#x27; });
-    if (result.indexOf(&#x27;command not found&#x27;) === -1 &#x26;&#x26;
-        result.indexOf(&#x27;not recognized&#x27;) === -1) {
+    var result = childProcess.execSync('bower -v', { silent: true, encoding: 'utf8' });
+    if (result.indexOf('command not found') === -1 &amp;&amp;
+        result.indexOf('not recognized') === -1) {
       return true;
     }
   } catch (ex) {} // eslint-disable-line no-empty
@@ -2594,13 +2587,13 @@ module.exports = function ionic(ionicArgs) {
     <li>example usage<pre class="apidocCodePre">...
 
 // This command will be deprecated in the future.
-var deprecationMsg = &#x27;This command has been &#x27; + chalk.red(&#x27;deprecated&#x27;) + &#x27;.  All &#x27; +
- &#x27;resources are currently available in NPM and we recommend that you use NPM to manage these.\n&#x27; +
- &#x27;More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n&#x27;;
+var deprecationMsg = 'This command has been ' + chalk.red('deprecated') + '.  All ' +
+ 'resources are currently available in NPM and we recommend that you use NPM to manage these.\n' +
+ 'More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n';
 log.info(chalk.bold(deprecationMsg));
 
 if (!bower.<span class="apidocCodeKeywordSpan">checkForBower</span>()) {
-  appLibUtils.fail(bower.installMessage, &#x27;add&#x27;);
+  appLibUtils.fail(bower.installMessage, 'add');
   return;
 }
 
@@ -2619,7 +2612,7 @@ var ioSet = false;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function getData() {
-  var bowerFilePath = path.resolve(&#x27;bower.json&#x27;);
+  var bowerFilePath = path.resolve('bower.json');
 
   try {
     if (fs.existsSync(bowerFilePath)) {
@@ -2630,21 +2623,21 @@ var ioSet = false;
   }
 
   return {
-    name: &#x27;HelloIonic&#x27;,
-    private: &#x27;true&#x27;
+    name: 'HelloIonic',
+    private: 'true'
   };
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var fs = require(&#x27;fs&#x27;);
-var path = require(&#x27;path&#x27;);
-var childProcess = require(&#x27;child_process&#x27;);
-var IonicAppLib = require(&#x27;ionic-app-lib&#x27;);
+var fs = require('fs');
+var path = require('path');
+var childProcess = require('child_process');
+var IonicAppLib = require('ionic-app-lib');
 var log = IonicAppLib.logging.logger;
 
 function setIonicVersion(newVersion) {
 var bowerData = this.<span class="apidocCodeKeywordSpan">getData</span>();
 if (!bowerData.devDependencies) bowerData.devDependencies = {};
-bowerData.devDependencies.ionic = &#x27;driftyco/ionic-bower#&#x27; + newVersion;
+bowerData.devDependencies.ionic = 'driftyco/ionic-bower#' + newVersion;
 this.saveData(bowerData);
 }
 
@@ -2664,20 +2657,20 @@ var bowerData = this.getData();
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function saveData(bowerData) {
   try {
-    var bowerFilePath = path.resolve(&#x27;bower.json&#x27;);
+    var bowerFilePath = path.resolve('bower.json');
     fs.writeFileSync(bowerFilePath, JSON.stringify(bowerData, null, 2));
   } catch (e) {
-    log.error(chalk.red.bold(&#x27;Error saving &#x27; + bowerFilePath + &#x27;: &#x27; + e));
+    log.error(chalk.red.bold('Error saving ' + bowerFilePath + ': ' + e));
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var IonicAppLib = require(&#x27;ionic-app-lib&#x27;);
+var IonicAppLib = require('ionic-app-lib');
 var log = IonicAppLib.logging.logger;
 
 function setIonicVersion(newVersion) {
   var bowerData = this.getData();
   if (!bowerData.devDependencies) bowerData.devDependencies = {};
-  bowerData.devDependencies.ionic = &#x27;driftyco/ionic-bower#&#x27; + newVersion;
+  bowerData.devDependencies.ionic = 'driftyco/ionic-bower#' + newVersion;
   this.<span class="apidocCodeKeywordSpan">saveData</span>(bowerData);
 }
 
@@ -2718,25 +2711,25 @@ function setAppName(newAppName) {
     <li>description and source-code<pre class="apidocCodePre">function setIonicVersion(newVersion) {
   var bowerData = this.getData();
   if (!bowerData.devDependencies) bowerData.devDependencies = {};
-  bowerData.devDependencies.ionic = &#x27;driftyco/ionic-bower#&#x27; + newVersion;
+  bowerData.devDependencies.ionic = 'driftyco/ionic-bower#' + newVersion;
   this.saveData(bowerData);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
     }
 
-    log.info(chalk.bold.green(&#x27;Ionic version updated to: &#x27;) + chalk.bold(data.versionData.version_number));
+    log.info(chalk.bold.green('Ionic version updated to: ') + chalk.bold(data.versionData.version_number));
 
     writeVersionData(data);
 
-    var ionicBower = require(&#x27;../utils/bower&#x27;).IonicBower;
+    var ionicBower = require('../utils/bower').IonicBower;
     ionicBower.<span class="apidocCodeKeywordSpan">setIonicVersion</span>(data.versionData.version_number);
 
   } catch (e) {
-    log.error(&#x27;updateFiles Error: &#x27; + e);
+    log.error('updateFiles Error: ' + e);
   }
 });
-writeStream.on(&#x27;error&#x27;, function(err) {
-  log.error(&#x27;updateFiles writeStream: &#x27; + err);
+writeStream.on('error', function(err) {
+  log.error('updateFiles writeStream: ' + err);
 ...</pre></li>
     </ul>
 
@@ -2758,28 +2751,28 @@ writeStream.on(&#x27;error&#x27;, function(err) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function attachErrorHandling() {
   appLibUtils.errorHandler = function errorHandler(msg) {
-    log.debug(&#x27;Cli.appLibUtils.errorHandler msg&#x27;, msg, typeof msg);
-    var stack = typeof msg == &#x27;string&#x27; ? &#x27;&#x27; : msg.stack;
-    var errorMessage = typeof msg == &#x27;string&#x27; ? msg : msg.message;
+    log.debug('Cli.appLibUtils.errorHandler msg', msg, typeof msg);
+    var stack = typeof msg == 'string' ? '' : msg.stack;
+    var errorMessage = typeof msg == 'string' ? msg : msg.message;
     var promise = Q();
     if (msg) {
       promise = Info.gatherInfo().then(function(info) {
         var ionicCliVersion = info.ionic_cli;
-        if (stack &#x26;&#x26; stack.length &#x3e; 0) {
-          process.stderr.write(&#x27;\n&#x27; + chalk.bold(stack) + &#x27;\n\n&#x27;);
+        if (stack &amp;&amp; stack.length &gt; 0) {
+          process.stderr.write('\n' + chalk.bold(stack) + '\n\n');
         }
-        process.stderr.write(&#x27;\n&#x27; + chalk.bold(errorMessage));
-        process.stderr.write(chalk.bold(&#x27; (CLI v&#x27; + ionicCliVersion + &#x27;)&#x27;) + &#x27;\n&#x27;);
+        process.stderr.write('\n' + chalk.bold(errorMessage));
+        process.stderr.write(chalk.bold(' (CLI v' + ionicCliVersion + ')') + '\n');
 
         Info.printInfo(info);
       });
     }
     promise.then(function() {
-      process.stderr.write(&#x27;\n&#x27;);
+      process.stderr.write('\n');
       process.exit(1);
-      return &#x27;&#x27;;
+      return '';
     }).catch(function(ex) {
-      console.log(&#x27;errorHandler had an error&#x27;, ex);
+      console.log('errorHandler had an error', ex);
       console.log(ex.stack);
     });
   };
@@ -2796,12 +2789,12 @@ var taskList;
 
 Cli.<span class="apidocCodeKeywordSpan">attachErrorHandling</span>();
 
-process.on(&#x27;exit&#x27;, function() {
+process.on('exit', function() {
   Cli.printVersionWarning(settings.version, Cli.npmVersion);
 });
 
 /*
- * Print version if &#x27;--version&#x27; or &#x27;--v&#x27; is an option
+ * Print version if '--version' or '--v' is an option
 ...</pre></li>
     </ul>
 
@@ -2818,31 +2811,31 @@ process.on(&#x27;exit&#x27;, function() {
   var resultsDeferred = Q.defer();
 
   try {
-    if (settingsVersion.indexOf(&#x27;beta&#x27;) &#x3e; -1 || settingsVersion.indexOf(&#x27;alpha&#x27;) &#x3e; -1) {
+    if (settingsVersion.indexOf('beta') &gt; -1 || settingsVersion.indexOf('alpha') &gt; -1) {
 
-      // don&#x27;t bother checking if its a beta
+      // don't bother checking if its a beta
       resultsDeferred.resolve();
       return;
     }
 
-    var versionCheck = IonicConfig.get(&#x27;versionCheck&#x27;);
-    if (versionCheck &#x26;&#x26; ((versionCheck + 86400000) &#x3e; Date.now())) {
+    var versionCheck = IonicConfig.get('versionCheck');
+    if (versionCheck &amp;&amp; ((versionCheck + 86400000) &gt; Date.now())) {
 
-      // we&#x27;ve recently checked for the latest version, so don&#x27;t bother again
+      // we've recently checked for the latest version, so don't bother again
       resultsDeferred.resolve();
       return;
     }
 
     var proxy = process.env.PROXY || process.env.http_proxy || null;
-    var request = require(&#x27;request&#x27;);
+    var request = require('request');
 
-    request({ url: &#x27;http://registry.npmjs.org/ionic/latest&#x27;, proxy: proxy }, function(err, res, body) {
+    request({ url: 'http://registry.npmjs.org/ionic/latest', proxy: proxy }, function(err, res, body) {
       if (err) {
         return console.log(err);
       }
       try {
         Cli.npmVersion = JSON.parse(body).version;
-        IonicConfig.set(&#x27;versionCheck&#x27;, Date.now());
+        IonicConfig.set('versionCheck', Date.now());
         IonicConfig.save();
       } catch (e) {
         console.log(e);
@@ -2884,8 +2877,8 @@ Cli.runr = function runr(processArgv) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function doRuntimeCheck(version) {
-  var semver = require(&#x27;semver&#x27;);
-  var lastVersionChecked = IonicConfig.get(&#x27;lastVersionChecked&#x27;);
+  var semver = require('semver');
+  var lastVersionChecked = IonicConfig.get('lastVersionChecked');
   var versionHasBeenChecked;
 
   try {
@@ -2897,7 +2890,7 @@ Cli.runr = function runr(processArgv) {
   if (!lastVersionChecked || !versionHasBeenChecked) {
     return Info.gatherInfo().then(function(info) {
       Info.checkRuntime(info);
-      IonicConfig.set(&#x27;lastVersionChecked&#x27;, version);
+      IonicConfig.set('lastVersionChecked', version);
       IonicConfig.save();
     });
   }
@@ -2969,7 +2962,7 @@ Cli.runr = function runr(processArgv) {
   }
 
   // PluginError
-  if (typeof e.err.showStack === &#x27;boolean&#x27;) {
+  if (typeof e.err.showStack === 'boolean') {
     return e.err.toString();
   }
 
@@ -2983,17 +2976,17 @@ Cli.runr = function runr(processArgv) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   );
-  if (finalTaskNames.indexOf(e.task) &#x3e; -1) {
+  if (finalTaskNames.indexOf(e.task) &gt; -1) {
     log.info();
   }
 });
 
-gulpInst.on(&#x27;task_err&#x27;, function(e) {
+gulpInst.on('task_err', function(e) {
   var msg = Cli.<span class="apidocCodeKeywordSpan">formatGulpError</span>(e);
   var time = prettyTime(e.hrDuration);
   gutil.log(
-    &#x27;\&#x27;&#x27; + chalk.cyan(e.task) + &#x27;\&#x27;&#x27;,
-    chalk.red(&#x27;errored after&#x27;),
+    '\'' + chalk.cyan(e.task) + '\'',
+    chalk.red('errored after'),
     chalk.magenta(time)
   );
   gutil.log(msg);
@@ -3016,7 +3009,7 @@ gulpInst.on(&#x27;task_err&#x27;, function(e) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 /*
- * Print help if &#x27;--help&#x27; or &#x27;-h&#x27; is an option
+ * Print help if '--help' or '-h' is an option
  * TODO: help should probably be a command and option on commands
  *       $ ionic help start (ALREADY WORKS)
  *       $ ionic start --help
@@ -3057,8 +3050,8 @@ return appLibUtils.<span class="apidocCodeKeywordSpan">getContentSrc</span>(proc
 };
 
 Cli.doRuntimeCheck = function doRuntimeCheck(version) {
-var semver = require(&#x27;semver&#x27;);
-var lastVersionChecked = IonicConfig.get(&#x27;lastVersionChecked&#x27;);
+var semver = require('semver');
+var lastVersionChecked = IonicConfig.get('lastVersionChecked');
 var versionHasBeenChecked;
 ...</pre></li>
     </ul>
@@ -3074,19 +3067,19 @@ var versionHasBeenChecked;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function getListOfBooleanOptions(taskOptionsObj) {
 
-  if (typeof taskOptionsObj !== &#x27;object&#x27; || Object.keys(taskOptionsObj) === 0) {
+  if (typeof taskOptionsObj !== 'object' || Object.keys(taskOptionsObj) === 0) {
     return [];
   }
 
   return Object.keys(taskOptionsObj)
     .filter(function(key) {
-      return typeof taskOptionsObj[key] !== &#x27;string&#x27;;
+      return typeof taskOptionsObj[key] !== 'string';
     })
     .reduce(function(list, key) {
       var keyItems = key
-        .split(&#x27;|&#x27;)
+        .split('|')
         .map(function(item) {
-          return item.replace(/^-{1,2}/, &#x27;&#x27;);
+          return item.replace(/^-{1,2}/, '');
         });
       return list.concat(keyItems);
     }, []);
@@ -3133,15 +3126,15 @@ argv = optimist(rawCliArguments)
   return task;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  log.info(&#x27;Successful stats opt-out&#x27;);
+  log.info('Successful stats opt-out');
   return Q.fcall(function() {
-    return &#x27;saved&#x27;;
+    return 'saved';
   });
 }
 
 var taskName = argv._[0];
 var task = Cli.<span class="apidocCodeKeywordSpan">getTaskSettingsByName</span>(taskName);
-log.debug(&#x27;Task:&#x27;, task);
+log.debug('Task:', task);
 
 // If no task is found then just provide the list of tasks available
 if (!task) {
@@ -3161,8 +3154,8 @@ if (!task) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function handleUncaughtExceptions(err) {
-  log.error(chalk.red.bold(&#x27;An uncaught exception occurred and has been reported to Ionic&#x27;));
-  var errorMessage = typeof err === &#x27;string&#x27; ? err : err.message;
+  log.error(chalk.red.bold('An uncaught exception occurred and has been reported to Ionic'));
+  var errorMessage = typeof err === 'string' ? err : err.message;
   appLibUtils.errorHandler(errorMessage);
   process.exit(1);
 }</pre></li>
@@ -3187,14 +3180,14 @@ if (!task) {
 
 if (!gulpLoaded) {
 
-  // warn if no build file and it&#x27;s a command that requires a build step
+  // warn if no build file and it's a command that requires a build step
   // but still run the command with no hooks
-  if (Cli.<span class="apidocCodeKeywordSpan">isBuildCommand</span>(taskName) &#x26;&#x26; argv.v2 &#x26;&#x26; !npmScripts) {
-    log.warn(&#x27;WARN: No build file found!&#x27;);
-    log.warn(&#x27;If your app requires a build step, you may want to ensure it runs before &#x27; + taskName + &#x27;.\n&#x27;);
+  if (Cli.<span class="apidocCodeKeywordSpan">isBuildCommand</span>(taskName) &amp;&amp; argv.v2 &amp;&amp; !npmScripts) {
+    log.warn('WARN: No build file found!');
+    log.warn('If your app requires a build step, you may want to ensure it runs before ' + taskName + '.\n');
   }
   if (!npmScripts) {
-    log.debug(&#x27;No gulpfile found, not running gulp hooks&#x27;);
+    log.debug('No gulpfile found, not running gulp hooks');
   }
 }
 ...</pre></li>
@@ -3212,14 +3205,14 @@ if (!gulpLoaded) {
     <li>description and source-code<pre class="apidocCodePre">function loadGulpfile() {
 
   // TODO add babel support?
-  var names = [&#x27;gulpfile.js&#x27;, &#x27;Gulpfile.js&#x27;];
-  for (var i = 0, ii = names.length; i &#x3c; ii; i += 1) {
+  var names = ['gulpfile.js', 'Gulpfile.js'];
+  for (var i = 0, ii = names.length; i &lt; ii; i += 1) {
     try {
       require(path.resolve(process.cwd(), names[i]));
-      log.verbose(&#x27;Gulpfile found&#x27;);
+      log.verbose('Gulpfile found');
       return true;
     } catch (e) {
-      if (e.code === &#x27;MODULE_NOT_FOUND&#x27; &#x26;&#x26; e.message.indexOf(names[i]) !== -1) {
+      if (e.code === 'MODULE_NOT_FOUND' &amp;&amp; e.message.indexOf(names[i]) !== -1) {
 
         // ignore missing gulpfile
         continue;
@@ -3239,10 +3232,10 @@ var npmScripts = Cli.loadNpmScripts();
 try {
   var gulpLoaded = Cli.<span class="apidocCodeKeywordSpan">loadGulpfile</span>();
 } catch (e) {
-  if (e.code === &#x27;MODULE_NOT_FOUND&#x27;) {
-    log.info(&#x27;Uh oh! Looks like you\&#x27;re missing a module in your gulpfile:&#x27;);
+  if (e.code === 'MODULE_NOT_FOUND') {
+    log.info('Uh oh! Looks like you\'re missing a module in your gulpfile:');
     log.error(e.message);
-    log.info(&#x27;\nDo you need to run `npm install`?\n&#x27;);
+    log.info('\nDo you need to run `npm install`?\n');
     process.exit(1);
   }
 ...</pre></li>
@@ -3258,11 +3251,11 @@ try {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function loadNpmScripts() {
-  var fileName = &#x27;package.json&#x27;;
+  var fileName = 'package.json';
 
   try {
     var packageFile = require(path.resolve(process.cwd(), fileName));
-    log.verbose(&#x27;Package.json found scripts:&#x27;, packageFile.scripts);
+    log.verbose('Package.json found scripts:', packageFile.scripts);
     return packageFile.scripts;
   } catch (e) {
     throw e;
@@ -3270,7 +3263,7 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   }
-  log.debug(&#x27;node_modules directory not found, not running gulp hooks&#x27;);
+  log.debug('node_modules directory not found, not running gulp hooks');
 
   return Q.fcall(task.run.bind(task), Cli, argv, rawCliArguments);
 }
@@ -3281,8 +3274,8 @@ var npmScripts = Cli.<span class="apidocCodeKeywordSpan">loadNpmScripts</span>()
 try {
   var gulpLoaded = Cli.loadGulpfile();
 } catch (e) {
-  if (e.code === &#x27;MODULE_NOT_FOUND&#x27;) {
-    log.info(&#x27;Uh oh! Looks like you\&#x27;re missing a module in your gulpfile:&#x27;);
+  if (e.code === 'MODULE_NOT_FOUND') {
+    log.info('Uh oh! Looks like you\'re missing a module in your gulpfile:');
     log.error(e.message);
 ...</pre></li>
     </ul>
@@ -3297,52 +3290,52 @@ try {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function logEvents(gulpInst, finalTaskNames) {
-  var prettyTime = require(&#x27;pretty-hrtime&#x27;);
-  var gutil = require(&#x27;gulp-util&#x27;);
+  var prettyTime = require('pretty-hrtime');
+  var gutil = require('gulp-util');
 
-  gulpInst.on(&#x27;task_start&#x27;, function(e) {
+  gulpInst.on('task_start', function(e) {
 
     // TODO: batch these
     // so when 5 tasks start at once it only logs one time with all 5
-    gutil.log(&#x27;Starting&#x27;, &#x27;\&#x27;&#x27; + chalk.cyan(e.task) + &#x27;\&#x27;...&#x27;);
+    gutil.log('Starting', '\'' + chalk.cyan(e.task) + '\'...');
   });
 
-  gulpInst.on(&#x27;task_stop&#x27;, function(e) {
+  gulpInst.on('task_stop', function(e) {
     var time = prettyTime(e.hrDuration);
     gutil.log(
-      &#x27;Finished&#x27;, &#x27;\&#x27;&#x27; + chalk.cyan(e.task) + &#x27;\&#x27;&#x27;,
-      &#x27;after&#x27;, chalk.magenta(time)
+      'Finished', '\'' + chalk.cyan(e.task) + '\'',
+      'after', chalk.magenta(time)
     );
-    if (finalTaskNames.indexOf(e.task) &#x3e; -1) {
+    if (finalTaskNames.indexOf(e.task) &gt; -1) {
       log.info();
     }
   });
 
-  gulpInst.on(&#x27;task_err&#x27;, function(e) {
+  gulpInst.on('task_err', function(e) {
     var msg = Cli.formatGulpError(e);
     var time = prettyTime(e.hrDuration);
     gutil.log(
-      &#x27;\&#x27;&#x27; + chalk.cyan(e.task) + &#x27;\&#x27;&#x27;,
-      chalk.red(&#x27;errored after&#x27;),
+      '\'' + chalk.cyan(e.task) + '\'',
+      chalk.red('errored after'),
       chalk.magenta(time)
     );
     gutil.log(msg);
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  // Empty gulpfile (or one that doesn&#x27;t require gulp?), and no gulp
-  log.error(chalk.red(&#x27;\nGulpfile detected, but gulp is not installed&#x27;));
-  log.error(chalk.red(&#x27;Do you need to run `npm install`?\n&#x27;));
+  // Empty gulpfile (or one that doesn't require gulp?), and no gulp
+  log.error(chalk.red('\nGulpfile detected, but gulp is not installed'));
+  log.error(chalk.red('Do you need to run `npm install`?\n'));
   return process.exit(1);
 }
 
 // setup gulp logging
 Cli.<span class="apidocCodeKeywordSpan">logEvents</span>(gulp, [beforeHook, afterHook]);
 
-// if there is no before hook there&#x27;s no need to run gulp
+// if there is no before hook there's no need to run gulp
 var beforeHookPromise = Q(true);
 if (gulp.tasks[beforeHook]) {
-  log.info(&#x27;\nRunning \&#x27;&#x27; + beforeHook + &#x27;\&#x27; gulp task before &#x27; + cmdName);
+  log.info('\nRunning \'' + beforeHook + '\' gulp task before ' + cmdName);
   beforeHookPromise = Cli.runGulpHook(gulp, beforeHook);
 ...</pre></li>
     </ul>
@@ -3357,55 +3350,55 @@ if (gulp.tasks[beforeHook]) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function printNewsUpdates(skipNewsCheck) {
-  if (typeof skipNewsCheck == &#x27;undefined&#x27;) {
+  if (typeof skipNewsCheck == 'undefined') {
     skipNewsCheck = true;
   }
 
   var q = Cli.cliNews = Q.defer();
   var proxy = process.env.PROXY || null;
 
-  var request = require(&#x27;request&#x27;);
-  var monthNames = [&#x27;January&#x27;, &#x27;February&#x27;, &#x27;March&#x27;, &#x27;April&#x27;, &#x27;May&#x27;, &#x27;June&#x27;,
-      &#x27;July&#x27;, &#x27;August&#x27;, &#x27;September&#x27;, &#x27;October&#x27;, &#x27;November&#x27;, &#x27;December&#x27;];
+  var request = require('request');
+  var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'];
   var d = new Date();
 
-  var downloadUrl = &#x27;http://code.ionicframework.com/content/cli-message.json&#x27;;
+  var downloadUrl = 'http://code.ionicframework.com/content/cli-message.json';
   request({ url: downloadUrl, proxy: proxy }, function(err, res, html) {
-    if (!err &#x26;&#x26; res &#x26;&#x26; parseInt(res.statusCode, 10) === 200) {
+    if (!err &amp;&amp; res &amp;&amp; parseInt(res.statusCode, 10) === 200) {
       try {
-        var newsId = IonicConfig.get(&#x27;newsId&#x27;);
+        var newsId = IonicConfig.get('newsId');
         var messagesJson = JSON.parse(html);
 
-        if (skipNewsCheck || typeof newsId == &#x27;undefined&#x27; || newsId !== messagesJson.id) {
-          IonicConfig.set(&#x27;newsId&#x27;, messagesJson.id);
+        if (skipNewsCheck || typeof newsId == 'undefined' || newsId !== messagesJson.id) {
+          IonicConfig.set('newsId', messagesJson.id);
           IonicConfig.save();
         } else {
           q.resolve();
           return q.promise;
         }
 
-        log.info(&#x27;+---------------------------------------------------------+\n&#x27;);
+        log.info('+---------------------------------------------------------+\n');
 
-        var monthMessage = [&#x27;+ Extra! Extra! Ionic Updates for &#x27;,
+        var monthMessage = ['+ Extra! Extra! Ionic Updates for ',
           monthNames[d.getMonth()],
-          &#x27; &#x27;,
+          ' ',
           d.getFullYear(),
-          &#x27;\n+\n&#x27;].join(&#x27;&#x27;);
+          '\n+\n'].join('');
         log.info(monthMessage);
 
-        for (var i = 0, j = messagesJson.list.length; i &#x3c; j; i += 1) {
+        for (var i = 0, j = messagesJson.list.length; i &lt; j; i += 1) {
           var entry = messagesJson.list[i];
-          var entryMessage = [&#x27;+ &#x27;, entry.name, &#x27;\n&#x27;, &#x27;+ &#x27;, chalk.blue.bold(entry.action), &#x27;\n+\n&#x27;].join(&#x27;&#x27;);
+          var entryMessage = ['+ ', entry.name, '\n', '+ ', chalk.blue.bold(entry.action), '\n+\n'].join('');
           log.info(entryMessage);
         }
-        log.info(chalk.green(&#x27;+---------------------------------------------------------+\n&#x27;));
+        log.info(chalk.green('+---------------------------------------------------------+\n'));
       } catch (ex) {
-        q.reject(&#x27;Error occurred in downloading the CLI messages:&#x27;, ex);
+        q.reject('Error occurred in downloading the CLI messages:', ex);
         appLibUtils.fail(ex);
       }
       q.resolve(messagesJson);
     } else {
-      log.error(&#x27;Unable to fetch&#x27;, err, res.statusCode);
+      log.error('Unable to fetch', err, res.statusCode);
       q.reject(res);
     }
   });
@@ -3424,18 +3417,18 @@ if (gulp.tasks[beforeHook]) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function printVersionWarning(version, npmVersion) {
-  if (version.indexOf(&#x27;beta&#x27;) &#x3e; -1 || version.indexOf(&#x27;alpha&#x27;) &#x3e; -1) {
+  if (version.indexOf('beta') &gt; -1 || version.indexOf('alpha') &gt; -1) {
     return;
   }
 
-  if (npmVersion &#x26;&#x26; npmVersion !== version.trim()) {
-    log.warn(chalk.red(&#x27;\n------------------------------------\n&#x27;));
-    log.warn(chalk.yellow.bold(&#x27;Ionic CLI is out of date:\n&#x27;));
-    log.warn(chalk.yellow(&#x27; * Locally installed version: &#x27; + version + &#x27;\n&#x27;));
-    log.warn(chalk.yellow(&#x27; * Latest version: &#x27; + npmVersion + &#x27;\n&#x27;));
-    log.warn(chalk.yellow(&#x27; * https://github.com/driftyco/ionic-cli/blob/master/CHANGELOG.md\n&#x27;));
-    log.warn(chalk.yellow(&#x27; * Run &#x27;) + chalk.bold(&#x27;npm install -g ionic&#x27;) + chalk.yellow(&#x27; to update\n&#x27;));
-    log.warn(chalk.red(&#x27;------------------------------------\n\n&#x27;));
+  if (npmVersion &amp;&amp; npmVersion !== version.trim()) {
+    log.warn(chalk.red('\n------------------------------------\n'));
+    log.warn(chalk.yellow.bold('Ionic CLI is out of date:\n'));
+    log.warn(chalk.yellow(' * Locally installed version: ' + version + '\n'));
+    log.warn(chalk.yellow(' * Latest version: ' + npmVersion + '\n'));
+    log.warn(chalk.yellow(' * https://github.com/driftyco/ionic-cli/blob/master/CHANGELOG.md\n'));
+    log.warn(chalk.yellow(' * Run ') + chalk.bold('npm install -g ionic') + chalk.yellow(' to update\n'));
+    log.warn(chalk.red('------------------------------------\n\n'));
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -3445,12 +3438,12 @@ var taskList;
 
 Cli.attachErrorHandling();
 
-process.on(&#x27;exit&#x27;, function() {
+process.on('exit', function() {
   Cli.<span class="apidocCodeKeywordSpan">printVersionWarning</span>(settings.version, Cli.npmVersion);
 });
 
 /*
- * Print version if &#x27;--version&#x27; or &#x27;--v&#x27; is an option
+ * Print version if '--version' or '--v' is an option
  * TODO: version should probably also be a command
  *       and this should just map the option to a command
  */
@@ -3467,7 +3460,7 @@ process.on(&#x27;exit&#x27;, function() {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function processExit(code) {
-  if (Cli.cliNews &#x26;&#x26; Cli.cliNews.promise) {
+  if (Cli.cliNews &amp;&amp; Cli.cliNews.promise) {
     Q.all([Cli.latestVersion.promise, Cli.cliNews.promise])
     .then(function() {
       process.exit(code);
@@ -3509,8 +3502,8 @@ process.on(&#x27;exit&#x27;, function() {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -3539,16 +3532,16 @@ module.exports = function ionic(ionicArgs) {
 // setup gulp logging
 Cli.logEvents(gulp, [beforeHook, afterHook]);
 
-// if there is no before hook there&#x27;s no need to run gulp
+// if there is no before hook there's no need to run gulp
 var beforeHookPromise = Q(true);
 if (gulp.tasks[beforeHook]) {
-  log.info(&#x27;\nRunning \&#x27;&#x27; + beforeHook + &#x27;\&#x27; gulp task before &#x27; + cmdName);
+  log.info('\nRunning \'' + beforeHook + '\' gulp task before ' + cmdName);
   beforeHookPromise = Cli.<span class="apidocCodeKeywordSpan">runGulpHook</span>(gulp, beforeHook);
 
-} else if (Cli.isBuildCommand(cmdName) &#x26;&#x26; argv.v2) {
-  log.warn(chalk.yellow(&#x27;WARN: No \&#x27;&#x27; + beforeHook + &#x27;\&#x27; gulp task found!&#x27;));
-  log.warn(chalk.yellow(&#x27;If your app requires a build step, you may want to ensure it runs before &#x27; +
-            cmdName + &#x27;.\n&#x27;));
+} else if (Cli.isBuildCommand(cmdName) &amp;&amp; argv.v2) {
+  log.warn(chalk.yellow('WARN: No \'' + beforeHook + '\' gulp task found!'));
+  log.warn(chalk.yellow('If your app requires a build step, you may want to ensure it runs before ' +
+            cmdName + '.\n'));
 }
 ...</pre></li>
     </ul>
@@ -3563,41 +3556,41 @@ if (gulp.tasks[beforeHook]) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function runNpmHook(hook) {
-  var cmd = &#x27;npm&#x27;;
-  var args = [&#x27;run&#x27;, hook];
-  var command = cmd + &#x27; &#x27; + args;
+  var cmd = 'npm';
+  var args = ['run', hook];
+  var command = cmd + ' ' + args;
 
   // Force colors for all spawned child processes
-  process.env[&#x27;FORCE_COLOR&#x27;] = true;
+  process.env['FORCE_COLOR'] = true;
 
   var q = Q.defer();
-  var crossSpawn = require(&#x27;cross-spawn&#x27;);
+  var crossSpawn = require('cross-spawn');
 
-  var spawned = crossSpawn.spawn(&#x27;npm&#x27;, args, { stdio: [&#x27;pipe&#x27;, &#x27;pipe&#x27;, process.stderr] });
-  spawned.on(&#x27;error&#x27;, function(err) {
-    log.error(&#x27;Unable to run spawn command &#x27; + err);
+  var spawned = crossSpawn.spawn('npm', args, { stdio: ['pipe', 'pipe', process.stderr] });
+  spawned.on('error', function(err) {
+    log.error('Unable to run spawn command ' + err);
   });
   spawned.stdout.pipe(process.stdout);
-  spawned.stdout.on(&#x27;data&#x27;, function(data) {
+  spawned.stdout.on('data', function(data) {
     var dataLines = data.toString().split(EOL);
-    for (var i = 0; i &#x3c; dataLines.length; i += 1) {
+    for (var i = 0; i &lt; dataLines.length; i += 1) {
       if (dataLines[i].length) {
-        if (dataLines[i].indexOf(&#x27;watch ready&#x27;) &#x3e; -1) {
+        if (dataLines[i].indexOf('watch ready') &gt; -1) {
           return q.resolve();
         }
       }
     }
   });
-  spawned.on(&#x27;exit&#x27;, function(code) {
-    log.debug(&#x27;Spawn command&#x27;, command, &#x27;completed&#x27;);
+  spawned.on('exit', function(code) {
+    log.debug('Spawn command', command, 'completed');
     if (code !== 0) {
-      return q.reject(&#x27;There was an error with the spawned command: &#x27; + command);
+      return q.reject('There was an error with the spawned command: ' + command);
     }
     return q.resolve();
   });
 
   // If this process ends ensure that we killed the spawned child
-  process.on(&#x27;exit&#x27;, function() {
+  process.on('exit', function() {
     spawned.kill();
   });
 
@@ -3605,12 +3598,12 @@ if (gulp.tasks[beforeHook]) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-  var packageFile = require(path.resolve(process.cwd() + &#x27;/package.json&#x27;));
+  var packageFile = require(path.resolve(process.cwd() + '/package.json'));
   var scripts = packageFile.scripts;
 
   var beforeHookPromise = Q(true);
   if (scripts[beforeHook]) {
-log.info(&#x27;\nRunning \&#x27;&#x27; + beforeHook + &#x27;\&#x27; npm script before &#x27; + cmdName);
+log.info('\nRunning \'' + beforeHook + '\' npm script before ' + cmdName);
 beforeHookPromise = Cli.<span class="apidocCodeKeywordSpan">runNpmHook</span>(scripts[beforeHook]);
   }
 
@@ -3633,32 +3626,32 @@ beforeHookPromise = Cli.<span class="apidocCodeKeywordSpan">runNpmHook</span>(sc
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function runWithGulp(argv, taskInstance, rawCliArguments) {
   var cmdName = argv._[0];
-  var beforeHook = cmdName + &#x27;:before&#x27;;
-  var afterHook = cmdName + &#x27;:after&#x27;;
+  var beforeHook = cmdName + ':before';
+  var afterHook = cmdName + ':after';
 
   try {
-    var gulp = require(path.resolve(process.cwd() + &#x27;/node_modules/gulp&#x27;));
+    var gulp = require(path.resolve(process.cwd() + '/node_modules/gulp'));
   } catch (e) {
 
-    // Empty gulpfile (or one that doesn&#x27;t require gulp?), and no gulp
-    log.error(chalk.red(&#x27;\nGulpfile detected, but gulp is not installed&#x27;));
-    log.error(chalk.red(&#x27;Do you need to run `npm install`?\n&#x27;));
+    // Empty gulpfile (or one that doesn't require gulp?), and no gulp
+    log.error(chalk.red('\nGulpfile detected, but gulp is not installed'));
+    log.error(chalk.red('Do you need to run `npm install`?\n'));
     return process.exit(1);
   }
 
   // setup gulp logging
   Cli.logEvents(gulp, [beforeHook, afterHook]);
 
-  // if there is no before hook there&#x27;s no need to run gulp
+  // if there is no before hook there's no need to run gulp
   var beforeHookPromise = Q(true);
   if (gulp.tasks[beforeHook]) {
-    log.info(&#x27;\nRunning \&#x27;&#x27; + beforeHook + &#x27;\&#x27; gulp task before &#x27; + cmdName);
+    log.info('\nRunning \'' + beforeHook + '\' gulp task before ' + cmdName);
     beforeHookPromise = Cli.runGulpHook(gulp, beforeHook);
 
-  } else if (Cli.isBuildCommand(cmdName) &#x26;&#x26; argv.v2) {
-    log.warn(chalk.yellow(&#x27;WARN: No \&#x27;&#x27; + beforeHook + &#x27;\&#x27; gulp task found!&#x27;));
-    log.warn(chalk.yellow(&#x27;If your app requires a build step, you may want to ensure it runs before &#x27; +
-              cmdName + &#x27;.\n&#x27;));
+  } else if (Cli.isBuildCommand(cmdName) &amp;&amp; argv.v2) {
+    log.warn(chalk.yellow('WARN: No \'' + beforeHook + '\' gulp task found!'));
+    log.warn(chalk.yellow('If your app requires a build step, you may want to ensure it runs before ' +
+              cmdName + '.\n'));
   }
 
   // run beforeHook
@@ -3672,7 +3665,7 @@ beforeHookPromise = Cli.<span class="apidocCodeKeywordSpan">runNpmHook</span>(sc
   // run afterHook
     .then(function() {
       if (gulp.tasks[afterHook]) {
-        log.info(&#x27;\nRunning \&#x27;&#x27; + afterHook + &#x27;\&#x27; gulp task after &#x27; + cmdName);
+        log.info('\nRunning \'' + afterHook + '\' gulp task after ' + cmdName);
 
         return Cli.runGulpHook(gulp, afterHook);
       }
@@ -3680,11 +3673,11 @@ beforeHookPromise = Cli.<span class="apidocCodeKeywordSpan">runNpmHook</span>(sc
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-    log.debug(&#x27;\nNpm scripts:&#x27;, npmScripts);
-    log.debug(&#x27;Gulpfile found:&#x27;, gulpLoaded, &#x27;\n&#x27;);
+    log.debug('\nNpm scripts:', npmScripts);
+    log.debug('Gulpfile found:', gulpLoaded, '\n');
 
-    if (npmScripts &#x26;&#x26; (npmScripts.hasOwnProperty(taskName + &#x27;:before&#x27;) || npmScripts.hasOwnProperty(taskName
- + &#x27;:after&#x27;))) {
+    if (npmScripts &amp;&amp; (npmScripts.hasOwnProperty(taskName + ':before') || npmScripts.hasOwnProperty(taskName
+ + ':after'))) {
 return Cli.runWithNpmScripts(argv, task, rawCliArguments);
     } else if (gulpLoaded) {
 return Cli.<span class="apidocCodeKeywordSpan">runWithGulp</span>(argv, task, rawCliArguments);
@@ -3692,9 +3685,9 @@ return Cli.<span class="apidocCodeKeywordSpan">runWithGulp</span>(argv, task, ra
 
     if (!gulpLoaded) {
 
-// warn if no build file and it&#x27;s a command that requires a build step
+// warn if no build file and it's a command that requires a build step
 // but still run the command with no hooks
-if (Cli.isBuildCommand(taskName) &#x26;&#x26; argv.v2 &#x26;&#x26; !npmScripts) {
+if (Cli.isBuildCommand(taskName) &amp;&amp; argv.v2 &amp;&amp; !npmScripts) {
 ...</pre></li>
     </ul>
 
@@ -3709,15 +3702,15 @@ if (Cli.isBuildCommand(taskName) &#x26;&#x26; argv.v2 &#x26;&#x26; !npmScripts) 
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function runWithNpmScripts(argv, taskInstance, rawCliArguments) {
   var cmdName = argv._[0];
-  var beforeHook = cmdName + &#x27;:before&#x27;;
-  var afterHook = cmdName + &#x27;:after&#x27;;
+  var beforeHook = cmdName + ':before';
+  var afterHook = cmdName + ':after';
 
-  var packageFile = require(path.resolve(process.cwd() + &#x27;/package.json&#x27;));
+  var packageFile = require(path.resolve(process.cwd() + '/package.json'));
   var scripts = packageFile.scripts;
 
   var beforeHookPromise = Q(true);
   if (scripts[beforeHook]) {
-    log.info(&#x27;\nRunning \&#x27;&#x27; + beforeHook + &#x27;\&#x27; npm script before &#x27; + cmdName);
+    log.info('\nRunning \'' + beforeHook + '\' npm script before ' + cmdName);
     beforeHookPromise = Cli.runNpmHook(scripts[beforeHook]);
   }
 
@@ -3732,7 +3725,7 @@ if (Cli.isBuildCommand(taskName) &#x26;&#x26; argv.v2 &#x26;&#x26; !npmScripts) 
     // run afterHook
     .then(function() {
       if (scripts[afterHook]) {
-        log.info(&#x27;\nRunning \&#x27;&#x27; + afterHook + &#x27;\&#x27; npm script before &#x27; + cmdName);
+        log.info('\nRunning \'' + afterHook + '\' npm script before ' + cmdName);
         return Cli.runNpmHook(scripts[afterHook]);
       }
     });
@@ -3741,11 +3734,11 @@ if (Cli.isBuildCommand(taskName) &#x26;&#x26; argv.v2 &#x26;&#x26; !npmScripts) 
 process.exit(1);
     }
 
-    log.debug(&#x27;\nNpm scripts:&#x27;, npmScripts);
-    log.debug(&#x27;Gulpfile found:&#x27;, gulpLoaded, &#x27;\n&#x27;);
+    log.debug('\nNpm scripts:', npmScripts);
+    log.debug('Gulpfile found:', gulpLoaded, '\n');
 
-    if (npmScripts &#x26;&#x26; (npmScripts.hasOwnProperty(taskName + &#x27;:before&#x27;) || npmScripts.hasOwnProperty(taskName
- + &#x27;:after&#x27;))) {
+    if (npmScripts &amp;&amp; (npmScripts.hasOwnProperty(taskName + ':before') || npmScripts.hasOwnProperty(taskName
+ + ':after'))) {
 return Cli.<span class="apidocCodeKeywordSpan">runWithNpmScripts</span>(argv, task, rawCliArguments);
     } else if (gulpLoaded) {
 return Cli.runWithGulp(argv, task, rawCliArguments);
@@ -3753,7 +3746,7 @@ return Cli.runWithGulp(argv, task, rawCliArguments);
 
     if (!gulpLoaded) {
 
-// warn if no build file and it&#x27;s a command that requires a build step
+// warn if no build file and it's a command that requires a build step
 ...</pre></li>
     </ul>
 
@@ -3780,41 +3773,41 @@ return Cli.runWithGulp(argv, task, rawCliArguments);
 
     Cli.attachErrorHandling();
 
-    process.on(&#x27;exit&#x27;, function() {
+    process.on('exit', function() {
       Cli.printVersionWarning(settings.version, Cli.npmVersion);
     });
 
     /*
-     * Print version if &#x27;--version&#x27; or &#x27;--v&#x27; is an option
+     * Print version if '--version' or '--v' is an option
      * TODO: version should probably also be a command
      *       and this should just map the option to a command
      */
-    if ((argv.version || argv.v) &#x26;&#x26; !argv._.length) {
+    if ((argv.version || argv.v) &amp;&amp; !argv._.length) {
       return Q.fcall(Cli.version);
     }
 
     /*
-     * Print ionitron if &#x27;--ionitron&#x27; is an option
+     * Print ionitron if '--ionitron' is an option
      * TODO: ionitron should probably also be a command
      *       and this should just map the option to a command
      */
     if (argv.ionitron) {
-      var Ionitron = require(&#x27;./utils/ionitron&#x27;);
-      var lang = argv.es ? &#x27;es&#x27; : &#x27;en&#x27;;
+      var Ionitron = require('./utils/ionitron');
+      var lang = argv.es ? 'es' : 'en';
       return Q.fcall(Ionitron.print, lang);
     }
 
     /*
-     * Set log level to debug if &#x27;--verbose&#x27; is an option
+     * Set log level to debug if '--verbose' is an option
      * TODO: This might be better to handle the verbose flag
      *       in each individual command
      */
     if (argv.verbose) {
-      log.level = &#x27;debug&#x27;;
+      log.level = 'debug';
     }
 
     /*
-     * Print help if &#x27;--help&#x27; or &#x27;-h&#x27; is an option
+     * Print help if '--help' or '-h' is an option
      * TODO: help should probably be a command and option on commands
      *       $ ionic help start (ALREADY WORKS)
      *       $ ionic start --help
@@ -3828,18 +3821,18 @@ return Cli.runWithGulp(argv, task, rawCliArguments);
      * TODO: Change stats-opt-out to be a command that updates config rather
      * than an option that is passed.
      */
-    if (argv[&#x27;stats-opt-out&#x27;]) {
-      IonicConfig.set(&#x27;statsOptOut&#x27;, true);
+    if (argv['stats-opt-out']) {
+      IonicConfig.set('statsOptOut', true);
       IonicConfig.save();
-      log.info(&#x27;Successful stats opt-out&#x27;);
+      log.info('Successful stats opt-out');
       return Q.fcall(function() {
-        return &#x27;saved&#x27;;
+        return 'saved';
       });
     }
 
     var taskName = argv._[0];
     var task = Cli.getTaskSettingsByName(taskName);
-    log.debug(&#x27;Task:&#x27;, task);
+    log.debug('Task:', task);
 
     // If no task is found then just provide the list of tasks available
     if (!task) {
@@ -3864,16 +3857,16 @@ return Cli.runWithGulp(argv, task, rawCliArguments);
 
     var root = appLibUtils.cdIonicRoot();
     var project = IonicProject.load(root);
-    argv.v2 = project &#x26;&#x26; project.get(&#x27;v2&#x27;);
+    argv.v2 = project &amp;&amp; project.get('v2');
 
     // For v1 projects ignore as this could have been skipped for faster start
-    // and gulp hooks aren&#x27;t required
+    // and gulp hooks aren't required
     // For v2, print a warning as this is most likely not what they want
-    if (!fs.existsSync(&#x27;node_modules&#x27;)) {
+    if (!fs.existsSync('node_modules')) {
       if (argv.v2) {
-        log.warn(chalk.yellow(&#x27;WARN: No node_modules directory found, do you need to run npm install?&#x27;));
+        log.warn(chalk.yellow('WARN: No node_modules directory found, do you need to run npm install?'));
       }
-      log.debug(&#x27;node_modules directory not found, not running gulp hooks&#x27;);
+      log.debug('node_modules directory not found, not running gulp hooks');
 
       return Q.fcall(task.run.bind(task), Cli, argv, rawCliArguments);
     }
@@ -3884,18 +3877,18 @@ return Cli.runWithGulp(argv, task, rawCliArguments);
     try {
       var gulpLoaded = Cli.loadGulpfile();
     } catch (e) {
-      if (e.code === &#x27;MODULE_NOT_FOUND&#x27;) {
-        log.info(&#x27;Uh oh! Looks like you\&#x27;re missing a module in your gulpfile:&#x27;);
+      if (e.code === 'MODULE_NOT_FOUND') {
+        log.info('Uh oh! Looks like you\'re missing a module in your gulpfile:');
         log.error(e.message);
-        log.info(&#x27;\nDo you need to run `npm install`?\n&#x27;);
+        log.info('\nDo you need to run `npm install`?\n');
         process.exit(1);
       }
-      log.error(chalk.red(&#x27;\nThere is an error in your gulpfile: &#x27;));
-      log.error(e.stack + &#x27;\n&#x27;);
+      log.error(chalk.red('\nThere is an error in your gulpfile: '));
+      log.error(e.stack + '\n');
       process.exit(1);
     }
 
-    log.debug(&#x27;\ ...</pre></li>
+    log.debug('\ ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * Before taking any more steps, lets check their
 * environment and display any upgrade warnings
@@ -3924,7 +3917,7 @@ try {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function version() {
-  log.info(settings.version + &#x27;\n&#x27;);
+  log.info(settings.version + '\n');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3978,8 +3971,8 @@ try {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -4016,36 +4009,36 @@ module.exports = function ionic(ionicArgs) {
   }
 
   var set = false;
-  var key = &#x27;&#x27;;
-  var val = &#x27;&#x27;;
+  var key = '';
+  var val = '';
 
-  switch (argv[&#x27;_&#x27;][1]) {
-  case &#x27;build&#x27;:
+  switch (argv['_'][1]) {
+  case 'build':
     return ioLib.writeIoConfig(false, false, true);
-  case &#x27;info&#x27;:
+  case 'info':
     return ioLib.listConfig();
-  case &#x27;set&#x27;:
-  case &#x27;unset&#x27;:
-    if (!argv[&#x27;_&#x27;][2]) {
-      return appLibUtils.fail(&#x22;Invalid syntax, use &#x27;ionic config &#x3c;command&#x3e; key value&#x27;&#x22;);
+  case 'set':
+  case 'unset':
+    if (!argv['_'][2]) {
+      return appLibUtils.fail("Invalid syntax, use 'ionic config &lt;command&gt; key value'");
     }
-    set = argv[&#x27;_&#x27;][1] === &#x27;set&#x27;;
-    key = argv[&#x27;_&#x27;][2];
-    if (argv[&#x27;_&#x27;][3] &#x26;&#x26; set) {
-      val = argv[&#x27;_&#x27;][3];
+    set = argv['_'][1] === 'set';
+    key = argv['_'][2];
+    if (argv['_'][3] &amp;&amp; set) {
+      val = argv['_'][3];
     }
     ioLib.writeIoConfig(key, val, set);
     break;
   default:
-    return appLibUtils.fail(&#x22;Invalid command, must use &#x27;set&#x27;, &#x27;unset&#x27;, &#x27;build&#x27;, or &#x27;info&#x27;&#x22;);
+    return appLibUtils.fail("Invalid command, must use 'set', 'unset', 'build', or 'info'");
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -4077,7 +4070,7 @@ module.exports = function ionic(ionicArgs) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function arePluginsInstalled(baseDir) {
   var deferred = Q.defer();
-  var pluginPath = path.join(baseDir, &#x27;plugins&#x27;);
+  var pluginPath = path.join(baseDir, 'plugins');
 
   try {
     fs.stat(pluginPath, function(err) {
@@ -4103,8 +4096,8 @@ var promiseList = []
   .concat(!cordovaUtils.<span class="apidocCodeKeywordSpan">arePluginsInstalled</span>(appDirectory) ?
     cordovaUtils.installPlugins() :
     Q())
-  .concat(npmScripts.hasIonicScript(&#x27;build&#x27;))
-  .concat(npmScripts.hasIonicScript(&#x27;serve&#x27;));
+  .concat(npmScripts.hasIonicScript('build'))
+  .concat(npmScripts.hasIonicScript('serve'));
 
 return Q.all(promiseList).then(function(results) {
   hasBuildCommand = results[2];
@@ -4124,28 +4117,28 @@ return Q.all(promiseList).then(function(results) {
   var deferred = Q.defer();
   isLiveReload = !!isLiveReload;
 
-  log.debug(&#x27;Executing cordova cli: &#x27; + optionList.join(&#x27; &#x27;));
-  var cordovaProcess = crossSpawn.spawn(&#x27;cordova&#x27;, optionList);
+  log.debug('Executing cordova cli: ' + optionList.join(' '));
+  var cordovaProcess = crossSpawn.spawn('cordova', optionList);
 
-  cordovaProcess.stdout.on(&#x27;data&#x27;, function(data) {
+  cordovaProcess.stdout.on('data', function(data) {
     log.info(data.toString());
   });
 
-  cordovaProcess.stderr.on(&#x27;data&#x27;, function(data) {
+  cordovaProcess.stderr.on('data', function(data) {
     if (data) {
       log.error(chalk.bold(data.toString()));
     }
   });
 
-  cordovaProcess.on(&#x27;close&#x27;, function(code) {
-    if (code &#x3e; 0) {
+  cordovaProcess.on('close', function(code) {
+    if (code &gt; 0) {
       return deferred.reject(code);
     }
     return deferred.resolve();
   });
 
   if (isLiveReload) {
-    cordovaProcess.on(&#x27;exit&#x27;, function() {
+    cordovaProcess.on('exit', function() {
 
       setTimeout(function() {
 
@@ -4159,7 +4152,7 @@ return Q.all(promiseList).then(function(results) {
       }, 5000);
     });
 
-    process.on(&#x27;exit&#x27;, function() {
+    process.on('exit', function() {
 
       // verify it was set back
       ConfigXml.setConfigXml(process.cwd(), {
@@ -4168,19 +4161,19 @@ return Q.all(promiseList).then(function(results) {
       });
     });
 
-    var readLine = require(&#x27;readline&#x27;);
-    if (process.platform === &#x27;win32&#x27;) {
+    var readLine = require('readline');
+    if (process.platform === 'win32') {
       var rl = readLine.createInterface({
         input: process.stdin,
         output: process.stdout
       });
 
-      rl.on(&#x27;SIGINT&#x27;, function() {
-        process.emit(&#x27;SIGINT&#x27;);
+      rl.on('SIGINT', function() {
+        process.emit('SIGINT');
       });
     }
 
-    process.on(&#x27;SIGINT&#x27;, function() {
+    process.on('SIGINT', function() {
       process.exit();
     });
   }
@@ -4218,27 +4211,27 @@ return Q.all(promiseList).then(function(results) {
     <li>description and source-code<pre class="apidocCodePre">function filterArgumentsForCordova(cmdName, argv, rawCliArguments) {
 
   // clean out any cmds that may confuse cordova
-  var port = argv.port || argv.p || &#x27;&#x27;;
-  var liveReloadPort = argv.livereloadport || argv[&#x27;livereload-port&#x27;] || argv.r || &#x27;&#x27;;
+  var port = argv.port || argv.p || '';
+  var liveReloadPort = argv.livereloadport || argv['livereload-port'] || argv.r || '';
   var ignoreCmds = [
-    &#x27;--livereload&#x27;, &#x27;-l&#x27;,
-    &#x27;--consolelogs&#x27;, &#x27;-c&#x27;,
-    &#x27;--serverlogs&#x27;, &#x27;-s&#x27;,
-    &#x27;--port&#x27;, &#x27;-p&#x27;,
-    &#x27;--livereload-port&#x27;,
-    &#x27;-i&#x27;, &#x27;-r&#x27;
+    '--livereload', '-l',
+    '--consolelogs', '-c',
+    '--serverlogs', '-s',
+    '--port', '-p',
+    '--livereload-port',
+    '-i', '-r'
   ];
 
   return rawCliArguments.filter(function(arg, index, fullList) {
 
     // Remove address parameter and the param that follows it
-    if (arg === &#x27;--address&#x27; || fullList[index - 1] === &#x27;--address&#x27;) { return false; }
+    if (arg === '--address' || fullList[index - 1] === '--address') { return false; }
 
     // If arg is equal to what we identifed as the port reject it
-    if (port &#x26;&#x26; parseInt(arg, 10) === parseInt(port, 10)) { return false; }
+    if (port &amp;&amp; parseInt(arg, 10) === parseInt(port, 10)) { return false; }
 
     // If arg is equal to what we identifed as the liveReloadPort reject it
-    if (liveReloadPort &#x26;&#x26; parseInt(arg, 10) === parseInt(liveReloadPort, 10)) { return false; }
+    if (liveReloadPort &amp;&amp; parseInt(arg, 10) === parseInt(liveReloadPort, 10)) { return false; }
 
     // Only return true if the arg is not found in the ignore Cmds list
     return ignoreCmds.indexOf(arg) === -1;
@@ -4273,16 +4266,16 @@ return ConfigXml.setConfigXml(appDirectory, {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function installPlatform(platform) {
-  log.info(chalk.yellow(&#x27;• You\&#x27;re trying to build for &#x27; + platform + &#x27; but don\&#x27;t have the platform installed yet.&#x27;));
-  log.info(&#x27;∆ Installing &#x27; + platform + &#x27; for you.&#x27;);
+  log.info(chalk.yellow('â€¢ You\'re trying to build for ' + platform + ' but don\'t have the platform installed yet.'));
+  log.info('âˆ† Installing ' + platform + ' for you.');
 
-  return promiseSpawn(&#x27;cordova&#x27;, [&#x27;platform&#x27;, &#x27;add&#x27;, platform]).then(function() {
-    log.info(&#x27;√ Installed platform &#x27; + platform);
+  return promiseSpawn('cordova', ['platform', 'add', platform]).then(function() {
+    log.info('âˆš Installed platform ' + platform);
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-if (runPlatform === &#x27;ios&#x27; &#x26;&#x26; os.platform() !== &#x27;darwin&#x27;) {
-  log.error(&#x27;✗ You cannot run iOS unless you are on Mac OSX.&#x27;);
+if (runPlatform === 'ios' &amp;&amp; os.platform() !== 'darwin') {
+  log.error('âœ— You cannot run iOS unless you are on Mac OSX.');
   return Q();
 }
 
@@ -4293,8 +4286,8 @@ var promiseList = []
   .concat(!cordovaUtils.arePluginsInstalled(appDirectory) ?
     cordovaUtils.installPlugins() :
     Q())
-  .concat(npmScripts.hasIonicScript(&#x27;build&#x27;))
-  .concat(npmScripts.hasIonicScript(&#x27;serve&#x27;));
+  .concat(npmScripts.hasIonicScript('build'))
+  .concat(npmScripts.hasIonicScript('serve'));
 ...</pre></li>
     </ul>
 
@@ -4309,17 +4302,17 @@ var promiseList = []
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function installPlugins() {
   var plugins = [
-    &#x27;cordova-plugin-device&#x27;,
-    &#x27;cordova-plugin-console&#x27;,
-    &#x27;cordova-plugin-whitelist&#x27;,
-    &#x27;cordova-plugin-splashscreen&#x27;,
-    &#x27;cordova-plugin-statusbar&#x27;,
-    &#x27;ionic-plugin-keyboard&#x27;
+    'cordova-plugin-device',
+    'cordova-plugin-console',
+    'cordova-plugin-whitelist',
+    'cordova-plugin-splashscreen',
+    'cordova-plugin-statusbar',
+    'ionic-plugin-keyboard'
   ];
 
   return Q.all(plugins.map(function(plugin) {
-    log.info([&#x27;Installing &#x27;, plugin].join(&#x27;&#x27;));
-    return promiseSpawn(&#x27;cordova&#x27;, [&#x27;plugin&#x27;, &#x27;add&#x27;, &#x27;--save&#x27;, plugin]);
+    log.info(['Installing ', plugin].join(''));
+    return promiseSpawn('cordova', ['plugin', 'add', '--save', plugin]);
   }));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -4332,8 +4325,8 @@ var promiseList = []
   .concat(!cordovaUtils.arePluginsInstalled(appDirectory) ?
     cordovaUtils.<span class="apidocCodeKeywordSpan">installPlugins</span>() :
     Q())
-  .concat(npmScripts.hasIonicScript(&#x27;build&#x27;))
-  .concat(npmScripts.hasIonicScript(&#x27;serve&#x27;));
+  .concat(npmScripts.hasIonicScript('build'))
+  .concat(npmScripts.hasIonicScript('serve'));
 
 return Q.all(promiseList).then(function(results) {
   hasBuildCommand = results[2];
@@ -4352,7 +4345,7 @@ return Q.all(promiseList).then(function(results) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isPlatformInstalled(platform, baseDir) {
   var deferred = Q.defer();
-  var platformPath = path.join(baseDir, &#x27;platforms&#x27;, platform);
+  var platformPath = path.join(baseDir, 'platforms', platform);
 
   try {
     fs.stat(platformPath, function(err) {
@@ -4369,8 +4362,8 @@ return Q.all(promiseList).then(function(results) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-if (runPlatform === &#x27;ios&#x27; &#x26;&#x26; os.platform() !== &#x27;darwin&#x27;) {
-  log.error(&#x27;✗ You cannot run iOS unless you are on Mac OSX.&#x27;);
+if (runPlatform === 'ios' &amp;&amp; os.platform() !== 'darwin') {
+  log.error('âœ— You cannot run iOS unless you are on Mac OSX.');
   return Q();
 }
 
@@ -4381,8 +4374,8 @@ var promiseList = []
   .concat(!cordovaUtils.arePluginsInstalled(appDirectory) ?
     cordovaUtils.installPlugins() :
     Q())
-  .concat(npmScripts.hasIonicScript(&#x27;build&#x27;))
-  .concat(npmScripts.hasIonicScript(&#x27;serve&#x27;));
+  .concat(npmScripts.hasIonicScript('build'))
+  .concat(npmScripts.hasIonicScript('serve'));
 ...</pre></li>
     </ul>
 
@@ -4396,7 +4389,7 @@ var promiseList = []
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function setupLiveReload(argv, baseDir) {
-  log.info(chalk.green.bold(&#x27;Setup Live Reload&#x27;));
+  log.info(chalk.green.bold('Setup Live Reload'));
 
   var project = Project.load(baseDir);
   var options = _.extend(Serve.loadSettings(argv, project), {
@@ -4416,8 +4409,8 @@ var promiseList = []
   var promises = [];
 
   if (argv.all) {
-    log.info(&#x27;Defaulting address to 0.0.0.0&#x27;);
-    options.address = &#x27;0.0.0.0&#x27;;
+    log.info('Defaulting address to 0.0.0.0');
+    options.address = '0.0.0.0';
   } else if (argv.address) {
     options.address = argv.address;
   } else {
@@ -4447,7 +4440,7 @@ var promiseList = []
     return options;
   })
   .catch(function(error) {
-    log.info(&#x27;There was an error serving your Ionic application for run&#x27;, error);
+    log.info('There was an error serving your Ionic application for run', error);
     log.info(error.stack);
     throw error;
   });
@@ -4485,14 +4478,14 @@ return ConfigXml.setConfigXml(appDirectory, {
     runLivereload: true,
     isPlatformServe: true
   });
-  options = npmScripts.consolidateOptions([&#x27;port&#x27;, &#x27;p&#x27;], options);
-  options = npmScripts.consolidateOptions([&#x27;livereload-port&#x27;, &#x27;r&#x27;], options);
-  options = npmScripts.consolidateOptions([&#x27;consolelogs&#x27;, &#x27;c&#x27;], options);
-  options = npmScripts.consolidateOptions([&#x27;serverlogs&#x27;, &#x27;s&#x27;], options);
-  options = npmScripts.consolidateOptions([&#x27;livereload&#x27;, &#x27;l&#x27;], options);
+  options = npmScripts.consolidateOptions(['port', 'p'], options);
+  options = npmScripts.consolidateOptions(['livereload-port', 'r'], options);
+  options = npmScripts.consolidateOptions(['consolelogs', 'c'], options);
+  options = npmScripts.consolidateOptions(['serverlogs', 's'], options);
+  options = npmScripts.consolidateOptions(['livereload', 'l'], options);
 
   options.port = options.port || serveUtils.DEFAULT_HTTP_PORT;
-  options[&#x27;livereload-port&#x27;] = options[&#x27;livereload-port&#x27;] || serveUtils.DEFAULT_LIVE_RELOAD_PORT;
+  options['livereload-port'] = options['livereload-port'] || serveUtils.DEFAULT_LIVE_RELOAD_PORT;
 
   return Serve.getAddress(options)
   .then(function() {
@@ -4504,20 +4497,20 @@ return ConfigXml.setConfigXml(appDirectory, {
     options.port = foundPort;
 
     // Check that the liveReload port is available
-    return serveUtils.findClosestOpenPort(options.address, options[&#x27;livereload-port&#x27;]);
+    return serveUtils.findClosestOpenPort(options.address, options['livereload-port']);
   })
   .then(function(foundPort) {
-    options[&#x27;livereload-port&#x27;] = foundPort;
+    options['livereload-port'] = foundPort;
 
     // Execute the serve command from app-scripts
     // Also remove platform from the raw args passed
-    return npmScripts.runIonicScript(&#x27;serve&#x27;,
+    return npmScripts.runIonicScript('serve',
       npmScripts.optionsToArray(options)
 
       // Serve specific options not related to the actual run or emulate code
       .concat([
-        &#x27;--iscordovaserve&#x27;,
-        &#x27;--nobrowser&#x27;
+        '--iscordovaserve',
+        '--nobrowser'
       ])
     );
   })
@@ -4529,9 +4522,9 @@ return ConfigXml.setConfigXml(appDirectory, {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-// If we are running livereload and are using &#x22;ionic:serve&#x22; app-script
+// If we are running livereload and are using "ionic:serve" app-script
 // then configure devServer manually
-if (isLiveReload &#x26;&#x26; hasServeCommand) {
+if (isLiveReload &amp;&amp; hasServeCommand) {
 
   // using app-scripts and livereload is requested
   // Also remove commandName from the rawArgs passed
@@ -4568,17 +4561,17 @@ if (isLiveReload &#x26;&#x26; hasServeCommand) {
   var hasBuildCommand = false;
   var hasServeCommand = false;
 
-  var isLiveReload = argv.livereload || argv[&#x27;live-reload&#x27;] || argv.l || false;
+  var isLiveReload = argv.livereload || argv['live-reload'] || argv.l || false;
 
   // If platform was not passed then add it to the rawArgs
   var runPlatform = argv._[1];
   if (!runPlatform) {
-    runPlatform = &#x27;ios&#x27;;
+    runPlatform = 'ios';
     rawArgs.splice(1, 0, runPlatform);
   }
 
-  if (runPlatform === &#x27;ios&#x27; &#x26;&#x26; os.platform() !== &#x27;darwin&#x27;) {
-    log.error(&#x27;✗ You cannot run iOS unless you are on Mac OSX.&#x27;);
+  if (runPlatform === 'ios' &amp;&amp; os.platform() !== 'darwin') {
+    log.error('âœ— You cannot run iOS unless you are on Mac OSX.');
     return Q();
   }
 
@@ -4589,23 +4582,23 @@ if (isLiveReload &#x26;&#x26; hasServeCommand) {
     .concat(!cordovaUtils.arePluginsInstalled(appDirectory) ?
       cordovaUtils.installPlugins() :
       Q())
-    .concat(npmScripts.hasIonicScript(&#x27;build&#x27;))
-    .concat(npmScripts.hasIonicScript(&#x27;serve&#x27;));
+    .concat(npmScripts.hasIonicScript('build'))
+    .concat(npmScripts.hasIonicScript('serve'));
 
   return Q.all(promiseList).then(function(results) {
     hasBuildCommand = results[2];
     hasServeCommand = results[3];
 
-    if (hasBuildCommand &#x26;&#x26; !(isLiveReload &#x26;&#x26; hasServeCommand)) {
-      return npmScripts.runIonicScript(&#x27;build&#x27;, rawArgs.slice(2));
+    if (hasBuildCommand &amp;&amp; !(isLiveReload &amp;&amp; hasServeCommand)) {
+      return npmScripts.runIonicScript('build', rawArgs.slice(2));
     }
     return Q();
   })
   .then(function() {
 
-    // If we are running livereload and are using &#x22;ionic:serve&#x22; app-script
+    // If we are running livereload and are using "ionic:serve" app-script
     // then configure devServer manually
-    if (isLiveReload &#x26;&#x26; hasServeCommand) {
+    if (isLiveReload &amp;&amp; hasServeCommand) {
 
       // using app-scripts and livereload is requested
       // Also remove commandName from the rawArgs passed
@@ -4637,8 +4630,8 @@ if (isLiveReload &#x26;&#x26; hasServeCommand) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -4674,14 +4667,14 @@ module.exports = function ionic(ionicArgs) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function run(ionic, argv) {
   try {
-    if (!argv.list &#x26;&#x26; argv._.length &#x3c; 3) {
+    if (!argv.list &amp;&amp; argv._.length &lt; 3) {
 
       // TODO should have a mechanism for printing usage on invalid tasks
-      fail(&#x27;Invalid arguments. Usage: ionic generate &#x3c;generator&#x3e; &#x3c;name&#x3e;&#x27;);
+      fail('Invalid arguments. Usage: ionic generate &lt;generator&gt; &lt;name&gt;');
     }
 
     if (!argv.v2) {
-      return fail(&#x27;Generators are only available for Ionic 2 projects&#x27;);
+      return fail('Generators are only available for Ionic 2 projects');
     }
 
     var generator = argv._[1];
@@ -4702,34 +4695,34 @@ module.exports = function ionic(ionicArgs) {
       includeSass: includeSass
     };
 
-    var componentsDir = path.join(process.cwd(), &#x27;src&#x27;, &#x27;components&#x27;);
-    var directivesDir = path.join(process.cwd(), &#x27;src&#x27;, &#x27;components&#x27;);
-    var pagesDir = path.join(process.cwd(), &#x27;src&#x27;, &#x27;pages&#x27;);
-    var pipesDir = path.join(process.cwd(), &#x27;src&#x27;, &#x27;pipes&#x27;);
-    var providersDir = path.join(process.cwd(), &#x27;src&#x27;, &#x27;providers&#x27;);
-    var templateDir = path.join(process.cwd(), &#x27;node_modules&#x27;, &#x27;ionic-angular&#x27;, &#x27;templates&#x27;);
+    var componentsDir = path.join(process.cwd(), 'src', 'components');
+    var directivesDir = path.join(process.cwd(), 'src', 'components');
+    var pagesDir = path.join(process.cwd(), 'src', 'pages');
+    var pipesDir = path.join(process.cwd(), 'src', 'pipes');
+    var providersDir = path.join(process.cwd(), 'src', 'providers');
+    var templateDir = path.join(process.cwd(), 'node_modules', 'ionic-angular', 'templates');
 
-    if (argv.componentsDir &#x26;&#x26; argv.componentsDir.length &#x3e; 0) {
+    if (argv.componentsDir &amp;&amp; argv.componentsDir.length &gt; 0) {
       componentsDir = path.resolve(argv.componentsDir);
     }
 
-    if (argv.directivesDir &#x26;&#x26; argv.directivesDir.length &#x3e; 0) {
+    if (argv.directivesDir &amp;&amp; argv.directivesDir.length &gt; 0) {
       directivesDir = path.resolve(argv.directivesDir);
     }
 
-    if (argv.pagesDir &#x26;&#x26; argv.pagesDir.length &#x3e; 0) {
+    if (argv.pagesDir &amp;&amp; argv.pagesDir.length &gt; 0) {
       pagesDir = path.resolve(argv.pagesDir);
     }
 
-    if (argv.pipesDir &#x26;&#x26; argv.pipesDir.length &#x3e; 0) {
+    if (argv.pipesDir &amp;&amp; argv.pipesDir.length &gt; 0) {
       pipesDir = path.resolve(argv.pipesDir);
     }
 
-    if (argv.providersDir &#x26;&#x26; argv.providersDir.length &#x3e; 0) {
+    if (argv.providersDir &amp;&amp; argv.providersDir.length &gt; 0) {
       providersDir = path.resolve(argv.providersDir);
     }
 
-    if (argv.templateDir &#x26;&#x26; argv.templateDir.length &#x3e; 0) {
+    if (argv.templateDir &amp;&amp; argv.templateDir.length &gt; 0) {
       templateDir = path.resolve(argv.templateDir);
     }
 
@@ -4744,7 +4737,7 @@ module.exports = function ionic(ionicArgs) {
     };
 
     return appGenerator.generate(generatorOptions, projectStructureOptions).catch(function(err) {
-      if (err.message === &#x27;Unknown Generator Type&#x27;) {
+      if (err.message === 'Unknown Generator Type') {
         log.error(err.message);
         appGenerator.printAvailableGenerators();
         return;
@@ -4755,15 +4748,15 @@ module.exports = function ionic(ionicArgs) {
 
 
   } catch (err) {
-    return fail(&#x27;There was an error generating your item:&#x27;, err);
+    return fail('There was an error generating your item:', err);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -4798,10 +4791,10 @@ module.exports = function ionic(ionicArgs) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function run(ionic, argv) {
-  var taskName = argv._[1] ? argv._[1] : &#x27;&#x27;;
+  var taskName = argv._[1] ? argv._[1] : '';
 
   // If no task name is provided then print all help available
-  if (taskName === &#x27;&#x27;) {
+  if (taskName === '') {
     var taskList = ionic.getAllTaskSettings();
     return helpUtil.printTaskListUsage(taskList, ionic.VERSION);
   }
@@ -4812,14 +4805,14 @@ module.exports = function ionic(ionicArgs) {
     return helpUtil.printTaskUsage(task, ionic.VERSION);
   }
 
-  return console.log(chalk.red.bold(&#x27;Command not found.&#x27;));
+  return console.log(chalk.red.bold('Command not found.'));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -4856,29 +4849,29 @@ module.exports = function ionic(ionicArgs) {
   try {
 
     switch (cmd) {
-    case &#x27;add&#x27;:
+    case 'add':
       Hooks.add(process.cwd());
       break;
-    case &#x27;remove&#x27;:
+    case 'remove':
       Hooks.remove(process.cwd());
       break;
-    case &#x27;perm&#x27;:
-    case &#x27;permissions&#x27;:
+    case 'perm':
+    case 'permissions':
       Hooks.setHooksPermission(process.cwd());
       break;
     default:
-      log.error(&#x27;Please supply a command - either add or remove&#x27;);
+      log.error('Please supply a command - either add or remove');
     }
   } catch (ex) {
-    log.error(&#x27;There was an error running the hooks command: &#x27;, ex.stack);
+    log.error('There was an error running the hooks command: ', ex.stack);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -4916,15 +4909,15 @@ module.exports = function ionic(ionicArgs) {
 
     Info.checkRuntime(info);
   }).catch(function(ex) {
-    appLibUtils.fail(&#x27;There was an error retrieving your environment information:&#x27;, ex);
+    appLibUtils.fail('There was an error retrieving your environment information:', ex);
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -4966,16 +4959,16 @@ module.exports = function ionic(ionicArgs) {
   return Login.retrieveLogin()
   .then(function(jar) {
     if (!jar) {
-      log.info(&#x27;No previous login existed. Attempting to log in now.&#x27;);
+      log.info('No previous login existed. Attempting to log in now.');
       return LoginTask.login(argv);
     }
     return jar;
   })
   .then(function(jar) {
-    if (argv[&#x27;_&#x27;][1] === &#x27;init&#x27;) {
+    if (argv['_'][1] === 'init') {
       ioLib.initIoPlatform(process.cwd(), jar);
     } else {
-      appLibUtils.fail(&#x27;Invalid command&#x27;);
+      appLibUtils.fail('Invalid command');
     }
   })
   .catch(function(ex) {
@@ -4986,8 +4979,8 @@ module.exports = function ionic(ionicArgs) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -5020,30 +5013,30 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function print(lang) {
 
   var ionitronPath = path.join(__dirname, ASCII_ART_FILE);
-  var contents = fs.readFileSync(ionitronPath, &#x27;utf8&#x27;);
+  var contents = fs.readFileSync(ionitronPath, 'utf8');
   var messageContent;
 
   switch (lang) {
-  case &#x27;es&#x27;:
+  case 'es':
 
-    // Replace the &#x27;h&#x27; (antenna) by Ñ hahaha&#x27;
-    contents = contents.replace(&#x27;h&#x27;, &#x27;\u00D1&#x27;);
+    // Replace the 'h' (antenna) by Ã‘ hahaha'
+    contents = contents.replace('h', '\u00D1');
     messageContent = [ionitronStatementsEs[Math.floor(Math.random() *
-                                                       (ionitronStatementsEs.length - 0) + 0)]].join(&#x27;&#x27;);
+                                                       (ionitronStatementsEs.length - 0) + 0)]].join('');
     break;
   default:
     messageContent = [ionitronStatements[Math.floor(Math.random() *
-                                                       (ionitronStatements.length - 0) + 0)]].join(&#x27;&#x27;);
+                                                       (ionitronStatements.length - 0) + 0)]].join('');
   }
 
-  var replaceString = &#x27;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&#x27;;
+  var replaceString = '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@';
 
-  if (messageContent.length &#x3c; replaceString.length) {
+  if (messageContent.length &lt; replaceString.length) {
     var diff = (replaceString.length) - messageContent.length;
     var i = 0;
 
-    while (i &#x3c; diff) {
-      messageContent = messageContent + &#x27; &#x27;;
+    while (i &lt; diff) {
+      messageContent = messageContent + ' ';
       i += 1;
     }
   }
@@ -5074,22 +5067,22 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function run(ionic, argv) {
 
   // This command will be deprecated in the future.
-  var deprecationMsg = &#x27;This command has been &#x27; + chalk.red(&#x27;deprecated&#x27;) + &#x27;.  All &#x27; +
-   &#x27;resources are currently available in NPM and we recommend that you use NPM to manage these.\n&#x27; +
-   &#x27;More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n&#x27;;
+  var deprecationMsg = 'This command has been ' + chalk.red('deprecated') + '.  All ' +
+   'resources are currently available in NPM and we recommend that you use NPM to manage these.\n' +
+   'More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n';
   log.info(chalk.bold(deprecationMsg));
 
-  if (!fs.existsSync(path.resolve(&#x27;www&#x27;))) {
-    return appLibUtils.fail(&#x27;&#x22;www&#x22; directory cannot be found. Make sure the working directory &#x27; +
-                      &#x27;is at the top level of an Ionic project.&#x27;, &#x27;lib&#x27;);
+  if (!fs.existsSync(path.resolve('www'))) {
+    return appLibUtils.fail('"www" directory cannot be found. Make sure the working directory ' +
+                      'is at the top level of an Ionic project.', 'lib');
   }
 
   // Gather version data from version.json or bower.json files
   var data = loadVersionData();
 
   // If this is an update command then do an update and exit
-  if (argv._.length &#x3e; 1 &#x26;&#x26;
-      (argv._[1].toLowerCase() === &#x27;update&#x27; || argv._[1].toLowerCase() === &#x27;up&#x27;)) {
+  if (argv._.length &gt; 1 &amp;&amp;
+      (argv._[1].toLowerCase() === 'update' || argv._[1].toLowerCase() === 'up')) {
     return updateLibVersion(data);
   }
 
@@ -5100,8 +5093,8 @@ module.exports = function ionic(ionicArgs) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -5136,32 +5129,32 @@ module.exports = function ionic(ionicArgs) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function run(ionic, argv) {
-  var ionicProjectFile = path.resolve(&#x27;.&#x27;, &#x27;ionic.project&#x27;);
+  var ionicProjectFile = path.resolve('.', 'ionic.project');
 
   if (!fs.existsSync(ionicProjectFile)) {
-    log.error(&#x27;You cannot run this command unless you are in an Ionic Project folder&#x27;);
+    log.error('You cannot run this command unless you are in an Ionic Project folder');
     return;
   }
 
-  if (!argv._[1] &#x26;&#x26; !argv.reset) {
-    log.error(&#x27;Please supply an Ionic App ID with this command or pass the --reset option&#x27;);
+  if (!argv._[1] &amp;&amp; !argv.reset) {
+    log.error('Please supply an Ionic App ID with this command or pass the --reset option');
     return;
   }
 
   if (argv.reset || argv.r) {
-    setAppId(ionic, &#x27;&#x27;);
+    setAppId(ionic, '');
   } else {
     setAppId(ionic, argv._[1]);
   }
 
-  log.info(chalk.green(&#x27;Your Ionic App ID was set&#x27;));
+  log.info(chalk.green('Your Ionic App ID was set'));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -5183,7 +5176,7 @@ module.exports = function ionic(ionicArgs) {
 
   try {
     project = IonicProject.load();
-    project.set(&#x27;app_id&#x27;, appId);
+    project.set('app_id', appId);
     project.save();
   } catch (ex) {
     fail(ex.message);
@@ -5222,24 +5215,24 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function run() {
 
   // This command will be deprecated in the future.
-  var deprecationMsg = &#x27;This command has been &#x27; + chalk.red(&#x27;deprecated&#x27;) + &#x27;.  All &#x27; +
-   &#x27;resources are currently available in NPM and we recommend that you use NPM to manage these.\n&#x27; +
-   &#x27;More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n&#x27;;
+  var deprecationMsg = 'This command has been ' + chalk.red('deprecated') + '.  All ' +
+   'resources are currently available in NPM and we recommend that you use NPM to manage these.\n' +
+   'More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n';
   log.info(chalk.bold(deprecationMsg));
 
   try {
     listComponents();
   } catch (error) {
     var errorMessage = error.message ? error.message : error;
-    appLibUtils.fail(errorMessage, &#x27;list&#x27;);
+    appLibUtils.fail(errorMessage, 'list');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -5275,7 +5268,7 @@ module.exports = function ionic(ionicArgs) {
 
   var promise;
 
-  if (email &#x26;&#x26; password) {
+  if (email &amp;&amp; password) {
     promise = Q({ email: email, password: password });
   } else {
     promise = promptForLogin(argv);
@@ -5286,7 +5279,7 @@ module.exports = function ionic(ionicArgs) {
     return Login.requestLogIn(loginInfo.email, loginInfo.password, true);
   })
   .then(function(cookieJar) {
-    log.info(chalk.green(&#x27;Logged in! :)&#x27;));
+    log.info(chalk.green('Logged in! :)'));
     return cookieJar;
   })
   .catch(function(ex) {
@@ -5300,13 +5293,13 @@ module.exports = function ionic(ionicArgs) {
 return Login.retrieveLogin()
 .then(function(jar) {
   if (!jar) {
-    log.info(&#x27;No previous login existed. Attempting to log in now.&#x27;);
+    log.info('No previous login existed. Attempting to log in now.');
     return LoginTask.<span class="apidocCodeKeywordSpan">login</span>(argv);
   }
   return jar;
 })
 .then(function(jar) {
-  if (argv[&#x27;_&#x27;][1] === &#x27;init&#x27;) {
+  if (argv['_'][1] === 'init') {
     ioLib.initIoPlatform(process.cwd(), jar);
   } else {
 ...</pre></li>
@@ -5325,30 +5318,30 @@ return Login.retrieveLogin()
   var q = Q.defer();
 
   var schema = [{
-    name: &#x27;email&#x27;,
-    pattern: /^[A-z0-9!#$%&#x26;&#x27;*+\/=?\^_{|}~\-]+(?:\.[A-z0-9!#$%&#x26;&#x27;*+\/=?\^_{|}~\-]+)*@(?:[A-z0-9](?:[A-z0-9\-]*[A-z0-9])?\.)+[A-z0-
+    name: 'email',
+    pattern: /^[A-z0-9!#$%&amp;'*+\/=?\^_{|}~\-]+(?:\.[A-z0-9!#$%&amp;'*+\/=?\^_{|}~\-]+)*@(?:[A-z0-9](?:[A-z0-9\-]*[A-z0-9])?\.)+[A-z0-
 9](?:[A-z0-9\-]*[A-z0-9])?$/, // eslint-disable-line max-len
-    description: chalk.yellow.bold(&#x27;Email:&#x27;),
+    description: chalk.yellow.bold('Email:'),
     required: true
   }, {
-    name: &#x27;password&#x27;,
-    description: chalk.yellow.bold(&#x27;Password:&#x27;),
+    name: 'password',
+    description: chalk.yellow.bold('Password:'),
     hidden: true,
     required: true
   }];
 
   // prompt for log
-  log.info(chalk.bold.green(&#x27;\nTo continue, please login to your Ionic account.&#x27;));
-  log.info(chalk.bold(&#x27;Don\&#x27;t have one? Create one at: &#x27;) + chalk.bold(appLibSettings.IONIC_DASH + &#x27;/signup&#x27;) + &#x27;\n&#x27;);
+  log.info(chalk.bold.green('\nTo continue, please login to your Ionic account.'));
+  log.info(chalk.bold('Don\'t have one? Create one at: ') + chalk.bold(appLibSettings.IONIC_DASH + '/signup') + '\n');
 
   prompt.override = argv;
-  prompt.message = &#x27;&#x27;;
-  prompt.delimiter = &#x27;&#x27;;
+  prompt.message = '';
+  prompt.delimiter = '';
   prompt.start();
 
   prompt.get(schema, function(err, result) {
     if (err) {
-      return q.reject(&#x27;Error logging in: &#x27; + err);
+      return q.reject('Error logging in: ' + err);
     }
 
     q.resolve({ email: result.email, password: result.password });
@@ -5375,8 +5368,8 @@ return Login.retrieveLogin()
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -5414,7 +5407,7 @@ module.exports = function ionic(ionicArgs) {
   });
 
   var value = list.reduce(function(final, optionName) {
-    if (options.hasOwnProperty(optionName) &#x26;&#x26; !!options[optionName]) {
+    if (options.hasOwnProperty(optionName) &amp;&amp; !!options[optionName]) {
       final = options[optionName];
     }
     return final;
@@ -5427,22 +5420,22 @@ module.exports = function ionic(ionicArgs) {
   return newOptions;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    log.error(&#x27;There was an error serving your Ionic application:&#x27;, error);
+    log.error('There was an error serving your Ionic application:', error);
   });
 }
 
 function runAppScriptsServer(argv) {
 var options = extend(argv, {});
 
-options = npmScripts.<span class="apidocCodeKeywordSpan">consolidateOptions</span>([&#x27;consolelogs&#x27;, &#x27;c&#x27;], options
+options = npmScripts.<span class="apidocCodeKeywordSpan">consolidateOptions</span>(['consolelogs', 'c'], options
 );
-options = npmScripts.consolidateOptions([&#x27;serverlogs&#x27;, &#x27;s&#x27;], options);
-options = npmScripts.consolidateOptions([&#x27;port&#x27;, &#x27;p&#x27;], options);
-options = npmScripts.consolidateOptions([&#x27;livereload-port&#x27;, &#x27;r&#x27;], options);
-options = npmScripts.consolidateOptions([&#x27;nobrowser&#x27;, &#x27;b&#x27;], options);
-options = npmScripts.consolidateOptions([&#x27;nolivereload&#x27;, &#x27;d&#x27;], options);
-options = npmScripts.consolidateOptions([&#x27;noproxy&#x27;, &#x27;x&#x27;], options);
-options = npmScripts.consolidateOptions([&#x27;browser&#x27;, &#x27;w&#x27;], options);
+options = npmScripts.consolidateOptions(['serverlogs', 's'], options);
+options = npmScripts.consolidateOptions(['port', 'p'], options);
+options = npmScripts.consolidateOptions(['livereload-port', 'r'], options);
+options = npmScripts.consolidateOptions(['nobrowser', 'b'], options);
+options = npmScripts.consolidateOptions(['nolivereload', 'd'], options);
+options = npmScripts.consolidateOptions(['noproxy', 'x'], options);
+options = npmScripts.consolidateOptions(['browser', 'w'], options);
 ...</pre></li>
     </ul>
 
@@ -5456,7 +5449,7 @@ options = npmScripts.consolidateOptions([&#x27;browser&#x27;, &#x27;w&#x27;], op
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function f() {
-  var packageJsonPath = path.resolve(process.cwd() + &#x27;/package.json&#x27;);
+  var packageJsonPath = path.resolve(process.cwd() + '/package.json');
   var q = Q.defer();
 
   if (packageJson) {
@@ -5464,7 +5457,7 @@ options = npmScripts.consolidateOptions([&#x27;browser&#x27;, &#x27;w&#x27;], op
   }
 
   try {
-    fs.readFile(packageJsonPath, &#x27;utf8&#x27;, function(err, dataString) {
+    fs.readFile(packageJsonPath, 'utf8', function(err, dataString) {
       if (!err) {
         packageJson = JSON.parse(dataString);
       }
@@ -5490,7 +5483,7 @@ options = npmScripts.consolidateOptions([&#x27;browser&#x27;, &#x27;w&#x27;], op
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function hasIonicScript(name) {
   return getPackageJsonContents().then(function(packageJsonContents) {
-    return packageJsonContents.hasOwnProperty(&#x27;scripts&#x27;) &#x26;&#x26;
+    return packageJsonContents.hasOwnProperty('scripts') &amp;&amp;
            packageJsonContents.scripts.hasOwnProperty(getScriptName(name));
   });
 }</pre></li>
@@ -5502,14 +5495,14 @@ options = npmScripts.consolidateOptions([&#x27;browser&#x27;, &#x27;w&#x27;], op
 .concat(!cordovaUtils.arePluginsInstalled(appDirectory) ?
   cordovaUtils.installPlugins() :
   Q())
-.concat(npmScripts.<span class="apidocCodeKeywordSpan">hasIonicScript</span>(&#x27;build&#x27;))
-.concat(npmScripts.hasIonicScript(&#x27;serve&#x27;));
+.concat(npmScripts.<span class="apidocCodeKeywordSpan">hasIonicScript</span>('build'))
+.concat(npmScripts.hasIonicScript('serve'));
 
   return Q.all(promiseList).then(function(results) {
 hasBuildCommand = results[2];
 hasServeCommand = results[3];
 
-if (hasBuildCommand &#x26;&#x26; !(isLiveReload &#x26;&#x26; hasServeCommand)) {
+if (hasBuildCommand &amp;&amp; !(isLiveReload &amp;&amp; hasServeCommand)) {
 ...</pre></li>
     </ul>
 
@@ -5525,13 +5518,13 @@ if (hasBuildCommand &#x26;&#x26; !(isLiveReload &#x26;&#x26; hasServeCommand)) {
     <li>description and source-code<pre class="apidocCodePre">function optionsToArray(options) {
   return Object.keys(options)
   .filter(function(itemName) {
-    return itemName !== &#x27;_&#x27; &#x26;&#x26; itemName.indexOf(&#x27;$&#x27;) !== 0;
+    return itemName !== '_' &amp;&amp; itemName.indexOf('$') !== 0;
   })
   .reduce(function(array, optionName) {
-    if (typeof options[optionName] === &#x27;boolean&#x27; &#x26;&#x26; options[optionName]) {
-      array.push(&#x27;--&#x27; + optionName);
-    } else if (typeof options[optionName] !== &#x27;boolean&#x27;) {
-      array.push(&#x27;--&#x27; + optionName, options[optionName]);
+    if (typeof options[optionName] === 'boolean' &amp;&amp; options[optionName]) {
+      array.push('--' + optionName);
+    } else if (typeof options[optionName] !== 'boolean') {
+      array.push('--' + optionName, options[optionName]);
     }
     return array;
   }, []);
@@ -5539,11 +5532,11 @@ if (hasBuildCommand &#x26;&#x26; !(isLiveReload &#x26;&#x26; hasServeCommand)) {
     <li>example usage<pre class="apidocCodePre">...
 })
 .then(function(portFound) {
-  options[&#x27;livereload-port&#x27;] = portFound;
+  options['livereload-port'] = portFound;
 
   // Execute the serve command from app-scripts
   // Also remove platform from the raw args passed
-  return npmScripts.runIonicScript(&#x27;serve&#x27;,
+  return npmScripts.runIonicScript('serve',
     npmScripts.<span class="apidocCodeKeywordSpan">optionsToArray</span>(options)
   );
 });
@@ -5565,60 +5558,60 @@ var cwd = process.cwd();
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function runIonicScript(name, argv) {
-  var crossSpawn = require(&#x27;cross-spawn&#x27;);
+  var crossSpawn = require('cross-spawn');
   var scriptName = getScriptName(name);
   var q = Q.defer();
 
-  process.env[&#x27;FORCE_COLOR&#x27;] = true;
-  var scriptSpawn = crossSpawn.spawn(&#x27;npm&#x27;, [&#x27;run&#x27;, scriptName, &#x27;--&#x27;].concat(argv || []), {
-    stdio: [process.stdin, &#x27;pipe&#x27;, process.stderr]
+  process.env['FORCE_COLOR'] = true;
+  var scriptSpawn = crossSpawn.spawn('npm', ['run', scriptName, '--'].concat(argv || []), {
+    stdio: [process.stdin, 'pipe', process.stderr]
   })
-    .on(&#x27;error&#x27;, function(err) {
-      log.debug(&#x27;Spawn command&#x27;, scriptName, &#x27;failed&#x27;);
-      q.reject(&#x27;Unable to run spawn command &#x27; + err);
+    .on('error', function(err) {
+      log.debug('Spawn command', scriptName, 'failed');
+      q.reject('Unable to run spawn command ' + err);
     });
 
   scriptSpawn.stdout.pipe(process.stdout);
 
-  scriptSpawn.stdout.on(&#x27;data&#x27;, function(data) {
-    var dataLines = data.toString().split(&#x27;\n&#x27;).find(function(line) {
-      return line.indexOf(DEV_SERVER_COMPLETION_STRING) &#x3e; -1;
+  scriptSpawn.stdout.on('data', function(data) {
+    var dataLines = data.toString().split('\n').find(function(line) {
+      return line.indexOf(DEV_SERVER_COMPLETION_STRING) &gt; -1;
     });
-    if (dataLines &#x26;&#x26; dataLines.length &#x3e; 0) {
+    if (dataLines &amp;&amp; dataLines.length &gt; 0) {
       return q.resolve();
     }
   });
 
-  scriptSpawn.on(&#x27;exit&#x27;, function(code) {
-    log.debug(&#x27;Spawn command&#x27;, scriptName, &#x27;completed&#x27;);
+  scriptSpawn.on('exit', function(code) {
+    log.debug('Spawn command', scriptName, 'completed');
     if (code !== 0) {
-      return q.reject(&#x27;There was an error with the spawned command: &#x27; + name);
+      return q.reject('There was an error with the spawned command: ' + name);
     }
     return q.resolve();
   });
 
   // If this process ends ensure that we killed the spawned child
-  process.on(&#x27;exit&#x27;, function() {
+  process.on('exit', function() {
     scriptSpawn.kill();
   });
 
   return q.promise;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-.concat(npmScripts.hasIonicScript(&#x27;serve&#x27;));
+.concat(npmScripts.hasIonicScript('serve'));
 
   return Q.all(promiseList).then(function(results) {
 hasBuildCommand = results[2];
 hasServeCommand = results[3];
 
-if (hasBuildCommand &#x26;&#x26; !(isLiveReload &#x26;&#x26; hasServeCommand)) {
-  return npmScripts.<span class="apidocCodeKeywordSpan">runIonicScript</span>(&#x27;build&#x27;, rawArgs.slice(2));
+if (hasBuildCommand &amp;&amp; !(isLiveReload &amp;&amp; hasServeCommand)) {
+  return npmScripts.<span class="apidocCodeKeywordSpan">runIonicScript</span>('build', rawArgs.slice(2));
 }
 return Q();
   })
   .then(function() {
 
-// If we are running livereload and are using &#x22;ionic:serve&#x22; app-script
+// If we are running livereload and are using "ionic:serve" app-script
 // then configure devServer manually
 ...</pre></li>
     </ul>
@@ -5642,8 +5635,8 @@ return Q();
     <li>description and source-code<pre class="apidocCodePre">function run(ionic, argv) {
   var cmd;
 
-  if (argv._.length &#x3c; 2) {
-    cmd = &#x27;list&#x27;;
+  if (argv._.length &lt; 2) {
+    cmd = 'list';
   } else {
     cmd = argv._[1];
   }
@@ -5655,35 +5648,35 @@ return Q();
   try {
     dir = process.cwd();
     project = Project.load(dir);
-    appId = project.get(&#x27;app_id&#x27;);
+    appId = project.get('app_id');
 
     if (!appId) {
-      throw new Error(&#x27;Missing Ionic App ID. Make sure to run &#x22;ionic upload&#x22; first or set &#x27; +
-        &#x27;your app_id in the ionic.config.json file.&#x27;);
+      throw new Error('Missing Ionic App ID. Make sure to run "ionic upload" first or set ' +
+        'your app_id in the ionic.config.json file.');
     }
   } catch (ex) {
-    return fail(ex, &#x27;package&#x27;);
+    return fail(ex, 'package');
   }
 
   switch (cmd) {
-  case &#x27;build&#x27;:
+  case 'build':
     return packageBuild(ionic, argv, dir, project, appId);
-  case &#x27;list&#x27;:
+  case 'list':
     return packageList(ionic, argv, dir, project, appId);
-  case &#x27;info&#x27;:
+  case 'info':
     return packageInfo(ionic, argv, dir, project, appId);
-  case &#x27;download&#x27;:
+  case 'download':
     return packageDownload(ionic, argv, dir, project, appId);
   }
 
-  return fail(&#x22;Unknown subcommand &#x27;&#x22; + cmd + &#x22;&#x27;.&#x22;, &#x27;package&#x27;);
+  return fail("Unknown subcommand '" + cmd + "'.", 'package');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -5725,9 +5718,9 @@ module.exports = function ionic(ionicArgs) {
   var rawArgs = rawCliArguments.slice(0);
   var argumentName = argv._[2];
 
-  var isAddCmd = argv._.indexOf(&#x27;add&#x27;) !== -1;
-  var isRmCmd = argv._.indexOf(&#x27;rm&#x27;) !== -1 || argv._.indexOf(&#x27;remove&#x27;) !== -1;
-  var addResources = isAddCmd &#x26;&#x26;  !(argv.noresources || argv.r);
+  var isAddCmd = argv._.indexOf('add') !== -1;
+  var isRmCmd = argv._.indexOf('rm') !== -1 || argv._.indexOf('remove') !== -1;
+  var addResources = isAddCmd &amp;&amp;  !(argv.noresources || argv.r);
 
   // ensure the content node was set back to its original
   return ConfigXml.setConfigXml(appDirectory, {
@@ -5754,11 +5747,11 @@ module.exports = function ionic(ionicArgs) {
     }
 
     if (isAddCmd) {
-      log.info(&#x27;Saving platform to package.json file&#x27;);
+      log.info('Saving platform to package.json file');
       return State.savePlatform(appDirectory, argumentName);
     }
     if (isRmCmd) {
-      log.info(&#x27;Removing platform from package.json file&#x27;);
+      log.info('Removing platform from package.json file');
       return State.removePlatform(appDirectory, argumentName);
     }
   })
@@ -5772,8 +5765,8 @@ module.exports = function ionic(ionicArgs) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -5813,8 +5806,8 @@ module.exports = function ionic(ionicArgs) {
   var cmdName = settings.name;
   var argumentName = argv._[2];
 
-  var isAddCmd = argv._.indexOf(&#x27;add&#x27;) !== -1;
-  var isRmCmd = argv._.indexOf(&#x27;rm&#x27;) !== -1 || argv._.indexOf(&#x27;remove&#x27;) !== -1;
+  var isAddCmd = argv._.indexOf('add') !== -1;
+  var isRmCmd = argv._.indexOf('rm') !== -1 || argv._.indexOf('remove') !== -1;
 
   // ensure the content node was set back to its original
   return ConfigXml.setConfigXml(appDirectory, {
@@ -5836,8 +5829,8 @@ module.exports = function ionic(ionicArgs) {
     if (isAddCmd) {
       var variables;
 
-      log.info(&#x27;Saving plugin to package.json file&#x27;);
-      if (argv.variable &#x26;&#x26; (typeof argv.variable === &#x27;string&#x27;)) {
+      log.info('Saving plugin to package.json file');
+      if (argv.variable &amp;&amp; (typeof argv.variable === 'string')) {
         variables = [argv.variable];
       } else {
         variables = argv.variable;
@@ -5847,7 +5840,7 @@ module.exports = function ionic(ionicArgs) {
 
     // Is the plugin being removed
     if (isRmCmd) {
-      log.info(&#x27;Removing plugin from package.json file&#x27;);
+      log.info('Removing plugin from package.json file');
       return State.removePlugin(appDirectory, argumentName);
     }
   })
@@ -5861,8 +5854,8 @@ module.exports = function ionic(ionicArgs) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -5920,8 +5913,8 @@ module.exports = function ionic(ionicArgs) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -5950,12 +5943,12 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">prompt = function (schema, argv) {
   var q = Q.defer();
   prompt.override = argv;
-  prompt.message = &#x27;&#x27;;
-  prompt.delimiter = &#x27;&#x27;;
+  prompt.message = '';
+  prompt.delimiter = '';
   prompt.start();
   prompt.get(schema, function(err, result) {
     if (err) {
-      if (err.message === &#x27;canceled&#x27;) {
+      if (err.message === 'canceled') {
         return q.reject(false);
       } else {
         return q.reject(err);
@@ -5967,18 +5960,18 @@ module.exports = function ionic(ionicArgs) {
   return q.promise;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  argv[&#x27;key-alias&#x27;] = argv.k;
+  argv['key-alias'] = argv.k;
 }
 
-if (typeof argv.w !== &#x27;undefined&#x27;) {
-  argv[&#x27;key-password&#x27;] = argv.w;
+if (typeof argv.w !== 'undefined') {
+  argv['key-password'] = argv.w;
 }
 
 Prompt.<span class="apidocCodeKeywordSpan">prompt</span>([
-    { name: &#x27;keystore&#x27;, description: &#x27;Keystore File:&#x27;.prompt, required: true },
-    { name: &#x27;keystore-password&#x27;, description: &#x27;Keystore Password:&#x27;.prompt, hidden: true, required: true },
-    { name: &#x27;key-alias&#x27;, description: &#x27;Key Alias:&#x27;.prompt, required: true },
-    { name: &#x27;key-password&#x27;, description: &#x27;Key Password:&#x27;.prompt, hidden: true, required: true }
+    { name: 'keystore', description: 'Keystore File:'.prompt, required: true },
+    { name: 'keystore-password', description: 'Keystore Password:'.prompt, hidden: true, required: true },
+    { name: 'key-alias', description: 'Key Alias:'.prompt, required: true },
+    { name: 'key-password', description: 'Key Password:'.prompt, hidden: true, required: true }
 ], argv)
   .then(function(result) {
     q.resolve(result);
@@ -6015,17 +6008,17 @@ Prompt.<span class="apidocCodeKeywordSpan">prompt</span>([
     var value = argv[propertyName] || argv[shortName];
     if (value) {
       if (!fileExists(value)) {
-        return fail(&#x27;Unable to find file: &#x27; + argv[propertyName]);
+        return fail('Unable to find file: ' + argv[propertyName]);
       }
       task.inputFiles[propertyName] = value;
       task.useCmdArgs = true;
     }
   }
 
-  getCmdArgValue(&#x27;production-mode&#x27;, &#x27;l&#x27;);
+  getCmdArgValue('production-mode', 'l');
 
-  getCmdArgFile(&#x27;ios-push-dev-cert&#x27;, &#x27;d&#x27;);
-  getCmdArgFile(&#x27;ios-push-prod-cert&#x27;, &#x27;p&#x27;);
+  getCmdArgFile('ios-push-dev-cert', 'd');
+  getCmdArgFile('ios-push-prod-cert', 'p');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6040,12 +6033,12 @@ Prompt.<span class="apidocCodeKeywordSpan">prompt</span>([
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function getCsrfToken(jar) {
-  for (var i = 0; i &#x3c; jar.length; i += 1) {
-    if (jar[i].key === &#x27;csrftoken&#x27;) {
+  for (var i = 0; i &lt; jar.length; i += 1) {
+    if (jar[i].key === 'csrftoken') {
       return jar[i].value;
     }
   }
-  return &#x27;&#x27;;
+  return '';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6072,7 +6065,7 @@ Prompt.<span class="apidocCodeKeywordSpan">prompt</span>([
   Login.retrieveLogin()
   .then(function(jar) {
     if (!jar) {
-      log.info(&#x27;No previous login existed. Attempting to log in now.&#x27;);
+      log.info('No previous login existed. Attempting to log in now.');
       return LoginTask.login(argv);
     }
     return jar;
@@ -6080,23 +6073,23 @@ Prompt.<span class="apidocCodeKeywordSpan">prompt</span>([
   .then(function(jar) {
     task.jar = jar;
 
-    if (argv._[1] &#x26;&#x26; argv._[1].trim() === &#x27;webhook_url&#x27;) {
+    if (argv._[1] &amp;&amp; argv._[1].trim() === 'webhook_url') {
       if (argv._[2]) {
         set_webhook_url(task, argv._[2].trim());
       } else {
-        log.error(chalk.bold.red(&#x27;You need to specify a webhook url!&#x27;));
+        log.error(chalk.bold.red('You need to specify a webhook url!'));
       }
-    } else if (argv[&#x27;google-api-key&#x27;]) {
-      set_google_api_key(task, argv[&#x27;google-api-key&#x27;].trim());
-    } else if (argv[&#x27;send&#x27;] || argv.s) {
+    } else if (argv['google-api-key']) {
+      set_google_api_key(task, argv['google-api-key'].trim());
+    } else if (argv['send'] || argv.s) {
 
       // Dev wants to send a push notification
       send_push(task);
-    } else if (argv[&#x27;ios-dev-cert&#x27;] || argv[&#x27;ios-prod-cert&#x27;] || argv.d || argv.p) {
+    } else if (argv['ios-dev-cert'] || argv['ios-prod-cert'] || argv.d || argv.p) {
 
       // Dev wants to upload an ios push cert
       upload_cert(task);
-    } else if (argv[&#x27;production-mode&#x27;] || argv.l) {
+    } else if (argv['production-mode'] || argv.l) {
 
       // Dev wants to switch between test/live mode
       // this will look like --live-mode=[y/n]
@@ -6105,15 +6098,15 @@ Prompt.<span class="apidocCodeKeywordSpan">prompt</span>([
     }
   })
   .catch(function(ex) {
-    log.error(&#x27;An error occurred&#x27;, ex);
+    log.error('An error occurred', ex);
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -6133,45 +6126,45 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function send_push() { // eslint-disable-line camelcase
   var project = IonicProject.load();
 
-  if (!project.get(&#x27;app_id&#x27;)) {
-    log.error(chalk.bold.red(&#x27;You need to upload your app first!&#x27;));
+  if (!project.get('app_id')) {
+    log.error(chalk.bold.red('You need to upload your app first!'));
     return false;
   }
 
   // So, we need the push API key to send notifications.
   var promptProperties = {};
 
-  promptProperties[&#x27;push-api-key&#x27;] = {
-    name: &#x27;push-api-key&#x27;,
-    description: chalk.yellow.bold(&#x27;Your private API key&#x27;),
+  promptProperties['push-api-key'] = {
+    name: 'push-api-key',
+    description: chalk.yellow.bold('Your private API key'),
     required: true,
     isFile: false
   };
 
-  promptProperties[&#x27;device-token&#x27;] = {
-    name: &#x27;device-token&#x27;,
-    description: chalk.yellow.bold(&#x27;Device token&#x27;),
+  promptProperties['device-token'] = {
+    name: 'device-token',
+    description: chalk.yellow.bold('Device token'),
     required: true,
     isFile: false
   };
 
-  promptProperties[&#x27;alert&#x27;] = {
-    name: &#x27;alert&#x27;,
-    description: chalk.yellow.bold(&#x27;Notification alert message&#x27;),
+  promptProperties['alert'] = {
+    name: 'alert',
+    description: chalk.yellow.bold('Notification alert message'),
     required: false,
     isFile: false
   };
 
-  promptProperties[&#x27;badge&#x27;] = {
-    name: &#x27;badge&#x27;,
-    description: chalk.yellow.bold(&#x27;Badge count&#x27;),
+  promptProperties['badge'] = {
+    name: 'badge',
+    description: chalk.yellow.bold('Badge count'),
     required: false,
     isFile: false
   };
 
-  promptProperties[&#x27;sound&#x27;] = {
-    name: &#x27;sound&#x27;,
-    description: chalk.yellow.bold(&#x27;Sound file name&#x27;),
+  promptProperties['sound'] = {
+    name: 'sound',
+    description: chalk.yellow.bold('Sound file name'),
     required: false,
     isFile: false
   };
@@ -6180,39 +6173,39 @@ module.exports = function ionic(ionicArgs) {
 
   prompt.get({ properties: promptProperties }, function(err, promptResult) {
     if (err) {
-      return fail(&#x27;Error: &#x27; + err);
+      return fail('Error: ' + err);
     }
 
-    var apiKey = promptResult[&#x27;push-api-key&#x27;];
+    var apiKey = promptResult['push-api-key'];
 
     var notification = {
-      platform: &#x27;ios&#x27;,
-      tokens: [promptResult[&#x27;device-token&#x27;]],
+      platform: 'ios',
+      tokens: [promptResult['device-token']],
       notification: {
-        alert: promptResult[&#x27;alert&#x27;],
+        alert: promptResult['alert'],
         ios: {
-          badge: promptResult[&#x27;badge&#x27;],
-          sound: promptResult[&#x27;sound&#x27;]
+          badge: promptResult['badge'],
+          sound: promptResult['sound']
         }
       }
     };
 
     var options = {
-      url: &#x27;https://push.ionic.io/api/v1/push&#x27;,
-      method: &#x27;POST&#x27;,
+      url: 'https://push.ionic.io/api/v1/push',
+      method: 'POST',
       json: true,
       headers: {
-        &#x27;X-Ionic-Application-Id&#x27;: project.get(&#x27;app_id&#x27;),
-        authorization: &#x27;Basic &#x27; + new Buffer(apiKey + &#x27;:&#x27;).toString(&#x27;base64&#x27;)
+        'X-Ionic-Application-Id': project.get('app_id'),
+        authorization: 'Basic ' + new Buffer(apiKey + ':').toString('base64')
       },
       body: notification
     };
 
     request(options, function(err, response) {
-      if (!err &#x26;&#x26; parseInt(response.statusCode, 10) === 202) {
-        log.info(&#x27;Successfully queued push notification&#x27;);
+      if (!err &amp;&amp; parseInt(response.statusCode, 10) === 202) {
+        log.info('Successfully queued push notification');
       } else {
-        log.error(&#x27;Error queueing push notification&#x27;, err);
+        log.error('Error queueing push notification', err);
       }
     });
   });
@@ -6232,17 +6225,17 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function set_google_api_key(task, google_api_key) { // eslint-disable-line camelcase
   var project = IonicProject.load();
 
-  if (!project.get(&#x27;app_id&#x27;)) {
-    log.error(chalk.bold.red(&#x27;You need to upload your app first!&#x27;));
+  if (!project.get('app_id')) {
+    log.error(chalk.bold.red('You need to upload your app first!'));
     return false;
   }
 
-  var url = task.ionic.IONIC_DASH + task.ionic.IONIC_API + &#x27;app/&#x27; + project.get(&#x27;app_id&#x27;) + &#x27;/push/google-api-key&#x27;;
+  var url = task.ionic.IONIC_DASH + task.ionic.IONIC_API + 'app/' + project.get('app_id') + '/push/google-api-key';
   var params = parseUrl(url);
 
   var form = new FormData();
-  form.append(&#x27;csrfmiddlewaretoken&#x27;, getCsrfToken(task.jar));
-  form.append(&#x27;android_api_key&#x27;, google_api_key);
+  form.append('csrfmiddlewaretoken', getCsrfToken(task.jar));
+  form.append('android_api_key', google_api_key);
 
   form.submit({
     protocol: params.protocol,
@@ -6251,20 +6244,20 @@ module.exports = function ionic(ionicArgs) {
     path: params.path,
     headers: form.getHeaders({
       cookie: task.jar.map(function(c) {
-        return c.key + &#x27;=&#x27; + encodeURIComponent(c.value);
-      }).join(&#x27;; &#x27;)
+        return c.key + '=' + encodeURIComponent(c.value);
+      }).join('; ')
     })
   },
   function(err, response) {
-    response.on(&#x27;data&#x27;, function() {
+    response.on('data', function() {
       if (err) {
-        return fail(&#x27;Error setting Google API Key: &#x27; + err);
+        return fail('Error setting Google API Key: ' + err);
       }
 
-      if (parseInt(response.statusCode, 10) === &#x27;200&#x27;) {
-        log.info(chalk.green(&#x27;Google API Key Saved&#x27;));
+      if (parseInt(response.statusCode, 10) === '200') {
+        log.info(chalk.green('Google API Key Saved'));
       } else {
-        return fail(&#x27;App not found&#x27;);
+        return fail('App not found');
       }
     });
   });
@@ -6286,29 +6279,29 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function set_production_mode(task) { // eslint-disable-line camelcase
   var project = IonicProject.load();
 
-  if (!project.get(&#x27;app_id&#x27;)) {
-    log.error(chalk.bold.red(&#x27;You need to upload your app first!&#x27;));
+  if (!project.get('app_id')) {
+    log.error(chalk.bold.red('You need to upload your app first!'));
     return false;
   }
 
-  if (task.inputValues[&#x27;production-mode&#x27;] === true) {
-    log.error(chalk.bold.red(&#x27;You need to specify a value [y/n] to set the production mode!&#x27;));
+  if (task.inputValues['production-mode'] === true) {
+    log.error(chalk.bold.red('You need to specify a value [y/n] to set the production mode!'));
     return false;
   }
 
-  task.inputValues[&#x27;production-mode&#x27;] = task.inputValues[&#x27;production-mode&#x27;].toLowerCase();
+  task.inputValues['production-mode'] = task.inputValues['production-mode'].toLowerCase();
 
-  if (task.inputValues[&#x27;production-mode&#x27;] !== &#x27;y&#x27; &#x26;&#x26; task.inputValues[&#x27;production-mode&#x27;] !== &#x27;n&#x27;) {
-    log.error(chalk.bold.red(&#x27;You need to specify a value [y/n] to set the production mode!&#x27;));
+  if (task.inputValues['production-mode'] !== 'y' &amp;&amp; task.inputValues['production-mode'] !== 'n') {
+    log.error(chalk.bold.red('You need to specify a value [y/n] to set the production mode!'));
     return false;
   }
 
-  var url = task.ionic.IONIC_DASH + task.ionic.IONIC_API + &#x27;app/&#x27; + project.get(&#x27;app_id&#x27;) + &#x27;/push/set-production-mode&#x27;;
+  var url = task.ionic.IONIC_DASH + task.ionic.IONIC_API + 'app/' + project.get('app_id') + '/push/set-production-mode';
   var params = parseUrl(url);
 
   var form = new FormData();
-  form.append(&#x27;csrfmiddlewaretoken&#x27;, getCsrfToken(task.jar));
-  form.append(&#x27;production_mode&#x27;, task.inputValues[&#x27;production-mode&#x27;]);
+  form.append('csrfmiddlewaretoken', getCsrfToken(task.jar));
+  form.append('production_mode', task.inputValues['production-mode']);
 
   form.submit({
     protocol: params.protocol,
@@ -6317,38 +6310,38 @@ module.exports = function ionic(ionicArgs) {
     path: params.path,
     headers: form.getHeaders({
       cookie: task.jar.map(function(c) {
-        return c.key + &#x27;=&#x27; + encodeURIComponent(c.value);
-      }).join(&#x27;; &#x27;)
+        return c.key + '=' + encodeURIComponent(c.value);
+      }).join('; ')
     })
   },
   function(err, response) {
     if (err) {
-      return fail(&#x27;Error uploading certificate: &#x27; + err);
+      return fail('Error uploading certificate: ' + err);
     }
 
-    response.setEncoding(&#x27;utf8&#x27;);
-    response.on(&#x27;data&#x27;, function(data) {
+    response.setEncoding('utf8');
+    response.on('data', function(data) {
       if (err) {
-        return fail(&#x27;Error setting mode: &#x27; + err);
+        return fail('Error setting mode: ' + err);
       }
 
       try {
         var d = JSON.parse(data);
-        if (d.errors &#x26;&#x26; d.errors.length) {
-          for (var j = 0; j &#x3c; d.errors.length; j += 1) {
+        if (d.errors &amp;&amp; d.errors.length) {
+          for (var j = 0; j &lt; d.errors.length; j += 1) {
             log.error(chalk.bold.red(d.errors[j]));
           }
-          return fail(&#x27;Unable to set mode&#x27;);
+          return fail('Unable to set mode');
         }
 
-        if (task.inputValues[&#x27;production-mode&#x27;] === &#x27;y&#x27;) {
-          log.info(&#x27;Successfully set production mode&#x27;);
+        if (task.inputValues['production-mode'] === 'y') {
+          log.info('Successfully set production mode');
         } else {
-          log.info(&#x27;Successfully set development mode&#x27;);
+          log.info('Successfully set development mode');
         }
 
       } catch (parseEx) {
-        return fail(&#x27;Error response: &#x27; + parseEx);
+        return fail('Error response: ' + parseEx);
       }
     });
   });
@@ -6368,17 +6361,17 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function set_webhook_url(task, webhook_url) { // eslint-disable-line camelcase
   var project = IonicProject.load();
 
-  if (!project.get(&#x27;app_id&#x27;)) {
-    log.error(chalk.bold.red(&#x27;You need to upload your app first!&#x27;));
+  if (!project.get('app_id')) {
+    log.error(chalk.bold.red('You need to upload your app first!'));
     return false;
   }
 
-  var url = task.ionic.IONIC_DASH + task.ionic.IONIC_API + &#x27;app/&#x27; + project.get(&#x27;app_id&#x27;) + &#x27;/push/webhook-url&#x27;;
+  var url = task.ionic.IONIC_DASH + task.ionic.IONIC_API + 'app/' + project.get('app_id') + '/push/webhook-url';
   var params = parseUrl(url);
 
   var form = new FormData();
-  form.append(&#x27;csrfmiddlewaretoken&#x27;, getCsrfToken(task.jar));
-  form.append(&#x27;webhook_url&#x27;, webhook_url);
+  form.append('csrfmiddlewaretoken', getCsrfToken(task.jar));
+  form.append('webhook_url', webhook_url);
 
   form.submit({
     protocol: params.protocol,
@@ -6387,20 +6380,20 @@ module.exports = function ionic(ionicArgs) {
     path: params.path,
     headers: form.getHeaders({
       cookie: task.jar.map(function(c) {
-        return c.key + &#x27;=&#x27; + encodeURIComponent(c.value);
-      }).join(&#x27;; &#x27;)
+        return c.key + '=' + encodeURIComponent(c.value);
+      }).join('; ')
     })
   },
   function(err, response) {
-    response.on(&#x27;data&#x27;, function() {
+    response.on('data', function() {
       if (err) {
-        return fail(&#x27;Error setting Webhook URL: &#x27; + err);
+        return fail('Error setting Webhook URL: ' + err);
       }
 
-      if (parseInt(response.statusCode, 10) === &#x27;200&#x27;) {
-        log.info(&#x27;Webhook URL set to&#x27;, webhook_url);
+      if (parseInt(response.statusCode, 10) === '200') {
+        log.info('Webhook URL set to', webhook_url);
       } else {
-        return fail(&#x27;App not found&#x27;);
+        return fail('App not found');
       }
     });
   });
@@ -6422,59 +6415,59 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function upload_cert(task) { // eslint-disable-line camelcase
   var project = IonicProject.load();
 
-  if (!project.get(&#x27;app_id&#x27;)) {
-    log.error(chalk.bold.red(&#x27;You need to upload your app first!&#x27;));
+  if (!project.get('app_id')) {
+    log.error(chalk.bold.red('You need to upload your app first!'));
     return false;
   }
 
 
   var promptProperties = {};
-  var prodCert = &#x27;0&#x27;;
+  var prodCert = '0';
 
-  if (argv[&#x27;ios-dev-cert&#x27;]) {
-    promptProperties[&#x27;ios-push-cert&#x27;] = {
-      name: &#x27;ios-push-cert&#x27;,
-      description: chalk.yellow.bold(&#x27;iOS Dev Push Certificate File (.p12)&#x27;),
+  if (argv['ios-dev-cert']) {
+    promptProperties['ios-push-cert'] = {
+      name: 'ios-push-cert',
+      description: chalk.yellow.bold('iOS Dev Push Certificate File (.p12)'),
       required: true,
       conform: fileExists,
       isFile: true
     };
-  } else if (argv[&#x27;ios-prod-cert&#x27;]) {
-    promptProperties[&#x27;ios-push-cert&#x27;] = {
-      name: &#x27;ios-push-cert&#x27;,
-      description: chalk.yellow.bold(&#x27;iOS Prod Push Certificate File (.p12)&#x27;),
+  } else if (argv['ios-prod-cert']) {
+    promptProperties['ios-push-cert'] = {
+      name: 'ios-push-cert',
+      description: chalk.yellow.bold('iOS Prod Push Certificate File (.p12)'),
       required: true,
       conform: fileExists,
       isFile: true
     };
 
-    prodCert = &#x27;1&#x27;;
+    prodCert = '1';
   }
 
   prompt.start();
 
   prompt.get({ properties: promptProperties }, function(err, promptResult) {
     if (err) {
-      return fail(&#x27;Error: &#x27; + err);
+      return fail('Error: ' + err);
     }
 
-    var url = task.ionic.IONIC_DASH + task.ionic.IONIC_API + &#x27;app/&#x27; + project.get(&#x27;app_id&#x27;) + &#x27;/push/upload-push-cert&#x27;;
+    var url = task.ionic.IONIC_DASH + task.ionic.IONIC_API + 'app/' + project.get('app_id') + '/push/upload-push-cert';
     var params = parseUrl(url);
 
     var form = new FormData();
-    form.append(&#x27;csrfmiddlewaretoken&#x27;, getCsrfToken(task.jar));
+    form.append('csrfmiddlewaretoken', getCsrfToken(task.jar));
 
     var inputFile;
 
     try {
-      inputFile = promptResult[&#x27;ios-push-cert&#x27;].replace(/\\ /g, &#x27; &#x27;).trim();
-      form.append(&#x27;ios_push_cert&#x27;, fs.createReadStream(resolvePath(inputFile)));
+      inputFile = promptResult['ios-push-cert'].replace(/\\ /g, ' ').trim();
+      form.append('ios_push_cert', fs.createReadStream(resolvePath(inputFile)));
     } catch (e) {
-      return fail(&#x27;Error loading &#x27; + resolvePath(inputFile));
+      return fail('Error loading ' + resolvePath(inputFile));
     }
 
     // Set the flag for if this is a production or dev cert
-    form.append(&#x27;prod_cert&#x27;, prodCert);
+    form.append('prod_cert', prodCert);
 
     form.submit({
       protocol: params.protocol,
@@ -6483,34 +6476,34 @@ module.exports = function ionic(ionicArgs) {
       path: params.path,
       headers: form.getHeaders({
         cookie: task.jar.map(function(c) {
-          return c.key + &#x27;=&#x27; + encodeURIComponent(c.value);
-        }).join(&#x27;; &#x27;)
+          return c.key + '=' + encodeURIComponent(c.value);
+        }).join('; ')
       })
     },
     function(err, response) {
       if (err) {
-        return fail(&#x27;Error uploading certificate: &#x27; + err);
+        return fail('Error uploading certificate: ' + err);
       }
 
-      response.setEncoding(&#x27;utf8&#x27;);
-      response.on(&#x27;data&#x27;, function(data) {
+      response.setEncoding('utf8');
+      response.on('data', function(data) {
         if (err) {
-          return fail(&#x27;Error uploading certificate: &#x27; + err);
+          return fail('Error uploading certificate: ' + err);
         }
 
         try {
           var d = JSON.parse(data);
-          if (d.errors &#x26;&#x26; d.errors.length) {
-            for (var j = 0; j &#x3c; d.errors.length; j += 1) {
+          if (d.errors &amp;&amp; d.errors.length) {
+            for (var j = 0; j &lt; d.errors.length; j += 1) {
               log.error(chalk.bold.red(d.errors[j]));
             }
-            return fail(&#x27;Unable to upload certificate&#x27;);
+            return fail('Unable to upload certificate');
           }
 
-          log.info(&#x27;Successfully uploaded certificate&#x27;);
+          log.info('Successfully uploaded certificate');
 
         } catch (parseEx) {
-          return fail(&#x27;Error response: &#x27; + parseEx);
+          return fail('Error response: ' + parseEx);
         }
       });
     });
@@ -6546,13 +6539,13 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function run(ionic, argv) {
 
   // This command will be deprecated in the future.
-  var deprecationMsg = &#x27;This command has been &#x27; + chalk.red(&#x27;deprecated&#x27;) + &#x27;.  All &#x27; +
-   &#x27;resources are currently available in NPM and we recommend that you use NPM to manage these.\n&#x27; +
-   &#x27;More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n&#x27;;
+  var deprecationMsg = 'This command has been ' + chalk.red('deprecated') + '.  All ' +
+   'resources are currently available in NPM and we recommend that you use NPM to manage these.\n' +
+   'More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n';
   log.info(chalk.bold(deprecationMsg));
 
   if (!bower.checkForBower()) {
-    appLibUtils.fail(bower.installMessage, &#x27;remove&#x27;);
+    appLibUtils.fail(bower.installMessage, 'remove');
     return;
   }
 
@@ -6563,7 +6556,7 @@ module.exports = function ionic(ionicArgs) {
     uninstallBowerComponent(componentName);
   } catch (error) {
     var errorMessage = error.message ? error.message : error;
-    appLibUtils.fail(errorMessage, &#x27;service&#x27;);
+    appLibUtils.fail(errorMessage, 'service');
   }
 
   // Inject the component into our index.html, if necessary, and save the app_id
@@ -6574,8 +6567,8 @@ module.exports = function ionic(ionicArgs) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -6614,7 +6607,7 @@ module.exports = function ionic(ionicArgs) {
     dir = process.cwd();
     Project.load(dir);
   } catch (ex) {
-    return appLibUtils.fail(ex, &#x27;resources&#x27;);
+    return appLibUtils.fail(ex, 'resources');
   }
 
   var options = argv;
@@ -6623,7 +6616,7 @@ module.exports = function ionic(ionicArgs) {
   return IonicResources.generate(dir, options)
     .catch(function(ex) {
       if (ex instanceof Error) {
-        appLibUtils.fail(ex, &#x27;resources&#x27;);
+        appLibUtils.fail(ex, 'resources');
       }
     });
 }</pre></li>
@@ -6631,8 +6624,8 @@ module.exports = function ionic(ionicArgs) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -6671,17 +6664,17 @@ module.exports = function ionic(ionicArgs) {
   var hasBuildCommand = false;
   var hasServeCommand = false;
 
-  var isLiveReload = argv.livereload || argv[&#x27;live-reload&#x27;] || argv.l || false;
+  var isLiveReload = argv.livereload || argv['live-reload'] || argv.l || false;
 
   // If platform was not passed then add it to the rawArgs
   var runPlatform = argv._[1];
   if (!runPlatform) {
-    runPlatform = &#x27;ios&#x27;;
+    runPlatform = 'ios';
     rawArgs.splice(1, 0, runPlatform);
   }
 
-  if (runPlatform === &#x27;ios&#x27; &#x26;&#x26; os.platform() !== &#x27;darwin&#x27;) {
-    log.error(&#x27;✗ You cannot run iOS unless you are on Mac OSX.&#x27;);
+  if (runPlatform === 'ios' &amp;&amp; os.platform() !== 'darwin') {
+    log.error('âœ— You cannot run iOS unless you are on Mac OSX.');
     return Q();
   }
 
@@ -6692,23 +6685,23 @@ module.exports = function ionic(ionicArgs) {
     .concat(!cordovaUtils.arePluginsInstalled(appDirectory) ?
       cordovaUtils.installPlugins() :
       Q())
-    .concat(npmScripts.hasIonicScript(&#x27;build&#x27;))
-    .concat(npmScripts.hasIonicScript(&#x27;serve&#x27;));
+    .concat(npmScripts.hasIonicScript('build'))
+    .concat(npmScripts.hasIonicScript('serve'));
 
   return Q.all(promiseList).then(function(results) {
     hasBuildCommand = results[2];
     hasServeCommand = results[3];
 
-    if (hasBuildCommand &#x26;&#x26; !(isLiveReload &#x26;&#x26; hasServeCommand)) {
-      return npmScripts.runIonicScript(&#x27;build&#x27;, rawArgs.slice(2));
+    if (hasBuildCommand &amp;&amp; !(isLiveReload &amp;&amp; hasServeCommand)) {
+      return npmScripts.runIonicScript('build', rawArgs.slice(2));
     }
     return Q();
   })
   .then(function() {
 
-    // If we are running livereload and are using &#x22;ionic:serve&#x22; app-script
+    // If we are running livereload and are using "ionic:serve" app-script
     // then configure devServer manually
-    if (isLiveReload &#x26;&#x26; hasServeCommand) {
+    if (isLiveReload &amp;&amp; hasServeCommand) {
 
       // using app-scripts and livereload is requested
       // Also remove commandName from the rawArgs passed
@@ -6739,8 +6732,8 @@ module.exports = function ionic(ionicArgs) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -6779,8 +6772,8 @@ module.exports = function ionic(ionicArgs) {
   var cmd;
   var subcmd;
 
-  if (argv._.length &#x3c; 2) {
-    cmd = &#x27;profiles&#x27;;
+  if (argv._.length &lt; 2) {
+    cmd = 'profiles';
   } else {
     cmd = argv._[1];
   }
@@ -6792,43 +6785,43 @@ module.exports = function ionic(ionicArgs) {
   try {
     dir = process.cwd();
     project = Project.load(dir);
-    appId = project.get(&#x27;app_id&#x27;);
+    appId = project.get('app_id');
 
     if (!appId) {
-      throw new Error(&#x27;Missing Ionic App ID.&#x27;);
+      throw new Error('Missing Ionic App ID.');
     }
   } catch (ex) {
-    return fail(ex, &#x27;security&#x27;);
+    return fail(ex, 'security');
   }
 
   switch (cmd) {
-  case &#x27;profiles&#x27;:
-    if (argv._.length &#x3c; 3) {
-      subcmd = &#x27;list&#x27;;
+  case 'profiles':
+    if (argv._.length &lt; 3) {
+      subcmd = 'list';
     } else {
       subcmd = argv._[2];
     }
 
     switch (subcmd) {
-    case &#x27;add&#x27;:
+    case 'add':
       return addSecurityProfile(ionic, argv, dir, appId);
-    case &#x27;list&#x27;:
+    case 'list':
       return listSecurityProfiles(ionic, argv, dir, appId);
     default:
-      return fail(&#x22;Unknown subcommand &#x27;profiles &#x22; + subcmd + &#x22;&#x27;.&#x22;, &#x27;security&#x27;);
+      return fail("Unknown subcommand 'profiles " + subcmd + "'.", 'security');
     }
-  case &#x27;credentials&#x27;:
+  case 'credentials':
     return addSecurityCredentials(ionic, argv, dir, appId);
   }
 
-  return fail(&#x22;Unknown subcommand &#x27;&#x22; + cmd + &#x22;&#x27;.&#x22;, &#x27;security&#x27;);
+  return fail("Unknown subcommand '" + cmd + "'.", 'security');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -6865,7 +6858,7 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function run(ionic, argv, rawCliArguments) {
 
   // Support `ionic lab` as a shortcut for `ionic serve --lab`
-  var runsLab = rawCliArguments[0] === &#x27;lab&#x27;;
+  var runsLab = rawCliArguments[0] === 'lab';
   if (runsLab) {
     argv.lab = true;
   }
@@ -6874,7 +6867,7 @@ module.exports = function ionic(ionicArgs) {
    * Before running the internal server check to see if npmscripts has
    * a ionic specific serve command.  If so then run it instead.
    */
-</span>  return npmScripts.hasIonicScript(&#x27;serve&#x27;)
+</span>  return npmScripts.hasIonicScript('serve')
     .then(function(hasServeCommand) {
       if (hasServeCommand) {
         return runAppScriptsServer(argv);
@@ -6883,15 +6876,15 @@ module.exports = function ionic(ionicArgs) {
       }
     })
     .catch(function(error) {
-      log.error(&#x27;There was an error serving your Ionic application:&#x27;, error);
+      log.error('There was an error serving your Ionic application:', error);
     });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -6930,10 +6923,10 @@ module.exports = function ionic(ionicArgs) {
 
   var directory = getBowerComponentsLocation();
 
-  log.info(&#x27;Checking for any plugins required by service package&#x27;);
+  log.info('Checking for any plugins required by service package');
 
   installBowerPlugins(directory, serviceName);
-  log.info(&#x27;ionic service add completed&#x27;);
+  log.info('ionic service add completed');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6948,7 +6941,7 @@ module.exports = function ionic(ionicArgs) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function addServiceToIonicJson(serviceName) {
-  var ionicProjectFile = path.join(process.cwd(), &#x27;ionic.project&#x27;);
+  var ionicProjectFile = path.join(process.cwd(), 'ionic.project');
 
   try {
     var ionicProjectJson = readIonicProjectJson() || {};
@@ -6958,15 +6951,15 @@ module.exports = function ionic(ionicArgs) {
     }
 
     var existingProject = _.findWhere(ionicProjectJson.services, { name: serviceName });
-    if (typeof existingProject != &#x27;undefined&#x27;) {
+    if (typeof existingProject != 'undefined') {
       return;
     }
 
     ionicProjectJson.services.push({ name: serviceName });
-    fs.writeFileSync(ionicProjectFile, JSON.stringify(ionicProjectJson, null, 2), &#x27;utf8&#x27;);
+    fs.writeFileSync(ionicProjectFile, JSON.stringify(ionicProjectJson, null, 2), 'utf8');
 
   } catch (ex) {
-    fail(&#x27;Failed to update the ionic.project settings for the service&#x27;, &#x27;service&#x27;);
+    fail('Failed to update the ionic.project settings for the service', 'service');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -6982,19 +6975,19 @@ module.exports = function ionic(ionicArgs) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function getBowerComponentsLocation() {
-  var bowerRcFileLocation = path.join(process.cwd(), &#x27;.bowerrc&#x27;);
+  var bowerRcFileLocation = path.join(process.cwd(), '.bowerrc');
   var bowerRc = null;
 
   try {
-    var content = fs.readFileSync(bowerRcFileLocation, &#x27;utf8&#x27;);
+    var content = fs.readFileSync(bowerRcFileLocation, 'utf8');
     bowerRc = JSON.parse(content);
   } catch (ex) {
     throw ex;
   }
 
-  var directory = &#x27;www/lib&#x27;; // Default directory
+  var directory = 'www/lib'; // Default directory
 
-  if (bowerRc &#x26;&#x26; bowerRc.directory) {
+  if (bowerRc &amp;&amp; bowerRc.directory) {
     directory = bowerRc.directory;
   }
 
@@ -7013,14 +7006,14 @@ module.exports = function ionic(ionicArgs) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function getBowerJson(directory, serviceName) {
-  var bowerJsonLocation = path.join(process.cwd(), directory, &#x27;ionic-service-&#x27; + serviceName, &#x27;ionic-plugins.json&#x27;);
+  var bowerJsonLocation = path.join(process.cwd(), directory, 'ionic-service-' + serviceName, 'ionic-plugins.json');
   var packageBowerJson = require(bowerJsonLocation);
   return packageBowerJson;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
   installBowerPlugins(directory, serviceName);
-  log.info(&#x27;ionic service add completed&#x27;);
+  log.info('ionic service add completed');
 }
 
 function removeService(serviceName) {
@@ -7046,7 +7039,7 @@ function removeService(serviceName) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function installBowerComponent(serviceName) {
-  var bowerInstallCommand = &#x27;bower link ionic-service-&#x27; + serviceName;
+  var bowerInstallCommand = 'bower link ionic-service-' + serviceName;
 
   try {
     var result = execSync(bowerInstallCommand);
@@ -7057,9 +7050,9 @@ function removeService(serviceName) {
   } catch (e) {} // eslint-disable-line no-empty
 
   // Error happened, report it.
-  var errorMessage = chalk.bold(&#x27;Failed to find the service &#x22;&#x27;) + serviceName.verbose +
-    chalk.bold(&#x27;&#x22;.\nAre you sure it exists?&#x27;);
-  fail(errorMessage, &#x27;service&#x27;);
+  var errorMessage = chalk.bold('Failed to find the service "') + serviceName.verbose +
+    chalk.bold('".\nAre you sure it exists?');
+  fail(errorMessage, 'service');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -7077,8 +7070,8 @@ function removeService(serviceName) {
   var packageBowerJson = getBowerJson(directory, serviceName);
 
   _.each(packageBowerJson.plugins, function(plugin) {
-    log.info(&#x27;Installing cordova plugin - &#x27; + plugin.name + &#x27; (&#x27; + plugin.id + &#x27;)&#x27;);
-    var installPluginCmd = &#x27;ionic plugin add &#x27; + plugin.uri;
+    log.info('Installing cordova plugin - ' + plugin.name + ' (' + plugin.id + ')');
+    var installPluginCmd = 'ionic plugin add ' + plugin.uri;
     log.info(installPluginCmd);
 
     try {
@@ -7089,8 +7082,8 @@ function removeService(serviceName) {
       }
     } catch (e) {} // eslint-disable-line no-empty
 
-    var errorMessage = chalk.bold(&#x27;Failed to find the plugin &#x22;&#x27;) + plugin.name.verbose + chalk.bold(&#x27;&#x22;.&#x27;);
-    fail(errorMessage, &#x27;service&#x27;);
+    var errorMessage = chalk.bold('Failed to find the plugin "') + plugin.name.verbose + chalk.bold('".');
+    fail(errorMessage, 'service');
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -7106,10 +7099,10 @@ function removeService(serviceName) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function readIonicProjectJson() {
-  var ionicProjectFile = path.join(process.cwd(), &#x27;ionic.project&#x27;);
+  var ionicProjectFile = path.join(process.cwd(), 'ionic.project');
   var ionicProjectJson = null;
   try {
-    var content = fs.readFileSync(ionicProjectFile, &#x27;utf8&#x27;);
+    var content = fs.readFileSync(ionicProjectFile, 'utf8');
     ionicProjectJson = JSON.parse(content);
   } catch (ex) {
     throw ex;
@@ -7152,13 +7145,13 @@ function removeService(serviceName) {
     <li>description and source-code<pre class="apidocCodePre">function run(ionic, argv) {
 
   // This command will be deprecated in the future.
-  var deprecationMsg = &#x27;This command has been &#x27; + chalk.red(&#x27;deprecated&#x27;) + &#x27;.  All &#x27; +
-   &#x27;resources are currently available in NPM and we recommend that you use NPM to manage these.\n&#x27; +
-   &#x27;More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n&#x27;;
+  var deprecationMsg = 'This command has been ' + chalk.red('deprecated') + '.  All ' +
+   'resources are currently available in NPM and we recommend that you use NPM to manage these.\n' +
+   'More information is available here: https://github.com/driftyco/ionic-cli/wiki/Migrating-to-NPM-from-bower\n';
   log.info(chalk.bold(deprecationMsg));
 
   if (!bower.checkForBower()) {
-    fail(bower.installMessage, &#x27;service&#x27;);
+    fail(bower.installMessage, 'service');
     return;
   }
 
@@ -7167,24 +7160,24 @@ function removeService(serviceName) {
 
   try {
     switch (action) {
-    case &#x27;add&#x27;:
+    case 'add':
       addService(serviceName);
       break;
-    case &#x27;remove&#x27;:
+    case 'remove':
       removeService(serviceName);
       break;
     }
   } catch (error) {
     var errorMessage = error.message ? error.message : error;
-    fail(errorMessage, &#x27;service&#x27;);
+    fail(errorMessage, 'service');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -7202,7 +7195,7 @@ module.exports = function ionic(ionicArgs) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function uninstallBowerComponent(serviceName) {
-  var bowerUninstallCommand = &#x27;bower unlink ionic-service-&#x27; + serviceName;
+  var bowerUninstallCommand = 'bower unlink ionic-service-' + serviceName;
 
   try {
     var result = execSync(bowerUninstallCommand);
@@ -7212,9 +7205,9 @@ module.exports = function ionic(ionicArgs) {
     }
   } catch (e) {} // eslint-disable-line no-empty
 
-  var errorMessage = chalk.bold(&#x27;Failed to find the service &#x22;&#x27;) + serviceName.verbose +
-    chalk.bold(&#x27;&#x22;.\nAre you sure it exists?&#x27;);
-  fail(errorMessage, &#x27;service&#x27;);
+  var errorMessage = chalk.bold('Failed to find the service "') + serviceName.verbose +
+    chalk.bold('".\nAre you sure it exists?');
+  fail(errorMessage, 'service');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -7230,8 +7223,8 @@ module.exports = function ionic(ionicArgs) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function uninstallBowerPlugins(bowerJson) {
   _.each(bowerJson.plugins, function(plugin) {
-    log.info(&#x27;Uninstalling cordova plugin -  &#x27; + plugin.name);
-    var uninstallPluginCmd = &#x27;ionic plugin rm &#x27; + plugin.id;
+    log.info('Uninstalling cordova plugin -  ' + plugin.name);
+    var uninstallPluginCmd = 'ionic plugin rm ' + plugin.id;
     log.info(uninstallPluginCmd);
 
     try {
@@ -7242,8 +7235,8 @@ module.exports = function ionic(ionicArgs) {
       }
     } catch (e) {} // eslint-disable-line no-empty
 
-    var errorMessage = chalk.bold(&#x27;Failed to find the plugin to remove &#x22;&#x27;) + plugin.name.verbose + chalk.bold(&#x27;&#x22;.&#x27;);
-    fail(errorMessage, &#x27;service&#x27;);
+    var errorMessage = chalk.bold('Failed to find the plugin to remove "') + plugin.name.verbose + chalk.bold('".');
+    fail(errorMessage, 'service');
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -7276,28 +7269,28 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function run(ionic, argv) {
   var taskName = argv._[1];
   if (!taskName) {
-    appLibUtils.fail(&#x27;Missing setup task command.&#x27;, &#x27;setup&#x27;);
+    appLibUtils.fail('Missing setup task command.', 'setup');
     return Q();
   }
-  if (taskName !== &#x27;sass&#x27;) {
-    appLibUtils.fail(&#x27;Invalid setup task command: &#x27; + taskName, &#x27;setup&#x27;);
+  if (taskName !== 'sass') {
+    appLibUtils.fail('Invalid setup task command: ' + taskName, 'setup');
     return Q();
   }
 
   return appLibSetup.sassSetup(process.cwd())
     .then(function() {
-      log.info(chalk.green(&#x27;Ionic setup complete&#x27;));
+      log.info(chalk.green('Ionic setup complete'));
     })
     .catch(function(error) {
-      log.error(&#x27;Error from setup - &#x27; + error);
+      log.error('Error from setup - ' + error);
     });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -7332,8 +7325,8 @@ module.exports = function ionic(ionicArgs) {
     <li>description and source-code<pre class="apidocCodePre">function run(ionic, argv) {
   var project;
 
-  if (argv._.length &#x3c; 2) {
-    return appLibUtils.fail(&#x27;Invalid command&#x27;, &#x27;share&#x27;);
+  if (argv._.length &lt; 2) {
+    return appLibUtils.fail('Invalid command', 'share');
   }
 
   try {
@@ -7343,23 +7336,23 @@ module.exports = function ionic(ionicArgs) {
     return;
   }
 
-  if (project.get(&#x27;app_id&#x27;) === &#x27;&#x27;) {
-    return appLibUtils.fail(&#x27;You must first upload the app to share it&#x27;);
+  if (project.get('app_id') === '') {
+    return appLibUtils.fail('You must first upload the app to share it');
   }
 
   var email = argv._[1];
 
-  if (email.indexOf(&#x27;@&#x27;) &#x3c; 0) {
-    return appLibUtils.fail(&#x27;Invalid email address&#x27;, &#x27;share&#x27;);
+  if (email.indexOf('@') &lt; 0) {
+    return appLibUtils.fail('Invalid email address', 'share');
   }
 
-  log.info(chalk.green([&#x27;Sharing app &#x27;,
-    project.get(&#x27;name&#x27;), &#x27; (&#x27;, project.get(&#x27;app_id&#x27;), &#x27;) with &#x27;, email, &#x27;.&#x27;].join(&#x27;&#x27;)));
+  log.info(chalk.green(['Sharing app ',
+    project.get('name'), ' (', project.get('app_id'), ') with ', email, '.'].join('')));
 
   return Login.retrieveLogin()
   .then(function(jar) {
     if (!jar) {
-      log.info(&#x27;No previous login existed. Attempting to log in now.&#x27;);
+      log.info('No previous login existed. Attempting to log in now.');
       return LoginTask.login(argv);
     }
     return jar;
@@ -7375,8 +7368,8 @@ module.exports = function ionic(ionicArgs) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -7413,25 +7406,25 @@ module.exports = function ionic(ionicArgs) {
     return templateUtils.listTemplates();
   }
 
-  if (argv._.length &#x3c; 2 &#x26;&#x26; StartWizard) {
+  if (argv._.length &lt; 2 &amp;&amp; StartWizard) {
     return StartWizard.start();
-  } else if(argv._length &#x3c; 2) {
-    return appLibUtils.fail(&#x27;Invalid command&#x27;, &#x27;start&#x27;);
+  } else if(argv._length &lt; 2) {
+    return appLibUtils.fail('Invalid command', 'start');
   }
 
-  if (argv._[1] === &#x27;.&#x27;) {
-    return log.error(chalk.red(&#x27;Please name your Ionic project something meaningful other than \&#x27;.\&#x27;&#x27;));
+  if (argv._[1] === '.') {
+    return log.error(chalk.red('Please name your Ionic project something meaningful other than \'.\''));
   }
 
   // Ensure that the folder name provided is a String
-  // ie 5 becomes &#x27;5&#x27; AND &#x27;5&#x27; stays as &#x27;5&#x27;
+  // ie 5 becomes '5' AND '5' stays as '5'
   argv._[1] = argv._[1].toString();
 
   var promptPromise;
   var options = appLibUtils.preprocessCliOptions(argv);
   var startingApp = true;
 
-  // Grab the app&#x27;s relative directory name
+  // Grab the app's relative directory name
   if (fs.existsSync(options.targetPath)) {
     promptPromise = Start.promptForOverwrite(options.targetPath);
   } else {
@@ -7442,7 +7435,7 @@ module.exports = function ionic(ionicArgs) {
   .then(function(promptToContinue) {
     if (!promptToContinue) {
       startingApp = false;
-      log.info(&#x27;\nIonic start cancelled by user.&#x27;);
+      log.info('\nIonic start cancelled by user.');
       return;
     }
     return Start.startApp(options);
@@ -7458,8 +7451,8 @@ module.exports = function ionic(ionicArgs) {
     }
   })
   .then(function() {
-    if (options.v2 &#x26;&#x26; startingApp) {
-      //log.info(&#x27;\nNew to Ionic? Get started here: http://ionicframework.com/getting-started\n&#x27;);
+    if (options.v2 &amp;&amp; startingApp) {
+      //log.info('\nNew to Ionic? Get started here: http://ionicframework.com/getting-started\n');
     }
   })
   .catch(function(error) {
@@ -7471,8 +7464,8 @@ module.exports = function ionic(ionicArgs) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -7522,28 +7515,28 @@ module.exports = function ionic(ionicArgs) {
   }
 
   switch (argv._[1]) {
-  case &#x27;save&#x27;:
+  case 'save':
     State.saveState(process.cwd(), options);
     break;
-  case &#x27;restore&#x27;:
+  case 'restore':
     State.restoreState(process.cwd(), options);
     break;
-  case &#x27;reset&#x27;:
+  case 'reset':
     State.resetState(process.cwd(), options);
     break;
-  case &#x27;clear&#x27;:
+  case 'clear':
     State.clearState(process.cwd(), options);
     break;
   default:
-    log.error(&#x27;Please specify a command [ save | restore | reset | clear ] for the state command.&#x27;);
+    log.error('Please specify a command [ save | restore | reset | clear ] for the state command.');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -7619,13 +7612,13 @@ argv = optimist(rawCliArguments)
   if (!fileName) return this;
 
   this.fileName = fileName;
-  if (fileName.indexOf(&#x27;.&#x27;) &#x3c; 0) {
-    this.fileName += &#x27;.data&#x27;;
+  if (fileName.indexOf('.') &lt; 0) {
+    this.fileName += '.data';
   }
 
   this.homeDir = process.env.HOME || process.env.USERPROFILE || process.env.HOMEPATH;
 
-  this.privateDir = path.join(this.homeDir, &#x27;.ionic&#x27;);
+  this.privateDir = path.join(this.homeDir, '.ionic');
 
   if (!fs.existsSync(this.privateDir)) {
     fs.mkdirSync(this.privateDir);
@@ -7663,16 +7656,16 @@ argv = optimist(rawCliArguments)
   return this.data;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-// .contant(&#x27;InstagramApiUrl&#x27;,&#x27;https://api.instagram.com&#x27;)
+// .contant('InstagramApiUrl','https://api.instagram.com')
 //In production, make this the real URL
 
-.controller(&#x27;FeedCtrl&#x27;, function($scope, $http, InstagramApiUrl) {
+.controller('FeedCtrl', function($scope, $http, InstagramApiUrl) {
 
   $scope.feed = null;
 
-  $http.<span class="apidocCodeKeywordSpan">get</span>(InstagramApiUrl + &#x27;/v1/media/search?client_id=1&#x26;lat=48&#x26;lng
-=2.294351&#x27;).then(function(data) {
-    console.log(&#x27;data &#x27; , data)
+  $http.<span class="apidocCodeKeywordSpan">get</span>(InstagramApiUrl + '/v1/media/search?client_id=1&amp;lat=48&amp;lng
+=2.294351').then(function(data) {
+    console.log('data ' , data)
     $scope.feed = data;
   })
 
@@ -7697,18 +7690,18 @@ argv = optimist(rawCliArguments)
   try {
 
 switch (cmd) {
-case &#x27;add&#x27;:
+case 'add':
   Hooks.add(process.cwd());
   break;
-case &#x27;remove&#x27;:
+case 'remove':
   Hooks.<span class="apidocCodeKeywordSpan">remove</span>(process.cwd());
   break;
-case &#x27;perm&#x27;:
-case &#x27;permissions&#x27;:
+case 'perm':
+case 'permissions':
   Hooks.setHooksPermission(process.cwd());
   break;
 default:
-  log.error(&#x27;Please supply a command - either add or remove&#x27;);
+  log.error('Please supply a command - either add or remove');
 ...</pre></li>
     </ul>
 
@@ -7727,7 +7720,7 @@ default:
     fs.writeFileSync(this.filePath, dataStoredAsString);
     this.data = JSON.parse(dataStoredAsString);
   } catch (e) {
-    console.error(&#x27;Unable to save ionic data:&#x27;, this.filePath, e);
+    console.error('Unable to save ionic data:', this.filePath, e);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -7736,12 +7729,12 @@ default:
  * TODO: Change stats-opt-out to be a command that updates config rather
  * than an option that is passed.
  */
-if (argv[&#x27;stats-opt-out&#x27;]) {
-  IonicConfig.set(&#x27;statsOptOut&#x27;, true);
+if (argv['stats-opt-out']) {
+  IonicConfig.set('statsOptOut', true);
   IonicConfig.<span class="apidocCodeKeywordSpan">save</span>();
-  log.info(&#x27;Successful stats opt-out&#x27;);
+  log.info('Successful stats opt-out');
   return Q.fcall(function() {
-    return &#x27;saved&#x27;;
+    return 'saved';
   });
 }
 
@@ -7768,12 +7761,12 @@ var taskName = argv._[0];
  * TODO: Change stats-opt-out to be a command that updates config rather
  * than an option that is passed.
  */
-if (argv[&#x27;stats-opt-out&#x27;]) {
-  IonicConfig.<span class="apidocCodeKeywordSpan">set</span>(&#x27;statsOptOut&#x27;, true);
+if (argv['stats-opt-out']) {
+  IonicConfig.<span class="apidocCodeKeywordSpan">set</span>('statsOptOut', true);
   IonicConfig.save();
-  log.info(&#x27;Successful stats opt-out&#x27;);
+  log.info('Successful stats opt-out');
   return Q.fcall(function() {
-    return &#x27;saved&#x27;;
+    return 'saved';
   });
 }
 ...</pre></li>
@@ -7798,12 +7791,12 @@ if (argv[&#x27;stats-opt-out&#x27;]) {
   return fetchStarterTemplates()
     .then(function(starterTemplates) {
       var templates = _.sortBy(starterTemplates.items, function(template) { return template.name; });
-      log.info(chalk.green(&#x27;Ionic Starter templates&#x27;));
+      log.info(chalk.green('Ionic Starter templates'));
       return list(templates);
     });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  &#x27;--zip-file|-z&#x27;: &#x27;URL to download zipfile for starter template&#x27;
+  '--zip-file|-z': 'URL to download zipfile for starter template'
 },
 isProjectTask: false
 };
@@ -7813,10 +7806,10 @@ if (argv.list || argv.l) {
   return templateUtils.<span class="apidocCodeKeywordSpan">listTemplates</span>();
 }
 
-if (argv._.length &#x3c; 2 &#x26;&#x26; StartWizard) {
+if (argv._.length &lt; 2 &amp;&amp; StartWizard) {
   return StartWizard.start();
-} else if(argv._length &#x3c; 2) {
-  return appLibUtils.fail(&#x27;Invalid command&#x27;, &#x27;start&#x27;);
+} else if(argv._length &lt; 2) {
+  return appLibUtils.fail('Invalid command', 'start');
 }
 ...</pre></li>
     </ul>
@@ -7844,7 +7837,7 @@ if (argv._.length &#x3c; 2 &#x26;&#x26; StartWizard) {
   return Login.retrieveLogin()
   .then(function(jar) {
     if (!jar) {
-      log.info(&#x27;No previous login existed. Attempting to log in now.&#x27;);
+      log.info('No previous login existed. Attempting to log in now.');
       return LoginTask.login(argv);
     }
     return jar;
@@ -7860,8 +7853,8 @@ if (argv._.length &#x3c; 2 &#x26;&#x26; StartWizard) {
  */
 module.exports = function ionic(ionicArgs) {
   var cliArgs = [
-    &#x27;node&#x27;,
-    &#x27;bin/ionic&#x27;
+    'node',
+    'bin/ionic'
   ];
 
   return cli.<span class="apidocCodeKeywordSpan">run</span>(cliArgs.concat(ionicArgs));
@@ -7886,3 +7879,4 @@ module.exports = function ionic(ionicArgs) {
     ]
 </div>
 </div>
+</body></html>
