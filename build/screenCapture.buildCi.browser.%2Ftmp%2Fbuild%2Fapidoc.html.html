@@ -47,7 +47,7 @@
 }
 </style>
 <h1>api documentation for
-    <a href="http://ionicframework.com/">ionic (v2.2.2-201704202005-201704202005)</a>
+    <a href="http://ionicframework.com/">ionic (v2.2.3-201704220743-201704220744)</a>
 </h1>
 <h4>A tool for creating and developing Ionic Framework mobile apps.</h4>
 <div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
@@ -7416,9 +7416,16 @@ module.exports = function ionic(ionicArgs) {
     return log.error(chalk.red('Please name your Ionic project something meaningful other than \'.\''));
   }
 
+
   // Ensure that the folder name provided is a String
   // ie 5 becomes '5' AND '5' stays as '5'
   argv._[1] = argv._[1].toString();
+
+
+  // This is temporary.... because I don't want to update app scripts before CLI v3 release
+  // If defined as v1 in command line then remove the v2 flag
+  // If no option or v2 option is passed then set the v2 flag
+  argv.v2 = !argv.v1;
 
   var promptPromise;
   var options = appLibUtils.preprocessCliOptions(argv);
